@@ -1,3 +1,10 @@
+---
+toc: true
+layout: post
+description: Portfolio of Grand Prize Winning Bounty Projects
+categories: [Flipside]
+title: Flipside Crypto Prize Winning Bounty Projects
+---
 # Flipside Crypto Prize Winning Bounty Projects
 
 ## Yearn Bounties   
