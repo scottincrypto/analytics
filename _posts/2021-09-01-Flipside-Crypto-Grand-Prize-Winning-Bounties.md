@@ -1,5 +1,5 @@
 ---
-toc: true
+toc: false 
 layout: post
 description: Portfolio of Grand Prize Winning Bounty Projects
 categories: [Flipside]
@@ -35,4 +35,5 @@ title: Flipside Crypto Prize Winning Bounty Projects
 [Compound Flash Loans](https://velocity-app.flipsidecrypto.com/dashboard/compound-flash-loans-IFYsKr)  
 [Compound - Miners & Liquidations](https://velocity-app.flipsidecrypto.com/dashboard/compound-how-are-miners-benefiting-from-liquidations-NKO6O4)  
 [Flipside Crypto blog featuring some of these Compound Bounties](https://blog.flipsidecrypto.com/compound-data-dashboards-june-18/)
+
 
