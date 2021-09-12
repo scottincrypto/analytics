@@ -5,8 +5,6 @@ description: Portfolio of Grand Prize Winning Bounty Projects
 categories: [Flipside]
 title: Flipside Crypto Prize Winning Bounty Projects
 ---
-# Flipside Crypto Prize Winning Bounty Projects
-
 ## Yearn Bounties   
 [Yearn TVL and ROI](https://colab.research.google.com/drive/1PwST7SbP1qkO578OI14OiANaoWMvL_S1?usp=sharing#scrollTo=fM9YEYf4wTBu)   
 [Comparing Yearn Strategies](https://colab.research.google.com/drive/1tDzd68W65yGPKA-yDQfQ2vGJ65JgAley?usp=sharing#scrollTo=j8nfEJGTGEvB) as featured as [Bounty of the Week]( https://flipsidecrypto.substack.com/p/bounty-brief-19) and in this [Flipside Crypto Blog](https://blog.flipsidecrypto.com/yearn-data-dashboards-august-19/)
