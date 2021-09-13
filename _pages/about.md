@@ -7,7 +7,9 @@ permalink: /about/
 Scott Simpson  
 **[@scottincrypto](https://twitter.com/scottincrypto)**
 
-Available for Crypto Analytics work, including Dune.  
+Available for Crypto Analytics work, including:
+- [Dune Analytics](https://dune.xyz)
+- [Flipside Crypto](https://flipsidecrypto.com)
 
 
 This website is powered by **[fastpages](https://github.com/fastai/fastpages)** [^1].
