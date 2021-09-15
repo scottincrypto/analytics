@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="twitter:card" content="summary_large_image" /><!-- Begin Jekyll SEO tag v2.6.1 -->
+<title>Polygon Bridging Behaviour | @scottincrypto</title>
+<meta name="generator" content="Jekyll v4.1.1" />
+<meta property="og:title" content="Polygon Bridging Behaviour" />
+<meta name="author" content="Scott Simpson" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="What do users do when they bridge to Polygon?" />
+<meta property="og:description" content="What do users do when they bridge to Polygon?" />
+<link rel="canonical" href="https://scottincrypto.github.io/analytics/polygon/2021/09/14/_09_15_Polygon_Bridge.html" />
+<meta property="og:url" content="https://scottincrypto.github.io/analytics/polygon/2021/09/14/_09_15_Polygon_Bridge.html" />
+<meta property="og:site_name" content="@scottincrypto" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2021-09-14T00:00:00-05:00" />
+<script type="application/ld+json">
+{"url":"https://scottincrypto.github.io/analytics/polygon/2021/09/14/_09_15_Polygon_Bridge.html","@type":"BlogPosting","headline":"Polygon Bridging Behaviour","dateModified":"2021-09-14T00:00:00-05:00","datePublished":"2021-09-14T00:00:00-05:00","author":{"@type":"Person","name":"Scott Simpson"},"mainEntityOfPage":{"@type":"WebPage","@id":"https://scottincrypto.github.io/analytics/polygon/2021/09/14/_09_15_Polygon_Bridge.html"},"description":"What do users do when they bridge to Polygon?","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link rel="stylesheet" href="/analytics/assets/css/style.css"><link type="application/atom+xml" rel="alternate" href="https://scottincrypto.github.io/analytics/feed.xml" title="@scottincrypto" /><link rel="shortcut icon" type="image/x-icon" href="/analytics/images/favicon.ico"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Primer/15.2.0/primer.css" integrity="sha512-xTz2ys4coGAOz8vuV1NcQBkgVmKhsSEtjbqyMJbBHRplFuvKIUo6xhLHpAyPt9mfR6twHJgn9OgVLuqOvjeBhg==" crossorigin="anonymous" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" integrity="sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog==" crossorigin="anonymous" />
+
+<script>
+function wrap_img(fn) {
+    if (document.attachEvent ? document.readyState === "complete" : document.readyState !== "loading") {
+        var elements = document.querySelectorAll(".post img");
+        Array.prototype.forEach.call(elements, function(el, i) {
+            if (el.getAttribute("title") && (el.className != "emoji")) {
+                const caption = document.createElement('figcaption');
+                var node = document.createTextNode(el.getAttribute("title"));
+                caption.appendChild(node);
+                const wrapper = document.createElement('figure');
+                wrapper.className = 'image';
+                el.parentNode.insertBefore(wrapper, el);
+                el.parentNode.removeChild(el);
+                wrapper.appendChild(el);
+                wrapper.appendChild(caption);
+            }
+        });
+    } else { document.addEventListener('DOMContentLoaded', fn); }
+}
+window.onload = wrap_img;
+</script>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function(){
+    // add link icon to anchor tags
+    var elem = document.querySelectorAll(".anchor-link")
+    elem.forEach(e => (e.innerHTML = '<i class="fas fa-link fa-xs"></i>'));
+    });
+</script>
+</head>
+<body><header class="site-header">
+
+  <div class="wrapper"><a class="site-title" rel="author" href="/analytics/">@scottincrypto</a><nav class="site-nav">
+        <input type="checkbox" id="nav-trigger" class="nav-trigger" />
+        <label for="nav-trigger">
+          <span class="menu-icon">
+            <svg viewBox="0 0 18 15" width="18px" height="15px">
+              <path d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.032C17.335,0,18,0.665,18,1.484L18,1.484z M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.032C17.335,6.031,18,6.696,18,7.516L18,7.516z M18,13.516C18,14.335,17.335,15,16.516,15H1.484 C0.665,15,0,14.335,0,13.516l0,0c0-0.82,0.665-1.483,1.484-1.483h15.032C17.335,12.031,18,12.695,18,13.516L18,13.516z"/>
+            </svg>
+          </span>
+        </label>
+
+        <div class="trigger"><a class="page-link" href="/analytics/about/">About Me</a><a class="page-link" href="/analytics/search/">Search</a><a class="page-link" href="/analytics/categories/">Tags</a></div>
+      </nav></div>
+</header>
+<main class="page-content" aria-label="Content">
+      <div class="wrapper">
+        <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
+
+  <header class="post-header">
+    <h1 class="post-title p-name" itemprop="name headline">Polygon Bridging Behaviour</h1><p class="page-description">What do users do when they bridge to Polygon?</p><p class="post-meta post-meta-title"><time class="dt-published" datetime="2021-09-14T00:00:00-05:00" itemprop="datePublished">
+        Sep 14, 2021
+      </time>• 
+          <span itemprop="author" itemscope itemtype="http://schema.org/Person">
+            <span class="p-author h-card" itemprop="name">Scott Simpson</span></span>
+       • <span class="read-time" title="Estimated read time">
+    
+    
+      6 min read
+    
+</span></p>
+
+    
+      <p class="category-tags"><i class="fas fa-tags category-tags-icon"></i></i> 
+      
+        <a class="category-tags-link" href="/analytics/categories/#polygon">polygon</a>
+        
+      
+      </p>
+    
+
+    
+      
+        <div class="pb-5 d-flex flex-wrap flex-justify-end">
+          <div class="px-2">
+
+    <a href="https://github.com/scottincrypto/analytics/tree/master/_notebooks/2021_09_15_Polygon_Bridge.ipynb" role="button" target="_blank">
+<img class="notebook-badge-image" src="/analytics/assets/badges/github.svg" alt="View On GitHub">
+    </a>
+</div>
+
+          
+          <div class="px-2">
+    <a href="https://colab.research.google.com/github/scottincrypto/analytics/blob/master/_notebooks/2021_09_15_Polygon_Bridge.ipynb" target="_blank">
+        <img class="notebook-badge-image" src="/analytics/assets/badges/colab.svg" alt="Open In Colab"/>
+    </a>
+</div>
+        </div>
+      </header>
+
+  <div class="post-content e-content" itemprop="articleBody">
+    <ul class="section-nav">
+<li class="toc-entry toc-h1"><a href="#Introduction">Introduction </a>
+<ul>
+<li class="toc-entry toc-h2"><a href="#About-the-Data">About the Data </a></li>
+</ul>
+</li>
+<li class="toc-entry toc-h1"><a href="#Top-Destinations">Top Destinations </a></li>
+<li class="toc-entry toc-h1"><a href="#Flow-of-Funds">Flow of Funds </a>
+<ul>
+<li class="toc-entry toc-h2"><a href="#By-Destination">By Destination </a></li>
+<li class="toc-entry toc-h2"><a href="#By-Use-Case">By Use Case </a></li>
+</ul>
+</li>
+<li class="toc-entry toc-h1"><a href="#Most-Popular-Destinations-by-Day">Most Popular Destinations by Day </a></li>
+<li class="toc-entry toc-h1"><a href="#Most-Popular-Use-Cases-by-Day">Most Popular Use Cases by Day </a></li>
+<li class="toc-entry toc-h1"><a href="#Conclusions">Conclusions </a></li>
+</ul><!--
+#################################################
+### THIS FILE WAS AUTOGENERATED! DO NOT EDIT! ###
+#################################################
+# file to edit: _notebooks/2021_09_15_Polygon_Bridge.ipynb
+-->
+
+<div class="container" id="notebook-container">
+        
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Introduction">
+<a class="anchor" href="#Introduction" aria-hidden="true"><span class="octicon octicon-link"></span></a>Introduction<a class="anchor-link" href="#Introduction"> </a>
+</h1>
+<p>This post seeks to answer the following questions:</p>
+<p><em>Where do people go when they bridge to Polygon from Ethereum? What are the 10 most popular first destinations for Polygon addresses that have just bridged from Ethereum? What has this been for each day in the past month?</em></p>
+<p>Polygon operates as a sidechain to Ethereum, with funds moved to &amp; from Polygon via a series of bridges.  These bridges accept tokens on the Ethereum side, then create wrapped versions of the same tokens on the Polygon side. Users are attracted to Polygon by the low fees &amp; fast transactions speeds relative to Ethereum.  In the absence of fiat onramps, bridges are the only way into the ecosystem.  There are a number of bridges in operation by different operators, but this analysis will focus on the official Polygon bridge provided by the protocol.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="About-the-Data">
+<a class="anchor" href="#About-the-Data" aria-hidden="true"><span class="octicon octicon-link"></span></a>About the Data<a class="anchor-link" href="#About-the-Data"> </a>
+</h2>
+<p>This dataset looks at all of the transactions coming into Polygon via the Polygon Bridge over the last month.  It then looks at the <em>next</em> transaction each wallet undertook in the currency that was bridged in, and classifies the destination of that transaction.  In examining the data, a couple of observations were noted:</p>
+<ul>
+<li>Often the first transaction was a very small swap for MATIC - the token used for gas on Polygon</li>
+<li>Most of the coins bridged were either USDC, USDT, WBTC or WETH.  Only 3% were other coins, and there was a very long list of these other coins.</li>
+</ul>
+<p>To simplify the analysis, we excluded any next transaction with a value of less than USD 10, and looked at the transaction <em>after</em> this instead.  This lets us see the intent of the user more than looking at their initial MATIC swap transaction instead.  We also limited our analysis to the 4 major coins above - this accounts for 97% of the funds bridged (as per the table below) and allowed us to simplify the charts for better insights.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Top-Destinations">
+<a class="anchor" href="#Top-Destinations" aria-hidden="true"><span class="octicon octicon-link"></span></a>Top Destinations<a class="anchor-link" href="#Top-Destinations"> </a>
+</h1>
+<p>The destination addresses &amp; contracts were classified by project or protocol to understand where users were going after bridging to Polygon.  We managed to classify over 70 of these destination contracts to account for over 75% of the value moved.  There was a very long tail (over 23k addresses) accounting for the remaining 25% of the value - these are labelled as "Unknown" in the data going forward.</p>
+<p>The graph below shows the next destination of the bridged funds.  Aave is the top destination, with a lot of value coming into Polygon to take part in borrowing &amp; lending activities.  A number of familiar names from the Ethereum ecosystem are in the list - Curve, 1inch, Balance, Sushi - but there are a few non-Ethereum specific names in the list - Quickswap, Iron Finance, Polynetwork.  An interesting find in this list are the bridges - a signficant portion of funds were immediately bridged out of Polygon after being bridged in.  This was done via the Polygon Bridge ("Bridge Out") or via the Allbridge facility.  It's possible users are using Allbridge to get to chains such as Solana or Binance using Polygon as an intermediate step.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Flow-of-Funds">
+<a class="anchor" href="#Flow-of-Funds" aria-hidden="true"><span class="octicon octicon-link"></span></a>Flow of Funds<a class="anchor-link" href="#Flow-of-Funds"> </a>
+</h1>
+<h2 id="By-Destination">
+<a class="anchor" href="#By-Destination" aria-hidden="true"><span class="octicon octicon-link"></span></a>By Destination<a class="anchor-link" href="#By-Destination"> </a>
+</h2>
+<p>The graph below shows the flow of funds from bridge, by token bridged, into the destination protocols shown above.  We can see the large flows into Aave - interestingly most of the Aave flow is USDC, USDT or WBTC.  WETH makes up only a small portion of the flow.  WETH yields are usually low on Aave, but WBTC yields are too.  Low yields do not show the full picture of user behaviour here.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="By-Use-Case">
+<a class="anchor" href="#By-Use-Case" aria-hidden="true"><span class="octicon octicon-link"></span></a>By Use Case<a class="anchor-link" href="#By-Use-Case"> </a>
+</h2>
+<p>To simplify the above graph, each destination was classified into a broad use case grouping.  This is shown in the graph below.  Users coming to Polygon for Defi activities (Aave, Iron Finance etc) account for the largest grouping.  Here we see the amount of funds bridge immediately back out of Polygon - 11% of funds bridge in are immediately bridged out.  Another observation from this graph is that there is a small amount of hodling occuring - this is seen where the inflows to each token are less than the outflows.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Most-Popular-Destinations-by-Day">
+<a class="anchor" href="#Most-Popular-Destinations-by-Day" aria-hidden="true"><span class="octicon octicon-link"></span></a>Most Popular Destinations by Day<a class="anchor-link" href="#Most-Popular-Destinations-by-Day"> </a>
+</h1>
+<p>The chart below shows, by day, the ranking of each of the destinations by the USD amount sent to them.  This chart is very busy and a littled difficult to intepret.  To target a particular protocol, double-click on the protocol in the legend and the graph will isolate just that protocol.  Clicking on another protocol after this will add it to the graph.  Double-click again to return to all values.</p>
+<p>Aave is consistently the top performer, being always ranked at number 4 or higher.  The unknown category also features highly - indicating that there are a wide variety of destinations on Polygon and it's not just a small handful capturing all the action.  The behaviour with bridges continues to yield interesting insight - Allbridge has risen to be a consistent top 5 destination in the last 2 weeks - perhaps this is coincident with the rise in interest in Solana, as Allbridge can be used to bridge to this chain.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Most-Popular-Use-Cases-by-Day">
+<a class="anchor" href="#Most-Popular-Use-Cases-by-Day" aria-hidden="true"><span class="octicon octicon-link"></span></a>Most Popular Use Cases by Day<a class="anchor-link" href="#Most-Popular-Use-Cases-by-Day"> </a>
+</h1>
+<p>To simplify the above graph, we used the broader classes of use cases rather than the destination protcols.  Here we see that Defi usage is on average the highest - this contains Aave.  Users are obviously keen to generate yield from their funds in Polygon, taking advantage of the low fees relative to Ethereum to deposit their funds.  We also see that funds jumping straight to dex swaps has dropped off - 3-4 weeks ago this was the highest use case, now it is amongst the lowest.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Conclusions">
+<a class="anchor" href="#Conclusions" aria-hidden="true"><span class="octicon octicon-link"></span></a>Conclusions<a class="anchor-link" href="#Conclusions"> </a>
+</h1>
+<p>The Polygon Bridge allows users to bring funds from Ethereum into the Polygon ecosystem.  We have looked at what users do once they bridge funds in.  We have discovered the following insights:</p>
+<ul>
+<li>97% of value bridged in is 4 tokens - USDT, USDC, WBTC, WETH - with a long tail of other tokens.</li>
+<li>The top single destination for bridged funds is depositing on Aave.</li>
+<li>There is a mix of Ethereum-based protocols used (Aave, Curve, Balancer, Sushi) and protocols that are based in other chains like Polygon &amp; BSC (Quickswap, Iron Finance).  The former indicates users bridging to Polygon for the lower fee environment, but the latter indicates there may be pull due to some unique opportunities on the ecosystem.</li>
+<li>We saw 11% of funds bridged in immediately bridged out in the next transaction.  It's possible that Polygon is being used as an intermediate step to bridge to other ecosystems.</li>
+<li>We looked at the most popular destinations and use cases by day - Defi usage (depositing, yield seeking) is consistently the most common use case, driven by Aave.</li>
+</ul>
+
+</div>
+</div>
+</div>
+</div>
+
+
+
+  </div><a class="u-url" href="/analytics/polygon/2021/09/14/_09_15_Polygon_Bridge.html" hidden></a>
+</article>
+      </div>
+    </main><footer class="site-footer h-card">
+  <data class="u-url" href="/analytics/"></data>
+
+  <div class="wrapper">
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col">
+        <p class="feed-subscribe">
+          <a href="/analytics/feed.xml">
+            <svg class="svg-icon orange">
+              <use xlink:href="/analytics/assets/minima-social-icons.svg#rss"></use>
+            </svg><span>Subscribe</span>
+          </a>
+        </p>
+      </div>
+      <div class="footer-col">
+        <p>On-chain analysis by @scottincrypto</p>
+      </div>
+    </div>
+
+    <div class="social-links"><ul class="social-media-list"><li><a rel="me" href="https://github.com/scottincrypto" title="scottincrypto"><svg class="svg-icon grey"><use xlink:href="/analytics/assets/minima-social-icons.svg#github"></use></svg></a></li><li><a rel="me" href="https://twitter.com/scottincrypto" title="scottincrypto"><svg class="svg-icon grey"><use xlink:href="/analytics/assets/minima-social-icons.svg#twitter"></use></svg></a></li></ul>
+</div>
+
+  </div>
+
+</footer>
+</body>
+
+</html>
