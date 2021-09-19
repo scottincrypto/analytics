@@ -1,0 +1,596 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="twitter:card" content="summary_large_image" /><!-- Begin Jekyll SEO tag v2.6.1 -->
+<title>Terra Validator Churn | @scottincrypto</title>
+<meta name="generator" content="Jekyll v4.1.1" />
+<meta property="og:title" content="Terra Validator Churn" />
+<meta name="author" content="Scott Simpson" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Validator Uptime Insights" />
+<meta property="og:description" content="Validator Uptime Insights" />
+<link rel="canonical" href="https://scottincrypto.github.io/analytics/terra/validators/2021/09/18/_09_12_Terra_Validator_Churn.html" />
+<meta property="og:url" content="https://scottincrypto.github.io/analytics/terra/validators/2021/09/18/_09_12_Terra_Validator_Churn.html" />
+<meta property="og:site_name" content="@scottincrypto" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2021-09-18T00:00:00-05:00" />
+<script type="application/ld+json">
+{"url":"https://scottincrypto.github.io/analytics/terra/validators/2021/09/18/_09_12_Terra_Validator_Churn.html","@type":"BlogPosting","headline":"Terra Validator Churn","dateModified":"2021-09-18T00:00:00-05:00","datePublished":"2021-09-18T00:00:00-05:00","author":{"@type":"Person","name":"Scott Simpson"},"mainEntityOfPage":{"@type":"WebPage","@id":"https://scottincrypto.github.io/analytics/terra/validators/2021/09/18/_09_12_Terra_Validator_Churn.html"},"description":"Validator Uptime Insights","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link rel="stylesheet" href="/analytics/assets/css/style.css"><link type="application/atom+xml" rel="alternate" href="https://scottincrypto.github.io/analytics/feed.xml" title="@scottincrypto" /><link rel="shortcut icon" type="image/x-icon" href="/analytics/images/favicon.ico"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Primer/15.2.0/primer.css" integrity="sha512-xTz2ys4coGAOz8vuV1NcQBkgVmKhsSEtjbqyMJbBHRplFuvKIUo6xhLHpAyPt9mfR6twHJgn9OgVLuqOvjeBhg==" crossorigin="anonymous" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" integrity="sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog==" crossorigin="anonymous" />
+
+<script>
+function wrap_img(fn) {
+    if (document.attachEvent ? document.readyState === "complete" : document.readyState !== "loading") {
+        var elements = document.querySelectorAll(".post img");
+        Array.prototype.forEach.call(elements, function(el, i) {
+            if (el.getAttribute("title") && (el.className != "emoji")) {
+                const caption = document.createElement('figcaption');
+                var node = document.createTextNode(el.getAttribute("title"));
+                caption.appendChild(node);
+                const wrapper = document.createElement('figure');
+                wrapper.className = 'image';
+                el.parentNode.insertBefore(wrapper, el);
+                el.parentNode.removeChild(el);
+                wrapper.appendChild(el);
+                wrapper.appendChild(caption);
+            }
+        });
+    } else { document.addEventListener('DOMContentLoaded', fn); }
+}
+window.onload = wrap_img;
+</script>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function(){
+    // add link icon to anchor tags
+    var elem = document.querySelectorAll(".anchor-link")
+    elem.forEach(e => (e.innerHTML = '<i class="fas fa-link fa-xs"></i>'));
+    });
+</script>
+</head>
+<body><header class="site-header">
+
+  <div class="wrapper"><a class="site-title" rel="author" href="/analytics/">@scottincrypto</a><nav class="site-nav">
+        <input type="checkbox" id="nav-trigger" class="nav-trigger" />
+        <label for="nav-trigger">
+          <span class="menu-icon">
+            <svg viewBox="0 0 18 15" width="18px" height="15px">
+              <path d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.032C17.335,0,18,0.665,18,1.484L18,1.484z M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.032C17.335,6.031,18,6.696,18,7.516L18,7.516z M18,13.516C18,14.335,17.335,15,16.516,15H1.484 C0.665,15,0,14.335,0,13.516l0,0c0-0.82,0.665-1.483,1.484-1.483h15.032C17.335,12.031,18,12.695,18,13.516L18,13.516z"/>
+            </svg>
+          </span>
+        </label>
+
+        <div class="trigger"><a class="page-link" href="/analytics/about/">About Me</a><a class="page-link" href="/analytics/search/">Search</a><a class="page-link" href="/analytics/categories/">Tags</a></div>
+      </nav></div>
+</header>
+<main class="page-content" aria-label="Content">
+      <div class="wrapper">
+        <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
+
+  <header class="post-header">
+    <h1 class="post-title p-name" itemprop="name headline">Terra Validator Churn</h1><p class="page-description">Validator Uptime Insights</p><p class="post-meta post-meta-title"><time class="dt-published" datetime="2021-09-18T00:00:00-05:00" itemprop="datePublished">
+        Sep 18, 2021
+      </time>• 
+          <span itemprop="author" itemscope itemtype="http://schema.org/Person">
+            <span class="p-author h-card" itemprop="name">Scott Simpson</span></span>
+       • <span class="read-time" title="Estimated read time">
+    
+    
+      3 min read
+    
+</span></p>
+
+    
+      <p class="category-tags"><i class="fas fa-tags category-tags-icon"></i></i> 
+      
+        <a class="category-tags-link" href="/analytics/categories/#terra">terra</a>
+        &nbsp;
+      
+        <a class="category-tags-link" href="/analytics/categories/#validators">validators</a>
+        
+      
+      </p>
+    
+
+    
+      
+        <div class="pb-5 d-flex flex-wrap flex-justify-end">
+          <div class="px-2">
+
+    <a href="https://github.com/scottincrypto/analytics/tree/master/_notebooks/2021_09_12_Terra_Validator_Churn.ipynb" role="button" target="_blank">
+<img class="notebook-badge-image" src="/analytics/assets/badges/github.svg" alt="View On GitHub">
+    </a>
+</div>
+
+          
+          <div class="px-2">
+    <a href="https://colab.research.google.com/github/scottincrypto/analytics/blob/master/_notebooks/2021_09_12_Terra_Validator_Churn.ipynb" target="_blank">
+        <img class="notebook-badge-image" src="/analytics/assets/badges/colab.svg" alt="Open In Colab"/>
+    </a>
+</div>
+        </div>
+      </header>
+
+  <div class="post-content e-content" itemprop="articleBody">
+    <ul class="section-nav">
+<li class="toc-entry toc-h1"><a href="#Introduction">Introduction </a></li>
+<li class="toc-entry toc-h1"><a href="#How-often-do-Validators-go-down?">How often do Validators go down? </a></li>
+<li class="toc-entry toc-h1"><a href="#Change-in-MTBF-Over-Time">Change in MTBF Over Time </a></li>
+<li class="toc-entry toc-h1"><a href="#High-Performing-Validators">High Performing Validators </a></li>
+<li class="toc-entry toc-h1"><a href="#Low-Performing-Validators">Low Performing Validators </a></li>
+<li class="toc-entry toc-h1"><a href="#Conclusions">Conclusions </a>
+<ul>
+<li class="toc-entry toc-h2"><a href="#References">References </a></li>
+</ul>
+</li>
+</ul><body>
+<!--
+#################################################
+### THIS FILE WAS AUTOGENERATED! DO NOT EDIT! ###
+#################################################
+# file to edit: _notebooks/2021_09_12_Terra_Validator_Churn.ipynb
+-->
+
+<div class="container" id="notebook-container">
+        
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Introduction">
+<a class="anchor" href="#Introduction" aria-hidden="true"><span class="octicon octicon-link"></span></a>Introduction<a class="anchor-link" href="#Introduction"> </a>
+</h1>
+<p>The Terra network operates a set of proof of stake validator nodes to provide security for the network.  Validators are judged on their uptime and on the quality of their validation - any deviations from expectations can result in slashing and loss of funds for the validator operator.  This post explores some uptime &amp; downtime insights of the Terra validator nodes.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="How-often-do-Validators-go-down?">
+<a class="anchor" href="#How-often-do-Validators-go-down?" aria-hidden="true"><span class="octicon octicon-link"></span></a>How often do Validators go down?<a class="anchor-link" href="#How-often-do-Validators-go-down?"> </a>
+</h1>
+<p>How often do validators that have been online at least once in the past 6 months turn off? It turns out, that on average, it happens pretty often - once every 1.6 hours for each validator (see table below).  This simple statistic doesn't really tell the story though - there are some very reliable validators and some rather unreliable ones making up this average.</p>
+<p>We took a dataset of all validators who collected rewards over the last 6 months, and looked for the <em>liveness</em> events recorded on chain.  These events are collected by the protocol and used in slashing calculations for nodes that haven't met their validation requirements.  These events keep a record of how many blocks a validator missed validating.</p>
+<p>Taking these liveness events and looking at how many, on average, each validator has had over this time (adjusting for how long the validator has been running), we can calculate an average time between downtime events for each validator.  Another name for this metric is Mean Time Between Failure (MTBF) - a common metric in Asset Management.  We can plot the MTBF for each validator and see what the distribution looks like below.</p>
+
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+
+<div class="output_html rendered_html output_subarea output_execute_result">
+<div>
+<style scoped="">
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>MTBF</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>1</th>
+      <td>1.6</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+    
+
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+
+<div class="output_html rendered_html output_subarea ">
+
+<meta charset="utf-8">
+
+    <div>
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-AMS-MML_SVG"></script><script type="text/javascript">if (window.MathJax) {MathJax.Hub.Config({SVG: {font: "STIX-Web"}});}</script>
+                <script type="text/javascript">window.PlotlyConfig = {MathJaxConfig: 'local'};</script>
+        <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>    
+            <div id="bc92ffb2-abc3-4427-98e7-17a91c7fe658" class="plotly-graph-div" style="height:494.4375772558714px; width:800px;"></div>
+            <script type="text/javascript">
+                
+                    window.PLOTLYENV=window.PLOTLYENV || {};
+                    
+                if (document.getElementById("bc92ffb2-abc3-4427-98e7-17a91c7fe658")) {
+                    Plotly.newPlot(
+                        'bc92ffb2-abc3-4427-98e7-17a91c7fe658',
+                        [{"alignmentgroup": "True", "bingroup": "x", "hoverlabel": {"namelength": 0}, "hovertemplate": "MTBF=%{x}<br>count=%{y}", "legendgroup": "", "marker": {"color": "#1F77B4"}, "name": "", "offsetgroup": "", "orientation": "v", "showlegend": false, "type": "histogram", "x": [1.3497802484246793, 0.8222214605910259, 1.2994638719953664, 3.2321825860948667, 9.384424603174605, 7.800802951388889, 6.209594389165285, 0.29012749238080476, 37.3399609375, 7.448911290322581, 0.9439715629677145, 19.029978448275862, 2.866853896103896, 20.630630841121498, 0.3506715647339158, 7.897951699463328, 1.0799792074363992, 1.3000456419316844, 4.3454281496063, 11.177101265822785, 43.71242574257426, 7.407642617449665, 7.075248397435898, 39.0703982300885, 91.97822916666668, 28.85591503267974, 0.4041148741418764, 5.218622931442081, 18.472615062761506, 11.58780839895013, 1.8086665301106104, 0.6651031937330522, 1.718550019462826, 8.298787593984963, 5.847622516556291, 65.89485074626866, 0.4878403314917127, 19.798004484304933, 44.59550505050505, 1.8597114574557707, 14.38096091205212, 1.332213337356669, 3.7007166806370497, 1.9941079494128275, 1.4255586051017113, 3.2155535324107793, 19.449140969162993, 17.31354901960784, 16.980596153846154, 1.8472615062761508, 17.5196626984127, 2.4432512451577195, 6.855520186335403, 11.291445012787724, 0.5549912005028284, 0.4772924324324324, 2.3571569674319273, 1.9709620535714287, 0.4078480369515012, 1.2308210203512686, 2.7679968652037616, 7.0190063593004774, 12.162410468319559, 0.4805654729509089, 2.247940427698574, 12.332276536312849, 1.109006531022356, 9.49452688172043, 6.352453237410072, 1.3770913911416094, 1.3246189618961894, 2.084492445703494, 1.401573015873016, 93.93521276595744, 19.709620535714286, 0.6951590300740041, 8.145673431734318, 35.8939430894309, 0.3055332179930796, 2.049069173630455, 26.438172425474253, 1.5739691198224852, 6.079725819344524, 15.169996980676329, 7.256038267288266, 71.6901903292181, 5.518239118895965, 1.1239765512265512, 8.03826873385013, 15.321235294117647, 6.83250919117647, 1.8795549857549858, 16.40645409494001, 4.850431207380665, 3.431010826210826, 1.5624520414226297, 0.3064067947551917, 0.5039299350897289, 0.17608384896567214, 0.23979505243517982, 29.841679292929296, 3.704970238095238, 22.065509259259258, 21.412683438155135, 3.789835426179604, 0.20749924035247647, 3.73875, 3.7938492063492064, 16.202222222222222, 0.6579575163398693, 25.086425925925926, 9.92646002710027, 3.5571800479016975, 8.379344252459804, 1.3235891856742696, 33.40061868686869, 4.053304704425874, 0.034440097897608726, 9.471527777777776, 6.162187608168916, 7.983321513002364, 1.0630098328416913, 15.907872069317024, 15.620718218218219, 4.2100331978319785, 3.365140877073393, 3.8889907407407405, 2.851276512940261, 10.891756756756758], "xaxis": "x", "yaxis": "y"}],
+                        {"barmode": "relative", "height": 494.4375772558714, "legend": {"tracegroupgap": 0}, "showlegend": false, "template": {"data": {"bar": [{"error_x": {"color": "rgb(36,36,36)"}, "error_y": {"color": "rgb(36,36,36)"}, "marker": {"line": {"color": "white", "width": 0.5}}, "type": "bar"}], "barpolar": [{"marker": {"line": {"color": "white", "width": 0.5}}, "type": "barpolar"}], "carpet": [{"aaxis": {"endlinecolor": "rgb(36,36,36)", "gridcolor": "white", "linecolor": "white", "minorgridcolor": "white", "startlinecolor": "rgb(36,36,36)"}, "baxis": {"endlinecolor": "rgb(36,36,36)", "gridcolor": "white", "linecolor": "white", "minorgridcolor": "white", "startlinecolor": "rgb(36,36,36)"}, "type": "carpet"}], "choropleth": [{"colorbar": {"outlinewidth": 10, "tickcolor": "rgb(36,36,36)", "ticklen": 8, "ticks": "outside", "tickwidth": 2}, "type": "choropleth"}], "contour": [{"colorbar": {"outlinewidth": 10, "tickcolor": "rgb(36,36,36)", "ticklen": 8, "ticks": "outside", "tickwidth": 2}, "colorscale": [[0.0, "#440154"], [0.1111111111111111, "#482878"], [0.2222222222222222, "#3e4989"], [0.3333333333333333, "#31688e"], [0.4444444444444444, "#26828e"], [0.5555555555555556, "#1f9e89"], [0.6666666666666666, "#35b779"], [0.7777777777777778, "#6ece58"], [0.8888888888888888, "#b5de2b"], [1.0, "#fde725"]], "type": "contour"}], "contourcarpet": [{"colorbar": {"outlinewidth": 10, "tickcolor": "rgb(36,36,36)", "ticklen": 8, "ticks": "outside", "tickwidth": 2}, "type": "contourcarpet"}], "heatmap": [{"colorbar": {"outlinewidth": 10, "tickcolor": "rgb(36,36,36)", "ticklen": 8, "ticks": "outside", "tickwidth": 2}, "colorscale": [[0.0, "#440154"], [0.1111111111111111, "#482878"], [0.2222222222222222, "#3e4989"], [0.3333333333333333, "#31688e"], [0.4444444444444444, "#26828e"], [0.5555555555555556, "#1f9e89"], [0.6666666666666666, "#35b779"], [0.7777777777777778, "#6ece58"], [0.8888888888888888, "#b5de2b"], [1.0, "#fde725"]], "type": "heatmap"}], "heatmapgl": [{"colorbar": {"outlinewidth": 10, "tickcolor": "rgb(36,36,36)", "ticklen": 8, "ticks": "outside", "tickwidth": 2}, "colorscale": [[0.0, "#440154"], [0.1111111111111111, "#482878"], [0.2222222222222222, "#3e4989"], [0.3333333333333333, "#31688e"], [0.4444444444444444, "#26828e"], [0.5555555555555556, "#1f9e89"], [0.6666666666666666, "#35b779"], [0.7777777777777778, "#6ece58"], [0.8888888888888888, "#b5de2b"], [1.0, "#fde725"]], "type": "heatmapgl"}], "histogram": [{"marker": {"line": {"color": "white", "width": 0.6}}, "type": "histogram"}], "histogram2d": [{"colorbar": {"outlinewidth": 10, "tickcolor": "rgb(36,36,36)", "ticklen": 8, "ticks": "outside", "tickwidth": 2}, "colorscale": [[0.0, "#440154"], [0.1111111111111111, "#482878"], [0.2222222222222222, "#3e4989"], [0.3333333333333333, "#31688e"], [0.4444444444444444, "#26828e"], [0.5555555555555556, "#1f9e89"], [0.6666666666666666, "#35b779"], [0.7777777777777778, "#6ece58"], [0.8888888888888888, "#b5de2b"], [1.0, "#fde725"]], "type": "histogram2d"}], "histogram2dcontour": [{"colorbar": {"outlinewidth": 10, "tickcolor": "rgb(36,36,36)", "ticklen": 8, "ticks": "outside", "tickwidth": 2}, "colorscale": [[0.0, "#440154"], [0.1111111111111111, "#482878"], [0.2222222222222222, "#3e4989"], [0.3333333333333333, "#31688e"], [0.4444444444444444, "#26828e"], [0.5555555555555556, "#1f9e89"], [0.6666666666666666, "#35b779"], [0.7777777777777778, "#6ece58"], [0.8888888888888888, "#b5de2b"], [1.0, "#fde725"]], "type": "histogram2dcontour"}], "mesh3d": [{"colorbar": {"outlinewidth": 10, "tickcolor": "rgb(36,36,36)", "ticklen": 8, "ticks": "outside", "tickwidth": 2}, "type": "mesh3d"}], "parcoords": [{"line": {"colorbar": {"outlinewidth": 10, "tickcolor": "rgb(36,36,36)", "ticklen": 8, "ticks": "outside", "tickwidth": 2}}, "type": "parcoords"}], "pie": [{"automargin": true, "type": "pie"}], "scatter": [{"marker": {"colorbar": {"outlinewidth": 10, "tickcolor": "rgb(36,36,36)", "ticklen": 8, "ticks": "outside", "tickwidth": 2}}, "type": "scatter"}], "scatter3d": [{"line": {"colorbar": {"outlinewidth": 10, "tickcolor": "rgb(36,36,36)", "ticklen": 8, "ticks": "outside", "tickwidth": 2}}, "marker": {"colorbar": {"outlinewidth": 10, "tickcolor": "rgb(36,36,36)", "ticklen": 8, "ticks": "outside", "tickwidth": 2}}, "type": "scatter3d"}], "scattercarpet": [{"marker": {"colorbar": {"outlinewidth": 10, "tickcolor": "rgb(36,36,36)", "ticklen": 8, "ticks": "outside", "tickwidth": 2}}, "type": "scattercarpet"}], "scattergeo": [{"marker": {"colorbar": {"outlinewidth": 10, "tickcolor": "rgb(36,36,36)", "ticklen": 8, "ticks": "outside", "tickwidth": 2}}, "type": "scattergeo"}], "scattergl": [{"marker": {"colorbar": {"outlinewidth": 10, "tickcolor": "rgb(36,36,36)", "ticklen": 8, "ticks": "outside", "tickwidth": 2}}, "type": "scattergl"}], "scattermapbox": [{"marker": {"colorbar": {"outlinewidth": 10, "tickcolor": "rgb(36,36,36)", "ticklen": 8, "ticks": "outside", "tickwidth": 2}}, "type": "scattermapbox"}], "scatterpolar": [{"marker": {"colorbar": {"outlinewidth": 10, "tickcolor": "rgb(36,36,36)", "ticklen": 8, "ticks": "outside", "tickwidth": 2}}, "type": "scatterpolar"}], "scatterpolargl": [{"marker": {"colorbar": {"outlinewidth": 10, "tickcolor": "rgb(36,36,36)", "ticklen": 8, "ticks": "outside", "tickwidth": 2}}, "type": "scatterpolargl"}], "scatterternary": [{"marker": {"colorbar": {"outlinewidth": 10, "tickcolor": "rgb(36,36,36)", "ticklen": 8, "ticks": "outside", "tickwidth": 2}}, "type": "scatterternary"}], "surface": [{"colorbar": {"outlinewidth": 10, "tickcolor": "rgb(36,36,36)", "ticklen": 8, "ticks": "outside", "tickwidth": 2}, "colorscale": [[0.0, "#440154"], [0.1111111111111111, "#482878"], [0.2222222222222222, "#3e4989"], [0.3333333333333333, "#31688e"], [0.4444444444444444, "#26828e"], [0.5555555555555556, "#1f9e89"], [0.6666666666666666, "#35b779"], [0.7777777777777778, "#6ece58"], [0.8888888888888888, "#b5de2b"], [1.0, "#fde725"]], "type": "surface"}], "table": [{"cells": {"fill": {"color": "rgb(237,237,237)"}, "line": {"color": "white"}}, "header": {"fill": {"color": "rgb(217,217,217)"}, "line": {"color": "white"}}, "type": "table"}]}, "layout": {"annotationdefaults": {"arrowhead": 0, "arrowwidth": 1}, "coloraxis": {"colorbar": {"outlinewidth": 10, "tickcolor": "rgb(36,36,36)", "ticklen": 8, "ticks": "outside", "tickwidth": 2}}, "colorscale": {"diverging": [[0.0, "rgb(103,0,31)"], [0.1, "rgb(178,24,43)"], [0.2, "rgb(214,96,77)"], [0.3, "rgb(244,165,130)"], [0.4, "rgb(253,219,199)"], [0.5, "rgb(247,247,247)"], [0.6, "rgb(209,229,240)"], [0.7, "rgb(146,197,222)"], [0.8, "rgb(67,147,195)"], [0.9, "rgb(33,102,172)"], [1.0, "rgb(5,48,97)"]], "sequential": [[0.0, "#440154"], [0.1111111111111111, "#482878"], [0.2222222222222222, "#3e4989"], [0.3333333333333333, "#31688e"], [0.4444444444444444, "#26828e"], [0.5555555555555556, "#1f9e89"], [0.6666666666666666, "#35b779"], [0.7777777777777778, "#6ece58"], [0.8888888888888888, "#b5de2b"], [1.0, "#fde725"]], "sequentialminus": [[0.0, "#440154"], [0.1111111111111111, "#482878"], [0.2222222222222222, "#3e4989"], [0.3333333333333333, "#31688e"], [0.4444444444444444, "#26828e"], [0.5555555555555556, "#1f9e89"], [0.6666666666666666, "#35b779"], [0.7777777777777778, "#6ece58"], [0.8888888888888888, "#b5de2b"], [1.0, "#fde725"]]}, "colorway": ["#1F77B4", "#FF7F0E", "#2CA02C", "#D62728", "#9467BD", "#8C564B", "#E377C2", "#7F7F7F", "#BCBD22", "#17BECF"], "font": {"color": "rgb(36,36,36)"}, "geo": {"bgcolor": "white", "lakecolor": "white", "landcolor": "white", "showlakes": true, "showland": true, "subunitcolor": "white"}, "hoverlabel": {"align": "left"}, "hovermode": "closest", "mapbox": {"style": "light"}, "paper_bgcolor": "white", "plot_bgcolor": "white", "polar": {"angularaxis": {"gridcolor": "rgb(232,232,232)", "linecolor": "rgb(36,36,36)", "showgrid": false, "showline": true, "ticks": "outside"}, "bgcolor": "white", "radialaxis": {"gridcolor": "rgb(232,232,232)", "linecolor": "rgb(36,36,36)", "showgrid": false, "showline": true, "ticks": "outside"}}, "scene": {"xaxis": {"backgroundcolor": "white", "gridcolor": "rgb(232,232,232)", "gridwidth": 2, "linecolor": "rgb(36,36,36)", "showbackground": true, "showgrid": false, "showline": true, "ticks": "outside", "zeroline": false, "zerolinecolor": "rgb(36,36,36)"}, "yaxis": {"backgroundcolor": "white", "gridcolor": "rgb(232,232,232)", "gridwidth": 2, "linecolor": "rgb(36,36,36)", "showbackground": true, "showgrid": false, "showline": true, "ticks": "outside", "zeroline": false, "zerolinecolor": "rgb(36,36,36)"}, "zaxis": {"backgroundcolor": "white", "gridcolor": "rgb(232,232,232)", "gridwidth": 2, "linecolor": "rgb(36,36,36)", "showbackground": true, "showgrid": false, "showline": true, "ticks": "outside", "zeroline": false, "zerolinecolor": "rgb(36,36,36)"}}, "shapedefaults": {"fillcolor": "black", "line": {"width": 0}, "opacity": 0.3}, "ternary": {"aaxis": {"gridcolor": "rgb(232,232,232)", "linecolor": "rgb(36,36,36)", "showgrid": false, "showline": true, "ticks": "outside"}, "baxis": {"gridcolor": "rgb(232,232,232)", "linecolor": "rgb(36,36,36)", "showgrid": false, "showline": true, "ticks": "outside"}, "bgcolor": "white", "caxis": {"gridcolor": "rgb(232,232,232)", "linecolor": "rgb(36,36,36)", "showgrid": false, "showline": true, "ticks": "outside"}}, "title": {"x": 0.05}, "xaxis": {"automargin": true, "gridcolor": "rgb(232,232,232)", "linecolor": "rgb(36,36,36)", "showgrid": false, "showline": true, "ticks": "outside", "title": {"standoff": 15}, "zeroline": false, "zerolinecolor": "rgb(36,36,36)"}, "yaxis": {"automargin": true, "gridcolor": "rgb(232,232,232)", "linecolor": "rgb(36,36,36)", "showgrid": false, "showline": true, "ticks": "outside", "title": {"standoff": 15}, "zeroline": false, "zerolinecolor": "rgb(36,36,36)"}}}, "title": {"text": "Mean Time Between Failure for Last 6 Months"}, "width": 800, "xaxis": {"anchor": "y", "domain": [0.0, 1.0], "title": {"text": "Mean Time Between Failure (hours)"}}, "yaxis": {"anchor": "x", "domain": [0.0, 1.0], "title": {"text": "Number of Validators"}}},
+                        {"responsive": true}
+                    ).then(function(){
+                            
+var gd = document.getElementById('bc92ffb2-abc3-4427-98e7-17a91c7fe658');
+var x = new MutationObserver(function (mutations, observer) {{
+        var display = window.getComputedStyle(gd).display;
+        if (!display || display === 'none') {{
+            console.log([gd, 'removed!']);
+            Plotly.purge(gd);
+            observer.disconnect();
+        }}
+}});
+
+// Listen for the removal of the full notebook cells
+var notebookContainer = gd.closest('#notebook-container');
+if (notebookContainer) {{
+    x.observe(notebookContainer, {childList: true});
+}}
+
+// Listen for the clearing of the current output cell
+var outputEl = gd.closest('.output');
+if (outputEl) {{
+    x.observe(outputEl, {childList: true});
+}}
+
+                        })
+                };
+                
+            </script>
+        </div>
+
+
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+    
+
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>We see there is a large variation between validators, pointing towards the conclusion that there are a number of very professional outfits, and potentially some less skilled or resourced node operators on the network.  There are 4 validators who operate with an MTBF of greater than 60 hours (one downtime event every 2-3 days) and there are nearly 50 who operate at less than 2 hours between each downtime event.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Change-in-MTBF-Over-Time">
+<a class="anchor" href="#Change-in-MTBF-Over-Time" aria-hidden="true"><span class="octicon octicon-link"></span></a>Change in MTBF Over Time<a class="anchor-link" href="#Change-in-MTBF-Over-Time"> </a>
+</h1>
+<p>To see how the MTBF metric has changed over the last 6 months, we plot the MTBF (per validator) over time below.  We can see there has been a marked decrease in MTBF over the 6 months, with early weeks as high as 6 hours between downtime events, trending down to less than 1 hour per event per validator.  This indicates a decrease in the overall reliability of the validator nodes over this time period.</p>
+
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+
+<div class="output_html rendered_html output_subarea ">
+
+<meta charset="utf-8">
+
+    <div>
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-AMS-MML_SVG"></script><script type="text/javascript">if (window.MathJax) {MathJax.Hub.Config({SVG: {font: "STIX-Web"}});}</script>
+                <script type="text/javascript">window.PlotlyConfig = {MathJaxConfig: 'local'};</script>
+        <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>    
+            <div id="cd07938e-dbef-48c6-9768-67771b45edce" class="plotly-graph-div" style="height:494.4375772558714px; width:800px;"></div>
+            <script type="text/javascript">
+                
+                    window.PLOTLYENV=window.PLOTLYENV || {};
+                    
+                if (document.getElementById("cd07938e-dbef-48c6-9768-67771b45edce")) {
+                    Plotly.newPlot(
+                        'cd07938e-dbef-48c6-9768-67771b45edce',
+                        [{"alignmentgroup": "True", "hoverlabel": {"namelength": 0}, "hovertemplate": "Week=%{x}<br>MTBF=%{y}", "legendgroup": "", "marker": {"color": "#1F77B4"}, "name": "", "offsetgroup": "", "orientation": "v", "showlegend": false, "textposition": "auto", "type": "bar", "x": ["2021-03-14T00:00:00", "2021-03-21T00:00:00", "2021-03-28T00:00:00", "2021-04-04T00:00:00", "2021-04-11T00:00:00", "2021-04-18T00:00:00", "2021-04-25T00:00:00", "2021-05-02T00:00:00", "2021-05-09T00:00:00", "2021-05-16T00:00:00", "2021-05-23T00:00:00", "2021-05-30T00:00:00", "2021-06-06T00:00:00", "2021-06-13T00:00:00", "2021-06-20T00:00:00", "2021-06-27T00:00:00", "2021-07-04T00:00:00", "2021-07-11T00:00:00", "2021-07-18T00:00:00", "2021-07-25T00:00:00", "2021-08-01T00:00:00", "2021-08-08T00:00:00", "2021-08-15T00:00:00", "2021-08-22T00:00:00", "2021-08-29T00:00:00", "2021-09-05T00:00:00"], "xaxis": "x", "y": [1.3683420855213804, 6.131386861313869, 6.11703511053316, 3.6342182890855455, 1.9270966097374458, 2.9147759771210677, 2.9592660550458714, 1.3981981981981981, 2.271523178807947, 2.3128911138923653, 3.873311597578016, 3.8817005545286505, 1.9701294390972452, 2.0087160576600738, 1.6750369276218613, 1.819249063859933, 2.6477353400539543, 2.234349919743178, 1.7037630104083266, 1.4859182248428893, 1.3326838772528007, 0.9766436876221832, 1.0557223890557224, 1.0219762152682632, 0.7091572862792821, 0.8912037037037036], "yaxis": "y"}],
+                        {"barmode": "relative", "height": 494.4375772558714, "legend": {"tracegroupgap": 0}, "template": {"data": {"bar": [{"error_x": {"color": "rgb(36,36,36)"}, "error_y": {"color": "rgb(36,36,36)"}, "marker": {"line": {"color": "white", "width": 0.5}}, "type": "bar"}], "barpolar": [{"marker": {"line": {"color": "white", "width": 0.5}}, "type": "barpolar"}], "carpet": [{"aaxis": {"endlinecolor": "rgb(36,36,36)", "gridcolor": "white", "linecolor": "white", "minorgridcolor": "white", "startlinecolor": "rgb(36,36,36)"}, "baxis": {"endlinecolor": "rgb(36,36,36)", "gridcolor": "white", "linecolor": "white", "minorgridcolor": "white", "startlinecolor": "rgb(36,36,36)"}, "type": "carpet"}], "choropleth": [{"colorbar": {"outlinewidth": 10, "tickcolor": "rgb(36,36,36)", "ticklen": 8, "ticks": "outside", "tickwidth": 2}, "type": "choropleth"}], "contour": [{"colorbar": {"outlinewidth": 10, "tickcolor": "rgb(36,36,36)", "ticklen": 8, "ticks": "outside", "tickwidth": 2}, "colorscale": [[0.0, "#440154"], [0.1111111111111111, "#482878"], [0.2222222222222222, "#3e4989"], [0.3333333333333333, "#31688e"], [0.4444444444444444, "#26828e"], [0.5555555555555556, "#1f9e89"], [0.6666666666666666, "#35b779"], [0.7777777777777778, "#6ece58"], [0.8888888888888888, "#b5de2b"], [1.0, "#fde725"]], "type": "contour"}], "contourcarpet": [{"colorbar": {"outlinewidth": 10, "tickcolor": "rgb(36,36,36)", "ticklen": 8, "ticks": "outside", "tickwidth": 2}, "type": "contourcarpet"}], "heatmap": [{"colorbar": {"outlinewidth": 10, "tickcolor": "rgb(36,36,36)", "ticklen": 8, "ticks": "outside", "tickwidth": 2}, "colorscale": [[0.0, "#440154"], [0.1111111111111111, "#482878"], [0.2222222222222222, "#3e4989"], [0.3333333333333333, "#31688e"], [0.4444444444444444, "#26828e"], [0.5555555555555556, "#1f9e89"], [0.6666666666666666, "#35b779"], [0.7777777777777778, "#6ece58"], [0.8888888888888888, "#b5de2b"], [1.0, "#fde725"]], "type": "heatmap"}], "heatmapgl": [{"colorbar": {"outlinewidth": 10, "tickcolor": "rgb(36,36,36)", "ticklen": 8, "ticks": "outside", "tickwidth": 2}, "colorscale": [[0.0, "#440154"], [0.1111111111111111, "#482878"], [0.2222222222222222, "#3e4989"], [0.3333333333333333, "#31688e"], [0.4444444444444444, "#26828e"], [0.5555555555555556, "#1f9e89"], [0.6666666666666666, "#35b779"], [0.7777777777777778, "#6ece58"], [0.8888888888888888, "#b5de2b"], [1.0, "#fde725"]], "type": "heatmapgl"}], "histogram": [{"marker": {"line": {"color": "white", "width": 0.6}}, "type": "histogram"}], "histogram2d": [{"colorbar": {"outlinewidth": 10, "tickcolor": "rgb(36,36,36)", "ticklen": 8, "ticks": "outside", "tickwidth": 2}, "colorscale": [[0.0, "#440154"], [0.1111111111111111, "#482878"], [0.2222222222222222, "#3e4989"], [0.3333333333333333, "#31688e"], [0.4444444444444444, "#26828e"], [0.5555555555555556, "#1f9e89"], [0.6666666666666666, "#35b779"], [0.7777777777777778, "#6ece58"], [0.8888888888888888, "#b5de2b"], [1.0, "#fde725"]], "type": "histogram2d"}], "histogram2dcontour": [{"colorbar": {"outlinewidth": 10, "tickcolor": "rgb(36,36,36)", "ticklen": 8, "ticks": "outside", "tickwidth": 2}, "colorscale": [[0.0, "#440154"], [0.1111111111111111, "#482878"], [0.2222222222222222, "#3e4989"], [0.3333333333333333, "#31688e"], [0.4444444444444444, "#26828e"], [0.5555555555555556, "#1f9e89"], [0.6666666666666666, "#35b779"], [0.7777777777777778, "#6ece58"], [0.8888888888888888, "#b5de2b"], [1.0, "#fde725"]], "type": "histogram2dcontour"}], "mesh3d": [{"colorbar": {"outlinewidth": 10, "tickcolor": "rgb(36,36,36)", "ticklen": 8, "ticks": "outside", "tickwidth": 2}, "type": "mesh3d"}], "parcoords": [{"line": {"colorbar": {"outlinewidth": 10, "tickcolor": "rgb(36,36,36)", "ticklen": 8, "ticks": "outside", "tickwidth": 2}}, "type": "parcoords"}], "pie": [{"automargin": true, "type": "pie"}], "scatter": [{"marker": {"colorbar": {"outlinewidth": 10, "tickcolor": "rgb(36,36,36)", "ticklen": 8, "ticks": "outside", "tickwidth": 2}}, "type": "scatter"}], "scatter3d": [{"line": {"colorbar": {"outlinewidth": 10, "tickcolor": "rgb(36,36,36)", "ticklen": 8, "ticks": "outside", "tickwidth": 2}}, "marker": {"colorbar": {"outlinewidth": 10, "tickcolor": "rgb(36,36,36)", "ticklen": 8, "ticks": "outside", "tickwidth": 2}}, "type": "scatter3d"}], "scattercarpet": [{"marker": {"colorbar": {"outlinewidth": 10, "tickcolor": "rgb(36,36,36)", "ticklen": 8, "ticks": "outside", "tickwidth": 2}}, "type": "scattercarpet"}], "scattergeo": [{"marker": {"colorbar": {"outlinewidth": 10, "tickcolor": "rgb(36,36,36)", "ticklen": 8, "ticks": "outside", "tickwidth": 2}}, "type": "scattergeo"}], "scattergl": [{"marker": {"colorbar": {"outlinewidth": 10, "tickcolor": "rgb(36,36,36)", "ticklen": 8, "ticks": "outside", "tickwidth": 2}}, "type": "scattergl"}], "scattermapbox": [{"marker": {"colorbar": {"outlinewidth": 10, "tickcolor": "rgb(36,36,36)", "ticklen": 8, "ticks": "outside", "tickwidth": 2}}, "type": "scattermapbox"}], "scatterpolar": [{"marker": {"colorbar": {"outlinewidth": 10, "tickcolor": "rgb(36,36,36)", "ticklen": 8, "ticks": "outside", "tickwidth": 2}}, "type": "scatterpolar"}], "scatterpolargl": [{"marker": {"colorbar": {"outlinewidth": 10, "tickcolor": "rgb(36,36,36)", "ticklen": 8, "ticks": "outside", "tickwidth": 2}}, "type": "scatterpolargl"}], "scatterternary": [{"marker": {"colorbar": {"outlinewidth": 10, "tickcolor": "rgb(36,36,36)", "ticklen": 8, "ticks": "outside", "tickwidth": 2}}, "type": "scatterternary"}], "surface": [{"colorbar": {"outlinewidth": 10, "tickcolor": "rgb(36,36,36)", "ticklen": 8, "ticks": "outside", "tickwidth": 2}, "colorscale": [[0.0, "#440154"], [0.1111111111111111, "#482878"], [0.2222222222222222, "#3e4989"], [0.3333333333333333, "#31688e"], [0.4444444444444444, "#26828e"], [0.5555555555555556, "#1f9e89"], [0.6666666666666666, "#35b779"], [0.7777777777777778, "#6ece58"], [0.8888888888888888, "#b5de2b"], [1.0, "#fde725"]], "type": "surface"}], "table": [{"cells": {"fill": {"color": "rgb(237,237,237)"}, "line": {"color": "white"}}, "header": {"fill": {"color": "rgb(217,217,217)"}, "line": {"color": "white"}}, "type": "table"}]}, "layout": {"annotationdefaults": {"arrowhead": 0, "arrowwidth": 1}, "coloraxis": {"colorbar": {"outlinewidth": 10, "tickcolor": "rgb(36,36,36)", "ticklen": 8, "ticks": "outside", "tickwidth": 2}}, "colorscale": {"diverging": [[0.0, "rgb(103,0,31)"], [0.1, "rgb(178,24,43)"], [0.2, "rgb(214,96,77)"], [0.3, "rgb(244,165,130)"], [0.4, "rgb(253,219,199)"], [0.5, "rgb(247,247,247)"], [0.6, "rgb(209,229,240)"], [0.7, "rgb(146,197,222)"], [0.8, "rgb(67,147,195)"], [0.9, "rgb(33,102,172)"], [1.0, "rgb(5,48,97)"]], "sequential": [[0.0, "#440154"], [0.1111111111111111, "#482878"], [0.2222222222222222, "#3e4989"], [0.3333333333333333, "#31688e"], [0.4444444444444444, "#26828e"], [0.5555555555555556, "#1f9e89"], [0.6666666666666666, "#35b779"], [0.7777777777777778, "#6ece58"], [0.8888888888888888, "#b5de2b"], [1.0, "#fde725"]], "sequentialminus": [[0.0, "#440154"], [0.1111111111111111, "#482878"], [0.2222222222222222, "#3e4989"], [0.3333333333333333, "#31688e"], [0.4444444444444444, "#26828e"], [0.5555555555555556, "#1f9e89"], [0.6666666666666666, "#35b779"], [0.7777777777777778, "#6ece58"], [0.8888888888888888, "#b5de2b"], [1.0, "#fde725"]]}, "colorway": ["#1F77B4", "#FF7F0E", "#2CA02C", "#D62728", "#9467BD", "#8C564B", "#E377C2", "#7F7F7F", "#BCBD22", "#17BECF"], "font": {"color": "rgb(36,36,36)"}, "geo": {"bgcolor": "white", "lakecolor": "white", "landcolor": "white", "showlakes": true, "showland": true, "subunitcolor": "white"}, "hoverlabel": {"align": "left"}, "hovermode": "closest", "mapbox": {"style": "light"}, "paper_bgcolor": "white", "plot_bgcolor": "white", "polar": {"angularaxis": {"gridcolor": "rgb(232,232,232)", "linecolor": "rgb(36,36,36)", "showgrid": false, "showline": true, "ticks": "outside"}, "bgcolor": "white", "radialaxis": {"gridcolor": "rgb(232,232,232)", "linecolor": "rgb(36,36,36)", "showgrid": false, "showline": true, "ticks": "outside"}}, "scene": {"xaxis": {"backgroundcolor": "white", "gridcolor": "rgb(232,232,232)", "gridwidth": 2, "linecolor": "rgb(36,36,36)", "showbackground": true, "showgrid": false, "showline": true, "ticks": "outside", "zeroline": false, "zerolinecolor": "rgb(36,36,36)"}, "yaxis": {"backgroundcolor": "white", "gridcolor": "rgb(232,232,232)", "gridwidth": 2, "linecolor": "rgb(36,36,36)", "showbackground": true, "showgrid": false, "showline": true, "ticks": "outside", "zeroline": false, "zerolinecolor": "rgb(36,36,36)"}, "zaxis": {"backgroundcolor": "white", "gridcolor": "rgb(232,232,232)", "gridwidth": 2, "linecolor": "rgb(36,36,36)", "showbackground": true, "showgrid": false, "showline": true, "ticks": "outside", "zeroline": false, "zerolinecolor": "rgb(36,36,36)"}}, "shapedefaults": {"fillcolor": "black", "line": {"width": 0}, "opacity": 0.3}, "ternary": {"aaxis": {"gridcolor": "rgb(232,232,232)", "linecolor": "rgb(36,36,36)", "showgrid": false, "showline": true, "ticks": "outside"}, "baxis": {"gridcolor": "rgb(232,232,232)", "linecolor": "rgb(36,36,36)", "showgrid": false, "showline": true, "ticks": "outside"}, "bgcolor": "white", "caxis": {"gridcolor": "rgb(232,232,232)", "linecolor": "rgb(36,36,36)", "showgrid": false, "showline": true, "ticks": "outside"}}, "title": {"x": 0.05}, "xaxis": {"automargin": true, "gridcolor": "rgb(232,232,232)", "linecolor": "rgb(36,36,36)", "showgrid": false, "showline": true, "ticks": "outside", "title": {"standoff": 15}, "zeroline": false, "zerolinecolor": "rgb(36,36,36)"}, "yaxis": {"automargin": true, "gridcolor": "rgb(232,232,232)", "linecolor": "rgb(36,36,36)", "showgrid": false, "showline": true, "ticks": "outside", "title": {"standoff": 15}, "zeroline": false, "zerolinecolor": "rgb(36,36,36)"}}}, "title": {"text": "Mean Time Between Failure over Time"}, "width": 800, "xaxis": {"anchor": "y", "domain": [0.0, 1.0], "title": {"text": "Week"}}, "yaxis": {"anchor": "x", "domain": [0.0, 1.0], "title": {"text": "Mean Time Between Failure (hours)"}}},
+                        {"responsive": true}
+                    ).then(function(){
+                            
+var gd = document.getElementById('cd07938e-dbef-48c6-9768-67771b45edce');
+var x = new MutationObserver(function (mutations, observer) {{
+        var display = window.getComputedStyle(gd).display;
+        if (!display || display === 'none') {{
+            console.log([gd, 'removed!']);
+            Plotly.purge(gd);
+            observer.disconnect();
+        }}
+}});
+
+// Listen for the removal of the full notebook cells
+var notebookContainer = gd.closest('#notebook-container');
+if (notebookContainer) {{
+    x.observe(notebookContainer, {childList: true});
+}}
+
+// Listen for the clearing of the current output cell
+var outputEl = gd.closest('.output');
+if (outputEl) {{
+    x.observe(outputEl, {childList: true});
+}}
+
+                        })
+                };
+                
+            </script>
+        </div>
+
+
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+    
+
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="High-Performing-Validators">
+<a class="anchor" href="#High-Performing-Validators" aria-hidden="true"><span class="octicon octicon-link"></span></a>High Performing Validators<a class="anchor-link" href="#High-Performing-Validators"> </a>
+</h1>
+<p>We saw earlier that there was a distinct difference between the best and worst performing validators.  The graph below segments the data to just look at the top 10 best performing validators (by number of downtime events relative to their operating time) over the last 6 months.  Here we also see a downward trend. Earlier, MTBF ranged in the hundreds of hours between failures.  This has trended down to around 30 hours between dowtime events.  Notice that this is more than an order of magnitude better than the current average of around 1 hour.</p>
+
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+
+<div class="output_html rendered_html output_subarea ">
+
+<meta charset="utf-8">
+
+    <div>
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-AMS-MML_SVG"></script><script type="text/javascript">if (window.MathJax) {MathJax.Hub.Config({SVG: {font: "STIX-Web"}});}</script>
+                <script type="text/javascript">window.PlotlyConfig = {MathJaxConfig: 'local'};</script>
+        <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>    
+            <div id="96be222f-02c6-44bb-a3c5-4af62bc2320d" class="plotly-graph-div" style="height:494.4375772558714px; width:800px;"></div>
+            <script type="text/javascript">
+                
+                    window.PLOTLYENV=window.PLOTLYENV || {};
+                    
+                if (document.getElementById("96be222f-02c6-44bb-a3c5-4af62bc2320d")) {
+                    Plotly.newPlot(
+                        '96be222f-02c6-44bb-a3c5-4af62bc2320d',
+                        [{"alignmentgroup": "True", "hoverlabel": {"namelength": 0}, "hovertemplate": "Week=%{x}<br>MTBF=%{y}", "legendgroup": "", "marker": {"color": "#1F77B4"}, "name": "", "offsetgroup": "", "orientation": "v", "showlegend": false, "textposition": "auto", "type": "bar", "x": ["2021-03-14T00:00:00", "2021-03-21T00:00:00", "2021-03-28T00:00:00", "2021-04-04T00:00:00", "2021-04-11T00:00:00", "2021-04-18T00:00:00", "2021-04-25T00:00:00", "2021-05-02T00:00:00", "2021-05-09T00:00:00", "2021-05-16T00:00:00", "2021-05-23T00:00:00", "2021-05-30T00:00:00", "2021-06-06T00:00:00", "2021-06-13T00:00:00", "2021-06-20T00:00:00", "2021-06-27T00:00:00", "2021-07-04T00:00:00", "2021-07-11T00:00:00", "2021-07-18T00:00:00", "2021-07-25T00:00:00", "2021-08-01T00:00:00", "2021-08-08T00:00:00", "2021-08-15T00:00:00", "2021-08-22T00:00:00", "2021-08-29T00:00:00", "2021-09-05T00:00:00"], "xaxis": "x", "y": [7.859649122807017, 192.0, 44.8, 108.0, 116.3076923076923, 302.40000000000003, 504.0, 1512.0, 116.3076923076923, 378.0, 302.40000000000003, 108.0, 80.0, 210.0, 140.0, 88.42105263157896, 112.0, 50.90909090909091, 43.07692307692307, 54.19354838709677, 35.0, 17.872340425531913, 20.74074074074074, 25.846153846153847, 44.21052631578948, 32.94117647058823], "yaxis": "y"}],
+                        {"barmode": "relative", "height": 494.4375772558714, "legend": {"tracegroupgap": 0}, "template": {"data": {"bar": [{"error_x": {"color": "rgb(36,36,36)"}, "error_y": {"color": "rgb(36,36,36)"}, "marker": {"line": {"color": "white", "width": 0.5}}, "type": "bar"}], "barpolar": [{"marker": {"line": {"color": "white", "width": 0.5}}, "type": "barpolar"}], "carpet": [{"aaxis": {"endlinecolor": "rgb(36,36,36)", "gridcolor": "white", "linecolor": "white", "minorgridcolor": "white", "startlinecolor": "rgb(36,36,36)"}, "baxis": {"endlinecolor": "rgb(36,36,36)", "gridcolor": "white", "linecolor": "white", "minorgridcolor": "white", "startlinecolor": "rgb(36,36,36)"}, "type": "carpet"}], "choropleth": [{"colorbar": {"outlinewidth": 10, "tickcolor": "rgb(36,36,36)", "ticklen": 8, "ticks": "outside", "tickwidth": 2}, "type": "choropleth"}], "contour": [{"colorbar": {"outlinewidth": 10, "tickcolor": "rgb(36,36,36)", "ticklen": 8, "ticks": "outside", "tickwidth": 2}, "colorscale": [[0.0, "#440154"], [0.1111111111111111, "#482878"], [0.2222222222222222, "#3e4989"], [0.3333333333333333, "#31688e"], [0.4444444444444444, "#26828e"], [0.5555555555555556, "#1f9e89"], [0.6666666666666666, "#35b779"], [0.7777777777777778, "#6ece58"], [0.8888888888888888, "#b5de2b"], [1.0, "#fde725"]], "type": "contour"}], "contourcarpet": [{"colorbar": {"outlinewidth": 10, "tickcolor": "rgb(36,36,36)", "ticklen": 8, "ticks": "outside", "tickwidth": 2}, "type": "contourcarpet"}], "heatmap": [{"colorbar": {"outlinewidth": 10, "tickcolor": "rgb(36,36,36)", "ticklen": 8, "ticks": "outside", "tickwidth": 2}, "colorscale": [[0.0, "#440154"], [0.1111111111111111, "#482878"], [0.2222222222222222, "#3e4989"], [0.3333333333333333, "#31688e"], [0.4444444444444444, "#26828e"], [0.5555555555555556, "#1f9e89"], [0.6666666666666666, "#35b779"], [0.7777777777777778, "#6ece58"], [0.8888888888888888, "#b5de2b"], [1.0, "#fde725"]], "type": "heatmap"}], "heatmapgl": [{"colorbar": {"outlinewidth": 10, "tickcolor": "rgb(36,36,36)", "ticklen": 8, "ticks": "outside", "tickwidth": 2}, "colorscale": [[0.0, "#440154"], [0.1111111111111111, "#482878"], [0.2222222222222222, "#3e4989"], [0.3333333333333333, "#31688e"], [0.4444444444444444, "#26828e"], [0.5555555555555556, "#1f9e89"], [0.6666666666666666, "#35b779"], [0.7777777777777778, "#6ece58"], [0.8888888888888888, "#b5de2b"], [1.0, "#fde725"]], "type": "heatmapgl"}], "histogram": [{"marker": {"line": {"color": "white", "width": 0.6}}, "type": "histogram"}], "histogram2d": [{"colorbar": {"outlinewidth": 10, "tickcolor": "rgb(36,36,36)", "ticklen": 8, "ticks": "outside", "tickwidth": 2}, "colorscale": [[0.0, "#440154"], [0.1111111111111111, "#482878"], [0.2222222222222222, "#3e4989"], [0.3333333333333333, "#31688e"], [0.4444444444444444, "#26828e"], [0.5555555555555556, "#1f9e89"], [0.6666666666666666, "#35b779"], [0.7777777777777778, "#6ece58"], [0.8888888888888888, "#b5de2b"], [1.0, "#fde725"]], "type": "histogram2d"}], "histogram2dcontour": [{"colorbar": {"outlinewidth": 10, "tickcolor": "rgb(36,36,36)", "ticklen": 8, "ticks": "outside", "tickwidth": 2}, "colorscale": [[0.0, "#440154"], [0.1111111111111111, "#482878"], [0.2222222222222222, "#3e4989"], [0.3333333333333333, "#31688e"], [0.4444444444444444, "#26828e"], [0.5555555555555556, "#1f9e89"], [0.6666666666666666, "#35b779"], [0.7777777777777778, "#6ece58"], [0.8888888888888888, "#b5de2b"], [1.0, "#fde725"]], "type": "histogram2dcontour"}], "mesh3d": [{"colorbar": {"outlinewidth": 10, "tickcolor": "rgb(36,36,36)", "ticklen": 8, "ticks": "outside", "tickwidth": 2}, "type": "mesh3d"}], "parcoords": [{"line": {"colorbar": {"outlinewidth": 10, "tickcolor": "rgb(36,36,36)", "ticklen": 8, "ticks": "outside", "tickwidth": 2}}, "type": "parcoords"}], "pie": [{"automargin": true, "type": "pie"}], "scatter": [{"marker": {"colorbar": {"outlinewidth": 10, "tickcolor": "rgb(36,36,36)", "ticklen": 8, "ticks": "outside", "tickwidth": 2}}, "type": "scatter"}], "scatter3d": [{"line": {"colorbar": {"outlinewidth": 10, "tickcolor": "rgb(36,36,36)", "ticklen": 8, "ticks": "outside", "tickwidth": 2}}, "marker": {"colorbar": {"outlinewidth": 10, "tickcolor": "rgb(36,36,36)", "ticklen": 8, "ticks": "outside", "tickwidth": 2}}, "type": "scatter3d"}], "scattercarpet": [{"marker": {"colorbar": {"outlinewidth": 10, "tickcolor": "rgb(36,36,36)", "ticklen": 8, "ticks": "outside", "tickwidth": 2}}, "type": "scattercarpet"}], "scattergeo": [{"marker": {"colorbar": {"outlinewidth": 10, "tickcolor": "rgb(36,36,36)", "ticklen": 8, "ticks": "outside", "tickwidth": 2}}, "type": "scattergeo"}], "scattergl": [{"marker": {"colorbar": {"outlinewidth": 10, "tickcolor": "rgb(36,36,36)", "ticklen": 8, "ticks": "outside", "tickwidth": 2}}, "type": "scattergl"}], "scattermapbox": [{"marker": {"colorbar": {"outlinewidth": 10, "tickcolor": "rgb(36,36,36)", "ticklen": 8, "ticks": "outside", "tickwidth": 2}}, "type": "scattermapbox"}], "scatterpolar": [{"marker": {"colorbar": {"outlinewidth": 10, "tickcolor": "rgb(36,36,36)", "ticklen": 8, "ticks": "outside", "tickwidth": 2}}, "type": "scatterpolar"}], "scatterpolargl": [{"marker": {"colorbar": {"outlinewidth": 10, "tickcolor": "rgb(36,36,36)", "ticklen": 8, "ticks": "outside", "tickwidth": 2}}, "type": "scatterpolargl"}], "scatterternary": [{"marker": {"colorbar": {"outlinewidth": 10, "tickcolor": "rgb(36,36,36)", "ticklen": 8, "ticks": "outside", "tickwidth": 2}}, "type": "scatterternary"}], "surface": [{"colorbar": {"outlinewidth": 10, "tickcolor": "rgb(36,36,36)", "ticklen": 8, "ticks": "outside", "tickwidth": 2}, "colorscale": [[0.0, "#440154"], [0.1111111111111111, "#482878"], [0.2222222222222222, "#3e4989"], [0.3333333333333333, "#31688e"], [0.4444444444444444, "#26828e"], [0.5555555555555556, "#1f9e89"], [0.6666666666666666, "#35b779"], [0.7777777777777778, "#6ece58"], [0.8888888888888888, "#b5de2b"], [1.0, "#fde725"]], "type": "surface"}], "table": [{"cells": {"fill": {"color": "rgb(237,237,237)"}, "line": {"color": "white"}}, "header": {"fill": {"color": "rgb(217,217,217)"}, "line": {"color": "white"}}, "type": "table"}]}, "layout": {"annotationdefaults": {"arrowhead": 0, "arrowwidth": 1}, "coloraxis": {"colorbar": {"outlinewidth": 10, "tickcolor": "rgb(36,36,36)", "ticklen": 8, "ticks": "outside", "tickwidth": 2}}, "colorscale": {"diverging": [[0.0, "rgb(103,0,31)"], [0.1, "rgb(178,24,43)"], [0.2, "rgb(214,96,77)"], [0.3, "rgb(244,165,130)"], [0.4, "rgb(253,219,199)"], [0.5, "rgb(247,247,247)"], [0.6, "rgb(209,229,240)"], [0.7, "rgb(146,197,222)"], [0.8, "rgb(67,147,195)"], [0.9, "rgb(33,102,172)"], [1.0, "rgb(5,48,97)"]], "sequential": [[0.0, "#440154"], [0.1111111111111111, "#482878"], [0.2222222222222222, "#3e4989"], [0.3333333333333333, "#31688e"], [0.4444444444444444, "#26828e"], [0.5555555555555556, "#1f9e89"], [0.6666666666666666, "#35b779"], [0.7777777777777778, "#6ece58"], [0.8888888888888888, "#b5de2b"], [1.0, "#fde725"]], "sequentialminus": [[0.0, "#440154"], [0.1111111111111111, "#482878"], [0.2222222222222222, "#3e4989"], [0.3333333333333333, "#31688e"], [0.4444444444444444, "#26828e"], [0.5555555555555556, "#1f9e89"], [0.6666666666666666, "#35b779"], [0.7777777777777778, "#6ece58"], [0.8888888888888888, "#b5de2b"], [1.0, "#fde725"]]}, "colorway": ["#1F77B4", "#FF7F0E", "#2CA02C", "#D62728", "#9467BD", "#8C564B", "#E377C2", "#7F7F7F", "#BCBD22", "#17BECF"], "font": {"color": "rgb(36,36,36)"}, "geo": {"bgcolor": "white", "lakecolor": "white", "landcolor": "white", "showlakes": true, "showland": true, "subunitcolor": "white"}, "hoverlabel": {"align": "left"}, "hovermode": "closest", "mapbox": {"style": "light"}, "paper_bgcolor": "white", "plot_bgcolor": "white", "polar": {"angularaxis": {"gridcolor": "rgb(232,232,232)", "linecolor": "rgb(36,36,36)", "showgrid": false, "showline": true, "ticks": "outside"}, "bgcolor": "white", "radialaxis": {"gridcolor": "rgb(232,232,232)", "linecolor": "rgb(36,36,36)", "showgrid": false, "showline": true, "ticks": "outside"}}, "scene": {"xaxis": {"backgroundcolor": "white", "gridcolor": "rgb(232,232,232)", "gridwidth": 2, "linecolor": "rgb(36,36,36)", "showbackground": true, "showgrid": false, "showline": true, "ticks": "outside", "zeroline": false, "zerolinecolor": "rgb(36,36,36)"}, "yaxis": {"backgroundcolor": "white", "gridcolor": "rgb(232,232,232)", "gridwidth": 2, "linecolor": "rgb(36,36,36)", "showbackground": true, "showgrid": false, "showline": true, "ticks": "outside", "zeroline": false, "zerolinecolor": "rgb(36,36,36)"}, "zaxis": {"backgroundcolor": "white", "gridcolor": "rgb(232,232,232)", "gridwidth": 2, "linecolor": "rgb(36,36,36)", "showbackground": true, "showgrid": false, "showline": true, "ticks": "outside", "zeroline": false, "zerolinecolor": "rgb(36,36,36)"}}, "shapedefaults": {"fillcolor": "black", "line": {"width": 0}, "opacity": 0.3}, "ternary": {"aaxis": {"gridcolor": "rgb(232,232,232)", "linecolor": "rgb(36,36,36)", "showgrid": false, "showline": true, "ticks": "outside"}, "baxis": {"gridcolor": "rgb(232,232,232)", "linecolor": "rgb(36,36,36)", "showgrid": false, "showline": true, "ticks": "outside"}, "bgcolor": "white", "caxis": {"gridcolor": "rgb(232,232,232)", "linecolor": "rgb(36,36,36)", "showgrid": false, "showline": true, "ticks": "outside"}}, "title": {"x": 0.05}, "xaxis": {"automargin": true, "gridcolor": "rgb(232,232,232)", "linecolor": "rgb(36,36,36)", "showgrid": false, "showline": true, "ticks": "outside", "title": {"standoff": 15}, "zeroline": false, "zerolinecolor": "rgb(36,36,36)"}, "yaxis": {"automargin": true, "gridcolor": "rgb(232,232,232)", "linecolor": "rgb(36,36,36)", "showgrid": false, "showline": true, "ticks": "outside", "title": {"standoff": 15}, "zeroline": false, "zerolinecolor": "rgb(36,36,36)"}}}, "title": {"text": "Mean Time Between Failure Top 10 Validators"}, "width": 800, "xaxis": {"anchor": "y", "domain": [0.0, 1.0], "title": {"text": "Week"}}, "yaxis": {"anchor": "x", "domain": [0.0, 1.0], "title": {"text": "Mean Time Between Failure (hours)"}}},
+                        {"responsive": true}
+                    ).then(function(){
+                            
+var gd = document.getElementById('96be222f-02c6-44bb-a3c5-4af62bc2320d');
+var x = new MutationObserver(function (mutations, observer) {{
+        var display = window.getComputedStyle(gd).display;
+        if (!display || display === 'none') {{
+            console.log([gd, 'removed!']);
+            Plotly.purge(gd);
+            observer.disconnect();
+        }}
+}});
+
+// Listen for the removal of the full notebook cells
+var notebookContainer = gd.closest('#notebook-container');
+if (notebookContainer) {{
+    x.observe(notebookContainer, {childList: true});
+}}
+
+// Listen for the clearing of the current output cell
+var outputEl = gd.closest('.output');
+if (outputEl) {{
+    x.observe(outputEl, {childList: true});
+}}
+
+                        })
+                };
+                
+            </script>
+        </div>
+
+
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+    
+
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Low-Performing-Validators">
+<a class="anchor" href="#Low-Performing-Validators" aria-hidden="true"><span class="octicon octicon-link"></span></a>Low Performing Validators<a class="anchor-link" href="#Low-Performing-Validators"> </a>
+</h1>
+<p>Performing the same analysis on the worst 10 validators (by downtime events) we can see why the average is so low.  The most recent week average MTBF for this group is around 8 minutes, and there is a distinct downtrend from 6 months ago when this number was as high as 1 hour.  This mirrors what we have seen in the rest of the dataset - reliability is trending downwards.</p>
+
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+
+<div class="output_html rendered_html output_subarea ">
+
+<meta charset="utf-8">
+
+    <div>
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-AMS-MML_SVG"></script><script type="text/javascript">if (window.MathJax) {MathJax.Hub.Config({SVG: {font: "STIX-Web"}});}</script>
+                <script type="text/javascript">window.PlotlyConfig = {MathJaxConfig: 'local'};</script>
+        <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>    
+            <div id="8b4ea910-6e4b-4f4c-aa4d-3f7a06623181" class="plotly-graph-div" style="height:494.4375772558714px; width:800px;"></div>
+            <script type="text/javascript">
+                
+                    window.PLOTLYENV=window.PLOTLYENV || {};
+                    
+                if (document.getElementById("8b4ea910-6e4b-4f4c-aa4d-3f7a06623181")) {
+                    Plotly.newPlot(
+                        '8b4ea910-6e4b-4f4c-aa4d-3f7a06623181',
+                        [{"alignmentgroup": "True", "hoverlabel": {"namelength": 0}, "hovertemplate": "Week=%{x}<br>MTBF=%{y}", "legendgroup": "", "marker": {"color": "#1F77B4"}, "name": "", "offsetgroup": "", "orientation": "v", "showlegend": false, "textposition": "auto", "type": "bar", "x": ["2021-03-14T00:00:00", "2021-03-21T00:00:00", "2021-03-28T00:00:00", "2021-04-04T00:00:00", "2021-04-11T00:00:00", "2021-04-18T00:00:00", "2021-04-25T00:00:00", "2021-05-02T00:00:00", "2021-05-09T00:00:00", "2021-05-16T00:00:00", "2021-05-23T00:00:00", "2021-05-30T00:00:00", "2021-06-06T00:00:00", "2021-06-13T00:00:00", "2021-06-20T00:00:00", "2021-06-27T00:00:00", "2021-07-04T00:00:00", "2021-07-11T00:00:00", "2021-07-18T00:00:00", "2021-07-25T00:00:00", "2021-08-01T00:00:00", "2021-08-08T00:00:00", "2021-08-15T00:00:00", "2021-08-22T00:00:00", "2021-08-29T00:00:00", "2021-09-05T00:00:00"], "xaxis": "x", "y": [0.2539298669891173, 1.1715481171548117, 1.0852713178294573, 0.8689655172413794, 0.700834326579261, 0.37583892617449666, 0.6473988439306358, 0.18975010588733587, 0.24624404543788933, 0.2960352422907489, 0.9186602870813397, 0.7485148514851485, 0.3160535117056856, 0.2988142292490119, 0.22819197102324176, 0.3094736842105263, 0.6112266112266113, 0.4661117717003567, 0.3753590807532716, 0.3231657048639736, 0.36307502315529483, 0.18928054080154513, 0.21219776254059905, 0.2699104888684875, 0.09576547231270359, 0.14466724074301882], "yaxis": "y"}],
+                        {"barmode": "relative", "height": 494.4375772558714, "legend": {"tracegroupgap": 0}, "template": {"data": {"bar": [{"error_x": {"color": "rgb(36,36,36)"}, "error_y": {"color": "rgb(36,36,36)"}, "marker": {"line": {"color": "white", "width": 0.5}}, "type": "bar"}], "barpolar": [{"marker": {"line": {"color": "white", "width": 0.5}}, "type": "barpolar"}], "carpet": [{"aaxis": {"endlinecolor": "rgb(36,36,36)", "gridcolor": "white", "linecolor": "white", "minorgridcolor": "white", "startlinecolor": "rgb(36,36,36)"}, "baxis": {"endlinecolor": "rgb(36,36,36)", "gridcolor": "white", "linecolor": "white", "minorgridcolor": "white", "startlinecolor": "rgb(36,36,36)"}, "type": "carpet"}], "choropleth": [{"colorbar": {"outlinewidth": 10, "tickcolor": "rgb(36,36,36)", "ticklen": 8, "ticks": "outside", "tickwidth": 2}, "type": "choropleth"}], "contour": [{"colorbar": {"outlinewidth": 10, "tickcolor": "rgb(36,36,36)", "ticklen": 8, "ticks": "outside", "tickwidth": 2}, "colorscale": [[0.0, "#440154"], [0.1111111111111111, "#482878"], [0.2222222222222222, "#3e4989"], [0.3333333333333333, "#31688e"], [0.4444444444444444, "#26828e"], [0.5555555555555556, "#1f9e89"], [0.6666666666666666, "#35b779"], [0.7777777777777778, "#6ece58"], [0.8888888888888888, "#b5de2b"], [1.0, "#fde725"]], "type": "contour"}], "contourcarpet": [{"colorbar": {"outlinewidth": 10, "tickcolor": "rgb(36,36,36)", "ticklen": 8, "ticks": "outside", "tickwidth": 2}, "type": "contourcarpet"}], "heatmap": [{"colorbar": {"outlinewidth": 10, "tickcolor": "rgb(36,36,36)", "ticklen": 8, "ticks": "outside", "tickwidth": 2}, "colorscale": [[0.0, "#440154"], [0.1111111111111111, "#482878"], [0.2222222222222222, "#3e4989"], [0.3333333333333333, "#31688e"], [0.4444444444444444, "#26828e"], [0.5555555555555556, "#1f9e89"], [0.6666666666666666, "#35b779"], [0.7777777777777778, "#6ece58"], [0.8888888888888888, "#b5de2b"], [1.0, "#fde725"]], "type": "heatmap"}], "heatmapgl": [{"colorbar": {"outlinewidth": 10, "tickcolor": "rgb(36,36,36)", "ticklen": 8, "ticks": "outside", "tickwidth": 2}, "colorscale": [[0.0, "#440154"], [0.1111111111111111, "#482878"], [0.2222222222222222, "#3e4989"], [0.3333333333333333, "#31688e"], [0.4444444444444444, "#26828e"], [0.5555555555555556, "#1f9e89"], [0.6666666666666666, "#35b779"], [0.7777777777777778, "#6ece58"], [0.8888888888888888, "#b5de2b"], [1.0, "#fde725"]], "type": "heatmapgl"}], "histogram": [{"marker": {"line": {"color": "white", "width": 0.6}}, "type": "histogram"}], "histogram2d": [{"colorbar": {"outlinewidth": 10, "tickcolor": "rgb(36,36,36)", "ticklen": 8, "ticks": "outside", "tickwidth": 2}, "colorscale": [[0.0, "#440154"], [0.1111111111111111, "#482878"], [0.2222222222222222, "#3e4989"], [0.3333333333333333, "#31688e"], [0.4444444444444444, "#26828e"], [0.5555555555555556, "#1f9e89"], [0.6666666666666666, "#35b779"], [0.7777777777777778, "#6ece58"], [0.8888888888888888, "#b5de2b"], [1.0, "#fde725"]], "type": "histogram2d"}], "histogram2dcontour": [{"colorbar": {"outlinewidth": 10, "tickcolor": "rgb(36,36,36)", "ticklen": 8, "ticks": "outside", "tickwidth": 2}, "colorscale": [[0.0, "#440154"], [0.1111111111111111, "#482878"], [0.2222222222222222, "#3e4989"], [0.3333333333333333, "#31688e"], [0.4444444444444444, "#26828e"], [0.5555555555555556, "#1f9e89"], [0.6666666666666666, "#35b779"], [0.7777777777777778, "#6ece58"], [0.8888888888888888, "#b5de2b"], [1.0, "#fde725"]], "type": "histogram2dcontour"}], "mesh3d": [{"colorbar": {"outlinewidth": 10, "tickcolor": "rgb(36,36,36)", "ticklen": 8, "ticks": "outside", "tickwidth": 2}, "type": "mesh3d"}], "parcoords": [{"line": {"colorbar": {"outlinewidth": 10, "tickcolor": "rgb(36,36,36)", "ticklen": 8, "ticks": "outside", "tickwidth": 2}}, "type": "parcoords"}], "pie": [{"automargin": true, "type": "pie"}], "scatter": [{"marker": {"colorbar": {"outlinewidth": 10, "tickcolor": "rgb(36,36,36)", "ticklen": 8, "ticks": "outside", "tickwidth": 2}}, "type": "scatter"}], "scatter3d": [{"line": {"colorbar": {"outlinewidth": 10, "tickcolor": "rgb(36,36,36)", "ticklen": 8, "ticks": "outside", "tickwidth": 2}}, "marker": {"colorbar": {"outlinewidth": 10, "tickcolor": "rgb(36,36,36)", "ticklen": 8, "ticks": "outside", "tickwidth": 2}}, "type": "scatter3d"}], "scattercarpet": [{"marker": {"colorbar": {"outlinewidth": 10, "tickcolor": "rgb(36,36,36)", "ticklen": 8, "ticks": "outside", "tickwidth": 2}}, "type": "scattercarpet"}], "scattergeo": [{"marker": {"colorbar": {"outlinewidth": 10, "tickcolor": "rgb(36,36,36)", "ticklen": 8, "ticks": "outside", "tickwidth": 2}}, "type": "scattergeo"}], "scattergl": [{"marker": {"colorbar": {"outlinewidth": 10, "tickcolor": "rgb(36,36,36)", "ticklen": 8, "ticks": "outside", "tickwidth": 2}}, "type": "scattergl"}], "scattermapbox": [{"marker": {"colorbar": {"outlinewidth": 10, "tickcolor": "rgb(36,36,36)", "ticklen": 8, "ticks": "outside", "tickwidth": 2}}, "type": "scattermapbox"}], "scatterpolar": [{"marker": {"colorbar": {"outlinewidth": 10, "tickcolor": "rgb(36,36,36)", "ticklen": 8, "ticks": "outside", "tickwidth": 2}}, "type": "scatterpolar"}], "scatterpolargl": [{"marker": {"colorbar": {"outlinewidth": 10, "tickcolor": "rgb(36,36,36)", "ticklen": 8, "ticks": "outside", "tickwidth": 2}}, "type": "scatterpolargl"}], "scatterternary": [{"marker": {"colorbar": {"outlinewidth": 10, "tickcolor": "rgb(36,36,36)", "ticklen": 8, "ticks": "outside", "tickwidth": 2}}, "type": "scatterternary"}], "surface": [{"colorbar": {"outlinewidth": 10, "tickcolor": "rgb(36,36,36)", "ticklen": 8, "ticks": "outside", "tickwidth": 2}, "colorscale": [[0.0, "#440154"], [0.1111111111111111, "#482878"], [0.2222222222222222, "#3e4989"], [0.3333333333333333, "#31688e"], [0.4444444444444444, "#26828e"], [0.5555555555555556, "#1f9e89"], [0.6666666666666666, "#35b779"], [0.7777777777777778, "#6ece58"], [0.8888888888888888, "#b5de2b"], [1.0, "#fde725"]], "type": "surface"}], "table": [{"cells": {"fill": {"color": "rgb(237,237,237)"}, "line": {"color": "white"}}, "header": {"fill": {"color": "rgb(217,217,217)"}, "line": {"color": "white"}}, "type": "table"}]}, "layout": {"annotationdefaults": {"arrowhead": 0, "arrowwidth": 1}, "coloraxis": {"colorbar": {"outlinewidth": 10, "tickcolor": "rgb(36,36,36)", "ticklen": 8, "ticks": "outside", "tickwidth": 2}}, "colorscale": {"diverging": [[0.0, "rgb(103,0,31)"], [0.1, "rgb(178,24,43)"], [0.2, "rgb(214,96,77)"], [0.3, "rgb(244,165,130)"], [0.4, "rgb(253,219,199)"], [0.5, "rgb(247,247,247)"], [0.6, "rgb(209,229,240)"], [0.7, "rgb(146,197,222)"], [0.8, "rgb(67,147,195)"], [0.9, "rgb(33,102,172)"], [1.0, "rgb(5,48,97)"]], "sequential": [[0.0, "#440154"], [0.1111111111111111, "#482878"], [0.2222222222222222, "#3e4989"], [0.3333333333333333, "#31688e"], [0.4444444444444444, "#26828e"], [0.5555555555555556, "#1f9e89"], [0.6666666666666666, "#35b779"], [0.7777777777777778, "#6ece58"], [0.8888888888888888, "#b5de2b"], [1.0, "#fde725"]], "sequentialminus": [[0.0, "#440154"], [0.1111111111111111, "#482878"], [0.2222222222222222, "#3e4989"], [0.3333333333333333, "#31688e"], [0.4444444444444444, "#26828e"], [0.5555555555555556, "#1f9e89"], [0.6666666666666666, "#35b779"], [0.7777777777777778, "#6ece58"], [0.8888888888888888, "#b5de2b"], [1.0, "#fde725"]]}, "colorway": ["#1F77B4", "#FF7F0E", "#2CA02C", "#D62728", "#9467BD", "#8C564B", "#E377C2", "#7F7F7F", "#BCBD22", "#17BECF"], "font": {"color": "rgb(36,36,36)"}, "geo": {"bgcolor": "white", "lakecolor": "white", "landcolor": "white", "showlakes": true, "showland": true, "subunitcolor": "white"}, "hoverlabel": {"align": "left"}, "hovermode": "closest", "mapbox": {"style": "light"}, "paper_bgcolor": "white", "plot_bgcolor": "white", "polar": {"angularaxis": {"gridcolor": "rgb(232,232,232)", "linecolor": "rgb(36,36,36)", "showgrid": false, "showline": true, "ticks": "outside"}, "bgcolor": "white", "radialaxis": {"gridcolor": "rgb(232,232,232)", "linecolor": "rgb(36,36,36)", "showgrid": false, "showline": true, "ticks": "outside"}}, "scene": {"xaxis": {"backgroundcolor": "white", "gridcolor": "rgb(232,232,232)", "gridwidth": 2, "linecolor": "rgb(36,36,36)", "showbackground": true, "showgrid": false, "showline": true, "ticks": "outside", "zeroline": false, "zerolinecolor": "rgb(36,36,36)"}, "yaxis": {"backgroundcolor": "white", "gridcolor": "rgb(232,232,232)", "gridwidth": 2, "linecolor": "rgb(36,36,36)", "showbackground": true, "showgrid": false, "showline": true, "ticks": "outside", "zeroline": false, "zerolinecolor": "rgb(36,36,36)"}, "zaxis": {"backgroundcolor": "white", "gridcolor": "rgb(232,232,232)", "gridwidth": 2, "linecolor": "rgb(36,36,36)", "showbackground": true, "showgrid": false, "showline": true, "ticks": "outside", "zeroline": false, "zerolinecolor": "rgb(36,36,36)"}}, "shapedefaults": {"fillcolor": "black", "line": {"width": 0}, "opacity": 0.3}, "ternary": {"aaxis": {"gridcolor": "rgb(232,232,232)", "linecolor": "rgb(36,36,36)", "showgrid": false, "showline": true, "ticks": "outside"}, "baxis": {"gridcolor": "rgb(232,232,232)", "linecolor": "rgb(36,36,36)", "showgrid": false, "showline": true, "ticks": "outside"}, "bgcolor": "white", "caxis": {"gridcolor": "rgb(232,232,232)", "linecolor": "rgb(36,36,36)", "showgrid": false, "showline": true, "ticks": "outside"}}, "title": {"x": 0.05}, "xaxis": {"automargin": true, "gridcolor": "rgb(232,232,232)", "linecolor": "rgb(36,36,36)", "showgrid": false, "showline": true, "ticks": "outside", "title": {"standoff": 15}, "zeroline": false, "zerolinecolor": "rgb(36,36,36)"}, "yaxis": {"automargin": true, "gridcolor": "rgb(232,232,232)", "linecolor": "rgb(36,36,36)", "showgrid": false, "showline": true, "ticks": "outside", "title": {"standoff": 15}, "zeroline": false, "zerolinecolor": "rgb(36,36,36)"}}}, "title": {"text": "Mean Time Between Failure Bottom 10 Validators"}, "width": 800, "xaxis": {"anchor": "y", "domain": [0.0, 1.0], "title": {"text": "Week"}}, "yaxis": {"anchor": "x", "domain": [0.0, 1.0], "title": {"text": "Mean Time Between Failure (hours)"}}},
+                        {"responsive": true}
+                    ).then(function(){
+                            
+var gd = document.getElementById('8b4ea910-6e4b-4f4c-aa4d-3f7a06623181');
+var x = new MutationObserver(function (mutations, observer) {{
+        var display = window.getComputedStyle(gd).display;
+        if (!display || display === 'none') {{
+            console.log([gd, 'removed!']);
+            Plotly.purge(gd);
+            observer.disconnect();
+        }}
+}});
+
+// Listen for the removal of the full notebook cells
+var notebookContainer = gd.closest('#notebook-container');
+if (notebookContainer) {{
+    x.observe(notebookContainer, {childList: true});
+}}
+
+// Listen for the clearing of the current output cell
+var outputEl = gd.closest('.output');
+if (outputEl) {{
+    x.observe(outputEl, {childList: true});
+}}
+
+                        })
+                };
+                
+            </script>
+        </div>
+
+
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+    
+
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Conclusions">
+<a class="anchor" href="#Conclusions" aria-hidden="true"><span class="octicon octicon-link"></span></a>Conclusions<a class="anchor-link" href="#Conclusions"> </a>
+</h1>
+<p>The data above has explored the downtime events among Terra validators.  We have seen that, on average over the entire validator set, validators miss blocks around once every 1.6 hours.  There is a vast difference between validators however - the best 10 validators currently miss blocks every 30 hours and the worst 10 miss one every 8 minutes.  Across all datasets there has been a trend of decreasing reliability compared with 6 months ago.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="References">
+<a class="anchor" href="#References" aria-hidden="true"><span class="octicon octicon-link"></span></a>References<a class="anchor-link" href="#References"> </a>
+</h2>
+<p>All data sourced from <a href="https://flipsidecrypto.com/">Flipside Crypto</a>.  Data sources:</p>
+<p><em><a href="https://api.flipsidecrypto.com/api/v2/queries/5eebcedf-5edd-4afd-931a-5932d5fbf964/data/latest">https://api.flipsidecrypto.com/api/v2/queries/5eebcedf-5edd-4afd-931a-5932d5fbf964/data/latest</a>
+<a href="https://api.flipsidecrypto.com/api/v2/queries/9c6e455a-66eb-45f9-b87a-c76d716e0040/data/latest">https://api.flipsidecrypto.com/api/v2/queries/9c6e455a-66eb-45f9-b87a-c76d716e0040/data/latest</a>
+<a href="https://api.flipsidecrypto.com/api/v2/queries/7013252f-a0fe-43b2-abea-b4f42e319210/data/latest">https://api.flipsidecrypto.com/api/v2/queries/7013252f-a0fe-43b2-abea-b4f42e319210/data/latest</a>
+<a href="https://api.flipsidecrypto.com/api/v2/queries/5ac709ee-887c-4522-9bc8-15cec97720e0/data/latest">https://api.flipsidecrypto.com/api/v2/queries/5ac709ee-887c-4522-9bc8-15cec97720e0/data/latest</a></em></p>
+
+</div>
+</div>
+</div>
+</div>
+
+
+</body>
+  </div><a class="u-url" href="/analytics/terra/validators/2021/09/18/_09_12_Terra_Validator_Churn.html" hidden></a>
+</article>
+      </div>
+    </main><footer class="site-footer h-card">
+  <data class="u-url" href="/analytics/"></data>
+
+  <div class="wrapper">
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col">
+        <p class="feed-subscribe">
+          <a href="/analytics/feed.xml">
+            <svg class="svg-icon orange">
+              <use xlink:href="/analytics/assets/minima-social-icons.svg#rss"></use>
+            </svg><span>Subscribe</span>
+          </a>
+        </p>
+      </div>
+      <div class="footer-col">
+        <p>On-chain analysis by @scottincrypto</p>
+      </div>
+    </div>
+
+    <div class="social-links"><ul class="social-media-list"><li><a rel="me" href="https://github.com/scottincrypto" title="scottincrypto"><svg class="svg-icon grey"><use xlink:href="/analytics/assets/minima-social-icons.svg#github"></use></svg></a></li><li><a rel="me" href="https://twitter.com/scottincrypto" title="scottincrypto"><svg class="svg-icon grey"><use xlink:href="/analytics/assets/minima-social-icons.svg#twitter"></use></svg></a></li></ul>
+</div>
+
+  </div>
+
+</footer>
+</body>
+
+</html>
