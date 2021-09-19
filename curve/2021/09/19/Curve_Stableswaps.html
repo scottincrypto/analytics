@@ -691,7 +691,7 @@ if (outputEl) {{
 <li>There is a big advantage in transaction costs using a specialised stablecoin swap platform, as opposed a general purpose dex like Uniswap v2</li>
 <li>Simply copying an existing concept is not a recipe for instant success for Saddle - the weight of liquidity in Curve translates to better outcomes for users, which begets even more liquidity</li>
 </ul>
-<p>If you are a user looking to swap stablecoins (USDC, USDT, DAI), then Curve should be the first choice.  It's worth a comparison with Uniswap v3, however, as it will be slightly more gas efficient on smaller trades.  Happy swapping.</p>
+<p>If you are a user looking to swap stablecoins (USDC, USDT, DAI), then <a href="https://curve.fi">Curve</a> should be the first choice.  It's worth a comparison with Uniswap v3, however, as it may be slightly more gas efficient on smaller trades.  Happy swapping.</p>
 
 </div>
 </div>
@@ -704,8 +704,8 @@ if (outputEl) {{
 </h1>
 <ul>
 <li>All data was sourced from the curated on-chain data tables at <a href="https://flipsidecrypto.com">Flipside Crypto</a>  </li>
-<li>I learned a lot about dex pricing impacts from this article by <a href="https://twitter.com/hasufl">Hasu</a> at <a href="https://research.paradigm.xyz/amm-price-impact">https://research.paradigm.xyz/amm-price-impact</a>  </li>
-<li>This post was inspired by this article at the fantastic Curve Market Cap
+<li>Insights on dex pricing impacts were from this article by <a href="https://twitter.com/hasufl">Hasu</a> at <a href="https://research.paradigm.xyz/amm-price-impact">https://research.paradigm.xyz/amm-price-impact</a>  </li>
+<li>The idea for this post was inspired by this article at the fantastic Curve Market Cap
 <a href="https://curve.substack.com/p/august-18-2021-curve-vs-balancer">https://curve.substack.com/p/august-18-2021-curve-vs-balancer</a>
 </li>
 </ul>
@@ -713,41 +713,6 @@ if (outputEl) {{
 </div>
 </div>
 </div>
-    
-    
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-python"><pre><span></span><span class="c1">#%R df_by_swap_size %&gt;% arrange(swap_size_bucket, cost_no_gas) </span>
-<span class="kn">import</span> <span class="nn">plotly</span>
-<span class="n">plotly</span><span class="o">.</span><span class="n">__version__</span>
-</pre></div>
-
-    </div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-<div class="output_area">
-
-
-
-<div class="output_text output_subarea output_execute_result">
-<pre>'5.3.1'</pre>
-</div>
-
-</div>
-
-</div>
-</div>
-
-</div>
-    
-
 </div>
 
 
