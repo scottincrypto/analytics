@@ -123,3 +123,6 @@ feed:
   
 exclude:
   - settings.ini
+
+# Permalinks
+permalink: /:categories/:year/:month/:day/:title:output_ext
