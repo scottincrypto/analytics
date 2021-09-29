@@ -80,7 +80,7 @@ window.onload = wrap_img;
        • <span class="read-time" title="Estimated read time">
     
     
-      13 min read
+      12 min read
     
 </span></p>
 
@@ -117,12 +117,11 @@ window.onload = wrap_img;
 
   <div class="post-content e-content" itemprop="articleBody">
     <ul class="section-nav">
-<li class="toc-entry toc-h1"><a href="#Header">Header </a></li>
 <li class="toc-entry toc-h1"><a href="#Yearn-yVaults,-yveCRV-DAO-and-yvBOOST">Yearn yVaults, yveCRV-DAO and yvBOOST </a>
 <ul>
 <li class="toc-entry toc-h2"><a href="#Yearn-yVaults">Yearn yVaults </a></li>
 <li class="toc-entry toc-h2"><a href="#yveCRV-yVault">yveCRV yVault </a></li>
-<li class="toc-entry toc-h2"><a href="#yvBoost">yvBoost </a></li>
+<li class="toc-entry toc-h2"><a href="#yvBoost-yVault">yvBoost yVault </a></li>
 </ul>
 </li>
 <li class="toc-entry toc-h1"><a href="#yVault-Usage---Total-Value-Locked-in-USD">yVault Usage - Total Value Locked in USD </a></li>
@@ -143,34 +142,6 @@ window.onload = wrap_img;
 <div class="cell border-box-sizing text_cell rendered">
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="Header">
-<a class="anchor" href="#Header" aria-hidden="true"><span class="octicon octicon-link"></span></a>Header<a class="anchor-link" href="#Header"> </a>
-</h1>
-<p>Narrative:
-How has the introduction of the yvBOOST Vault impacted usage of the yveCRV Vault?</p>
-<p>Intro to the yveCRV and yvBoost vaults - lift this from the Zap bounty</p>
-<p>Talk about intro dates<br>
-You can't withdraw from yveCRV - but you can swap and there is a liquid market for it (<a href="https://analytics.sushi.com/pairs/0x10b47177e92ef9d5c6059055d92ddf6290848991">https://analytics.sushi.com/pairs/0x10b47177e92ef9d5c6059055d92ddf6290848991</a>) with 1.2m of liquidity</p>
-<p>Options for loose CRV tokens</p>
-<ul>
-<li>Use it in defi - LP fees</li>
-<li>Lock it yourself with CRV (claim fees etc)</li>
-<li>Deposit with Yearn (yveCRV-DAO or yvBoost)</li>
-<li>Deposit with Convex (same concept at Yearn)</li>
-</ul>
-<p>Yearn provided a home for CRV - it captured</p>
-<p>Conclusion:
-yEs the yvBoost vault impacted the usage of the yveCRV Vault.</p>
-<p>Prior to yvBoost, yveCRV-DAO was the place to optimally stake CRV tokens.</p>
-<p>yvBOost automated this and gave the exit option.  at the same time CVX launched
-When yvBoost launched, yveCRV-DAO was required to enter it.  This was either done via users or Zaps.  As the yveCRV relative price dropped, the vault used swaps to get the required yveCRV instead.</p>
-
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
 <h1 id="Yearn-yVaults,-yveCRV-DAO-and-yvBOOST">
 <a class="anchor" href="#Yearn-yVaults,-yveCRV-DAO-and-yvBOOST" aria-hidden="true"><span class="octicon octicon-link"></span></a>Yearn yVaults, yveCRV-DAO and yvBOOST<a class="anchor-link" href="#Yearn-yVaults,-yveCRV-DAO-and-yvBOOST"> </a>
 </h1>
@@ -185,10 +156,10 @@ When yvBoost launched, yveCRV-DAO was required to enter it.  This was either don
 </h2>
 <p>Now the veCRV-DAO yVault (also known as the yveCRV Vault) is a little different to the others.  It starts with the CRV token, the governance &amp; reward token from <a href="https://curve.fi">Curve</a>.  Curve is a dex which specialises in stableswaps - swaps between tokens which have approximately the same value.  Examples are ETH/stETH or swaps between dollar pegged stablecoins.  Curve has optimised their swap code to make these swaps efficient from both a liquidity impact and fee perspected - see this <a href="https://scottincrypto.github.io/analytics/curve/2021/09/19/Curve_Stableswaps.html">post</a> for a further exploration of Curve &amp; stablecoin swaps.</p>
 <p>The CRV token has voting rights in the Curve DAO which makes decisions on the Curve protocol - things like fees, LP rewards, swap parameters and pools launched.  In some Curve pools, liquidity providers receive CRV tokens to incentivise liquidity in the pools.  CRV tokens are also available on the open market.  To encourage users to stay as CRV hodlers, there is a facility to lock CRV tokens into the CRV DAO for a fixed period of up to 4 years.  Users receive veCRV tokens (voting escrow Curve Tokens) for doing this, and more tokens are received the longer the locking period.  veCRV holders can still participate in governance voting, they receive 50% of Curve trading fees and they qualify for boosted rewards (up to 2.5x) when they provide liquidity in Curve.</p>
-<p>The fees generated for veCRV holders are collected in the form of 3CRV tokens (shares in the <a href="https://curve.fi/3pool">Curve tripool</a>, which can be redeemed for stablecoins if desired.  Fee distribution for veCRV holders happens weekly and users need to collect these manually and pay the gas cost for the transactions.</p>
+<p>The fees generated for veCRV holders are collected in the form of 3CRV tokens (shares in the <a href="https://curve.fi/3pool">Curve tripool</a>), which can be redeemed for stablecoins if desired.  Fee distribution for veCRV holders happens weekly and users need to collect these manually and pay the gas cost for the transactions.</p>
 <p>In true Yearn fashion there is a vault &amp; a strategy to maximise the returns from this CRV locking process.  This is the yveCRV yVault and it's different to the other vaults in that you <em>can't withdraw your tokens</em>.  Yearn takes CRV tokens and locks them with the CRV DAO for the maximum 4 year period and continually renews this lock.  This maximises the veCRV returns to the yVault.  In addition, all Yearn vaults send 10% of earned CRV into this vault for additional boost.  The returns to the users are in the form of the 3CRV tokens earned by the veCRV - like the CRV staking contract, these are collectable weekly as an income stream, and must be collected manaully.  yVault depositors receive yveCRV-DAO tokens as their share in the vault.</p>
-<h2 id="yvBoost">
-<a class="anchor" href="#yvBoost" aria-hidden="true"><span class="octicon octicon-link"></span></a>yvBoost<a class="anchor-link" href="#yvBoost"> </a>
+<h2 id="yvBoost-yVault">
+<a class="anchor" href="#yvBoost-yVault" aria-hidden="true"><span class="octicon octicon-link"></span></a>yvBoost yVault<a class="anchor-link" href="#yvBoost-yVault"> </a>
 </h2>
 <p>Finally we get to the yvBoost yVault.  This vault builds on the yveCRV yVault, but automates the process of collecting the weekly rewards.  The Strategy behind this vault collects the 3CRV rewards each week, swaps them for more yveCRV then deposits them back into the vault.  The yvBoost vault is a standard Yearn yVault - you can withdraw part or all of your outstanding deposit and any accrued gains at any time.  Working in the native tokens of the yVault, users can deposit or withdraw yveCRV-DAO tokens.  Alternatively, users can take advantage of the Zap function and deposit pretty much any ERC-20 token into the vault.  They can also withdraw using Zap and collect WETH, WBTC, DAI, USDT or USDC.  As the Zap conversions occur on the way in and out, the user maintains price exposure to the yveCRV-DAO tokens whilst deposited in the vault.</p>
 <p>The yveCRV yVault launched 4-5 months before the yvBoost yVault.  We will examine what impact the launch of the yvBoost yVault had on the usage of the yveCRV yVault.</p>
@@ -462,7 +433,7 @@ if (outputEl) {{
 <p><img src="https://github.com/scottincrypto/analytics/raw/master/data/yearn_vault_ROI_calc.gif" alt="ROI Formula"></p>
 <p>The approach used by the Yearn team on the <a href="https://yearn.finance">https://yearn.finance</a> page is to annualise this ROI based on a 7 day rolling period.  We have applied this approach to the yvBoost vault.</p>
 <p>The ROI calculations for the yveCRV vault is a little simpler - each week there is a deposit of 3CRV tokens into the vault which are the income stream generated from the locked CRV tokens.  We take the value of the deposited 3CRV tokens over the value of the CRV tokens in the vault over each 7 day period and annualise it to get the vault ROI.  Note, this assumes that users withdraw their returns from the vault.</p>
-<p>The ROI of the two vaults are shown in the chart below.  We can see that the yvBoost vault tracks the return of the yveCRV vault, with a slight discount on average.  It's not clear whether there is any impact on yveCRV/yvBoost usage due to ROI as they track each other fairly reliably.  What we do see, however, is an impact on ROI of the yveCRV:CRV pricing ratio above.  We can see the yvBoost ROI flippen the yveCRV ROI in late August - this is a direct result of the steep discount of yveCRV relative to CRV.  The underlying income of the yvBoost vault is driven by the number of CRV tokens locked, but the value of the vault has fallen due to the drop in yveCRV price relative to CRV.  This increases the vault ROI dramatically.  This apparent pricing mismatch is an excellent opportunity to get some great returns from the yvBoost vault.</p>
+<p>The ROI of the two vaults are shown in the chart below.  We can see that the yvBoost vault tracks the return of the yveCRV vault, with a slight discount on average.  It's not clear whether there is any impact on yveCRV/yvBoost usage due to ROI as they track each other fairly reliably.  What we do see, however, is an impact on ROI of the yveCRV:CRV pricing ratio above.  We can see the yvBoost ROI flippen the yveCRV ROI in late August - this is a direct result of the steep discount of yveCRV relative to CRV.  The underlying income of the yvBoost vault is driven by the number of CRV tokens locked, but the value of the vault has fallen due to the drop in yveCRV price relative to CRV.  This increases the vault ROI dramatically, amplified by the fact that the underlying 3CRV earnings of the vault are swapped into more yveCRV at a discount. This apparent pricing mismatch is an excellent opportunity to get some great returns from the yvBoost vault.</p>
 
 </div>
 </div>
