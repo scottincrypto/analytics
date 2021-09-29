@@ -1,0 +1,574 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="twitter:card" content="summary_large_image" /><!-- Begin Jekyll SEO tag v2.6.1 -->
+<title>yvBoost &amp; yveCRV Vaults | @scottincrypto</title>
+<meta name="generator" content="Jekyll v4.1.1" />
+<meta property="og:title" content="yvBoost &amp; yveCRV Vaults" />
+<meta name="author" content="Scott Simpson" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="How has the introduction of the yvBOOST Vault impacted usage of the yveCRV Vault?" />
+<meta property="og:description" content="How has the introduction of the yvBOOST Vault impacted usage of the yveCRV Vault?" />
+<link rel="canonical" href="https://scottincrypto.github.io/analytics/curve/yearn/2021/09/29/yvBoost-and-yveCRV-Vaults.html" />
+<meta property="og:url" content="https://scottincrypto.github.io/analytics/curve/yearn/2021/09/29/yvBoost-and-yveCRV-Vaults.html" />
+<meta property="og:site_name" content="@scottincrypto" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2021-09-29T00:00:00-05:00" />
+<script type="application/ld+json">
+{"url":"https://scottincrypto.github.io/analytics/curve/yearn/2021/09/29/yvBoost-and-yveCRV-Vaults.html","@type":"BlogPosting","headline":"yvBoost &amp; yveCRV Vaults","dateModified":"2021-09-29T00:00:00-05:00","datePublished":"2021-09-29T00:00:00-05:00","author":{"@type":"Person","name":"Scott Simpson"},"mainEntityOfPage":{"@type":"WebPage","@id":"https://scottincrypto.github.io/analytics/curve/yearn/2021/09/29/yvBoost-and-yveCRV-Vaults.html"},"description":"How has the introduction of the yvBOOST Vault impacted usage of the yveCRV Vault?","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link rel="stylesheet" href="/analytics/assets/css/style.css"><link type="application/atom+xml" rel="alternate" href="https://scottincrypto.github.io/analytics/feed.xml" title="@scottincrypto" /><link rel="shortcut icon" type="image/x-icon" href="/analytics/images/favicon.ico"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Primer/15.2.0/primer.css" integrity="sha512-xTz2ys4coGAOz8vuV1NcQBkgVmKhsSEtjbqyMJbBHRplFuvKIUo6xhLHpAyPt9mfR6twHJgn9OgVLuqOvjeBhg==" crossorigin="anonymous" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" integrity="sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog==" crossorigin="anonymous" />
+
+<script>
+function wrap_img(fn) {
+    if (document.attachEvent ? document.readyState === "complete" : document.readyState !== "loading") {
+        var elements = document.querySelectorAll(".post img");
+        Array.prototype.forEach.call(elements, function(el, i) {
+            if (el.getAttribute("title") && (el.className != "emoji")) {
+                const caption = document.createElement('figcaption');
+                var node = document.createTextNode(el.getAttribute("title"));
+                caption.appendChild(node);
+                const wrapper = document.createElement('figure');
+                wrapper.className = 'image';
+                el.parentNode.insertBefore(wrapper, el);
+                el.parentNode.removeChild(el);
+                wrapper.appendChild(el);
+                wrapper.appendChild(caption);
+            }
+        });
+    } else { document.addEventListener('DOMContentLoaded', fn); }
+}
+window.onload = wrap_img;
+</script>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function(){
+    // add link icon to anchor tags
+    var elem = document.querySelectorAll(".anchor-link")
+    elem.forEach(e => (e.innerHTML = '<i class="fas fa-link fa-xs"></i>'));
+    });
+</script>
+</head>
+<body><header class="site-header">
+
+  <div class="wrapper"><a class="site-title" rel="author" href="/analytics/">@scottincrypto</a><nav class="site-nav">
+        <input type="checkbox" id="nav-trigger" class="nav-trigger" />
+        <label for="nav-trigger">
+          <span class="menu-icon">
+            <svg viewBox="0 0 18 15" width="18px" height="15px">
+              <path d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.032C17.335,0,18,0.665,18,1.484L18,1.484z M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.032C17.335,6.031,18,6.696,18,7.516L18,7.516z M18,13.516C18,14.335,17.335,15,16.516,15H1.484 C0.665,15,0,14.335,0,13.516l0,0c0-0.82,0.665-1.483,1.484-1.483h15.032C17.335,12.031,18,12.695,18,13.516L18,13.516z"/>
+            </svg>
+          </span>
+        </label>
+
+        <div class="trigger"><a class="page-link" href="/analytics/about/">About Me</a><a class="page-link" href="/analytics/search/">Search</a><a class="page-link" href="/analytics/categories/">Tags</a></div>
+      </nav></div>
+</header>
+<main class="page-content" aria-label="Content">
+      <div class="wrapper">
+        <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
+
+  <header class="post-header">
+    <h1 class="post-title p-name" itemprop="name headline">yvBoost &amp; yveCRV Vaults</h1><p class="page-description">How has the introduction of the yvBOOST Vault impacted usage of the yveCRV Vault?</p><p class="post-meta post-meta-title"><time class="dt-published" datetime="2021-09-29T00:00:00-05:00" itemprop="datePublished">
+        Sep 29, 2021
+      </time>• 
+          <span itemprop="author" itemscope itemtype="http://schema.org/Person">
+            <span class="p-author h-card" itemprop="name">Scott Simpson</span></span>
+       • <span class="read-time" title="Estimated read time">
+    
+    
+      13 min read
+    
+</span></p>
+
+    
+      <p class="category-tags"><i class="fas fa-tags category-tags-icon"></i></i> 
+      
+        <a class="category-tags-link" href="/analytics/categories/#Curve">Curve</a>
+        &nbsp;
+      
+        <a class="category-tags-link" href="/analytics/categories/#Yearn">Yearn</a>
+        
+      
+      </p>
+    
+
+    
+      
+        <div class="pb-5 d-flex flex-wrap flex-justify-end">
+          <div class="px-2">
+
+    <a href="https://github.com/scottincrypto/analytics/tree/master/_notebooks/2021-09-29-yvBoost and yveCRV Vaults.ipynb" role="button" target="_blank">
+<img class="notebook-badge-image" src="/analytics/assets/badges/github.svg" alt="View On GitHub">
+    </a>
+</div>
+
+          
+          <div class="px-2">
+    <a href="https://colab.research.google.com/github/scottincrypto/analytics/blob/master/_notebooks/2021-09-29-yvBoost and yveCRV Vaults.ipynb" target="_blank">
+        <img class="notebook-badge-image" src="/analytics/assets/badges/colab.svg" alt="Open In Colab"/>
+    </a>
+</div>
+        </div>
+      </header>
+
+  <div class="post-content e-content" itemprop="articleBody">
+    <ul class="section-nav">
+<li class="toc-entry toc-h1"><a href="#Header">Header </a></li>
+<li class="toc-entry toc-h1"><a href="#Yearn-yVaults,-yveCRV-DAO-and-yvBOOST">Yearn yVaults, yveCRV-DAO and yvBOOST </a>
+<ul>
+<li class="toc-entry toc-h2"><a href="#Yearn-yVaults">Yearn yVaults </a></li>
+<li class="toc-entry toc-h2"><a href="#yveCRV-yVault">yveCRV yVault </a></li>
+<li class="toc-entry toc-h2"><a href="#yvBoost">yvBoost </a></li>
+</ul>
+</li>
+<li class="toc-entry toc-h1"><a href="#yVault-Usage---Total-Value-Locked-in-USD">yVault Usage - Total Value Locked in USD </a></li>
+<li class="toc-entry toc-h1"><a href="#yVault-Usage---Total-Value-Locked-in-CRV-Tokens">yVault Usage - Total Value Locked in CRV Tokens </a></li>
+<li class="toc-entry toc-h1"><a href="#Impact-of-Pricing">Impact of Pricing </a></li>
+<li class="toc-entry toc-h1"><a href="#Vault-Return-on-Investment">Vault Return on Investment </a></li>
+<li class="toc-entry toc-h1"><a href="#Conclusions">Conclusions </a></li>
+</ul><body>
+<!--
+#################################################
+### THIS FILE WAS AUTOGENERATED! DO NOT EDIT! ###
+#################################################
+# file to edit: _notebooks/2021-09-29-yvBoost and yveCRV Vaults.ipynb
+-->
+
+<div class="container" id="notebook-container">
+        
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Header">
+<a class="anchor" href="#Header" aria-hidden="true"><span class="octicon octicon-link"></span></a>Header<a class="anchor-link" href="#Header"> </a>
+</h1>
+<p>Narrative:
+How has the introduction of the yvBOOST Vault impacted usage of the yveCRV Vault?</p>
+<p>Intro to the yveCRV and yvBoost vaults - lift this from the Zap bounty</p>
+<p>Talk about intro dates<br>
+You can't withdraw from yveCRV - but you can swap and there is a liquid market for it (<a href="https://analytics.sushi.com/pairs/0x10b47177e92ef9d5c6059055d92ddf6290848991">https://analytics.sushi.com/pairs/0x10b47177e92ef9d5c6059055d92ddf6290848991</a>) with 1.2m of liquidity</p>
+<p>Options for loose CRV tokens</p>
+<ul>
+<li>Use it in defi - LP fees</li>
+<li>Lock it yourself with CRV (claim fees etc)</li>
+<li>Deposit with Yearn (yveCRV-DAO or yvBoost)</li>
+<li>Deposit with Convex (same concept at Yearn)</li>
+</ul>
+<p>Yearn provided a home for CRV - it captured</p>
+<p>Conclusion:
+yEs the yvBoost vault impacted the usage of the yveCRV Vault.</p>
+<p>Prior to yvBoost, yveCRV-DAO was the place to optimally stake CRV tokens.</p>
+<p>yvBOost automated this and gave the exit option.  at the same time CVX launched
+When yvBoost launched, yveCRV-DAO was required to enter it.  This was either done via users or Zaps.  As the yveCRV relative price dropped, the vault used swaps to get the required yveCRV instead.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Yearn-yVaults,-yveCRV-DAO-and-yvBOOST">
+<a class="anchor" href="#Yearn-yVaults,-yveCRV-DAO-and-yvBOOST" aria-hidden="true"><span class="octicon octicon-link"></span></a>Yearn yVaults, yveCRV-DAO and yvBOOST<a class="anchor-link" href="#Yearn-yVaults,-yveCRV-DAO-and-yvBOOST"> </a>
+</h1>
+<h2 id="Yearn-yVaults">
+<a class="anchor" href="#Yearn-yVaults" aria-hidden="true"><span class="octicon octicon-link"></span></a>Yearn yVaults<a class="anchor-link" href="#Yearn-yVaults"> </a>
+</h2>
+<p>Yearn is a DeFi protocol which automates yield farming.  Users have tokens which they want to hold - Yearn puts those tokens to work by finding the best yield farming opportunities across DeFi.  It does this in a gas efficient way for the user, so even small deposits can get decent returns over time.</p>
+<p>Yearn users deposit their tokens into yVaults, and receive a token in return which is proportional to their share of the vault capital.  A yVault is a smart contract with one ore more Strategies sitting behind it.  The Strategies are the yield-farming recipes which are created by clever humans (Strategists) and monitored &amp; managed by bots (Keepers).  The yVault contains logic which automatically allocates the vault deposits to whichever combination of Strategies gives the best return for the users.  The rewards from the yield farming accrue into the vault, so the value of the vault token is always increasing.  When a user withdraws from the yVault, they get more tokens than they deposited.  This additional amount is the yield the vault has earned on their behalf.</p>
+<p>Each yVault is structured around a particular underlying token - there are vaults for Eth, USDC, WBTC and many others.  Users can deposit in the yVault native token, or they can deposit using any other token &amp; take advantage of Zaps.  Zaps are smart contracts which take an input token and swap it for the underlying token in a gas efficient manner.  The swap may occur via a number of dexs or dex aggregators, but this is abstracted away for the user.  There is a similar feature when withdrawing - the user can withdraw the underlying token from a yVault, or choose to receive their funds in ETH, WBTC, DAI, USDC or USDT.  It's important to know that whatever token the user deposits  or withdraws, they maintain price exposure to the <em>underlying token</em> of the vault whilst deposited.</p>
+<h2 id="yveCRV-yVault">
+<a class="anchor" href="#yveCRV-yVault" aria-hidden="true"><span class="octicon octicon-link"></span></a>yveCRV yVault<a class="anchor-link" href="#yveCRV-yVault"> </a>
+</h2>
+<p>Now the veCRV-DAO yVault (also known as the yveCRV Vault) is a little different to the others.  It starts with the CRV token, the governance &amp; reward token from <a href="https://curve.fi">Curve</a>.  Curve is a dex which specialises in stableswaps - swaps between tokens which have approximately the same value.  Examples are ETH/stETH or swaps between dollar pegged stablecoins.  Curve has optimised their swap code to make these swaps efficient from both a liquidity impact and fee perspected - see this <a href="https://scottincrypto.github.io/analytics/curve/2021/09/19/Curve_Stableswaps.html">post</a> for a further exploration of Curve &amp; stablecoin swaps.</p>
+<p>The CRV token has voting rights in the Curve DAO which makes decisions on the Curve protocol - things like fees, LP rewards, swap parameters and pools launched.  In some Curve pools, liquidity providers receive CRV tokens to incentivise liquidity in the pools.  CRV tokens are also available on the open market.  To encourage users to stay as CRV hodlers, there is a facility to lock CRV tokens into the CRV DAO for a fixed period of up to 4 years.  Users receive veCRV tokens (voting escrow Curve Tokens) for doing this, and more tokens are received the longer the locking period.  veCRV holders can still participate in governance voting, they receive 50% of Curve trading fees and they qualify for boosted rewards (up to 2.5x) when they provide liquidity in Curve.</p>
+<p>The fees generated for veCRV holders are collected in the form of 3CRV tokens (shares in the <a href="https://curve.fi/3pool">Curve tripool</a>, which can be redeemed for stablecoins if desired.  Fee distribution for veCRV holders happens weekly and users need to collect these manually and pay the gas cost for the transactions.</p>
+<p>In true Yearn fashion there is a vault &amp; a strategy to maximise the returns from this CRV locking process.  This is the yveCRV yVault and it's different to the other vaults in that you <em>can't withdraw your tokens</em>.  Yearn takes CRV tokens and locks them with the CRV DAO for the maximum 4 year period and continually renews this lock.  This maximises the veCRV returns to the yVault.  In addition, all Yearn vaults send 10% of earned CRV into this vault for additional boost.  The returns to the users are in the form of the 3CRV tokens earned by the veCRV - like the CRV staking contract, these are collectable weekly as an income stream, and must be collected manaully.  yVault depositors receive yveCRV-DAO tokens as their share in the vault.</p>
+<h2 id="yvBoost">
+<a class="anchor" href="#yvBoost" aria-hidden="true"><span class="octicon octicon-link"></span></a>yvBoost<a class="anchor-link" href="#yvBoost"> </a>
+</h2>
+<p>Finally we get to the yvBoost yVault.  This vault builds on the yveCRV yVault, but automates the process of collecting the weekly rewards.  The Strategy behind this vault collects the 3CRV rewards each week, swaps them for more yveCRV then deposits them back into the vault.  The yvBoost vault is a standard Yearn yVault - you can withdraw part or all of your outstanding deposit and any accrued gains at any time.  Working in the native tokens of the yVault, users can deposit or withdraw yveCRV-DAO tokens.  Alternatively, users can take advantage of the Zap function and deposit pretty much any ERC-20 token into the vault.  They can also withdraw using Zap and collect WETH, WBTC, DAI, USDT or USDC.  As the Zap conversions occur on the way in and out, the user maintains price exposure to the yveCRV-DAO tokens whilst deposited in the vault.</p>
+<p>The yveCRV yVault launched 4-5 months before the yvBoost yVault.  We will examine what impact the launch of the yvBoost yVault had on the usage of the yveCRV yVault.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="yVault-Usage---Total-Value-Locked-in-USD">
+<a class="anchor" href="#yVault-Usage---Total-Value-Locked-in-USD" aria-hidden="true"><span class="octicon octicon-link"></span></a>yVault Usage - Total Value Locked in USD<a class="anchor-link" href="#yVault-Usage---Total-Value-Locked-in-USD"> </a>
+</h1>
+<p>If we are to understand the impact of the yvBoost vault on the usage of the yveCRV vault, first we must define what we mean by usage.  For a Yearn vault, this is best defined by the Total Value Locked (TVL).  This is the sum of the value of the tokens deposited and withdrawn from the vault by users.  For the yveCRV vault this is simple - as there are no withdrawals, we just need to sum the deposits.  For the yvBoost vault, we need to add the deposits &amp; subtract the withdrawal transactions.  We need a common baseline for comparing TVLs, as:</p>
+<ul>
+<li>yveCRV deposits are denominated in CRV</li>
+<li>yvBoost deposits are denominated in yveCRV-DAO</li>
+</ul>
+<p>Let's have a look at the TVL denominated in USD over time for these two vaults, shown in the graph below.  There isn't too much to discern from this - the value of both vaults declined post May 2021.  For the yvBoost vault, this may have been due to withdrawals being higher than deposits, or it could be due to the USD value of yveCRV-DAO tokens dropping.  Same with the yveCRV graph - we know that there are no withdrawals, but were the rises due to price or deposits?  It seems we need an alternative approach.</p>
+
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+
+<div class="output_html rendered_html output_subarea ">
+
+<meta charset="utf-8">
+
+    <div>            <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-AMS-MML_SVG"></script><script type="text/javascript">if (window.MathJax) {MathJax.Hub.Config({SVG: {font: "STIX-Web"}});}</script>                <script type="text/javascript">window.PlotlyConfig = {MathJaxConfig: 'local'};</script>
+        <script src="https://cdn.plot.ly/plotly-2.4.2.min.js"></script>                <div id="b97964b7-7f2b-4a53-86d0-28c9583fff65" class="plotly-graph-div" style="height:494.4375772558714px; width:800px;"></div>            <script type="text/javascript">                                    window.PLOTLYENV=window.PLOTLYENV || {};                                    if (document.getElementById("b97964b7-7f2b-4a53-86d0-28c9583fff65")) {                    Plotly.newPlot(                        "b97964b7-7f2b-4a53-86d0-28c9583fff65",                        [{"hovertemplate":"Vault=yveCRV-DAO<br>Week=%{x}<br>USD Value=%{y}<extra></extra>","legendgroup":"yveCRV-DAO","line":{"color":"#1F77B4","dash":"solid"},"marker":{"symbol":"circle"},"mode":"lines","name":"yveCRV-DAO","orientation":"v","showlegend":true,"type":"scatter","x":["2020-12-27T00:00:00+00:00","2021-01-03T00:00:00+00:00","2021-01-10T00:00:00+00:00","2021-01-17T00:00:00+00:00","2021-01-24T00:00:00+00:00","2021-01-31T00:00:00+00:00","2021-02-07T00:00:00+00:00","2021-02-14T00:00:00+00:00","2021-02-21T00:00:00+00:00","2021-02-28T00:00:00+00:00","2021-03-07T00:00:00+00:00","2021-03-14T00:00:00+00:00","2021-03-21T00:00:00+00:00","2021-03-28T00:00:00+00:00","2021-04-04T00:00:00+00:00","2021-04-11T00:00:00+00:00","2021-04-18T00:00:00+00:00","2021-04-25T00:00:00+00:00","2021-05-02T00:00:00+00:00","2021-05-09T00:00:00+00:00","2021-05-16T00:00:00+00:00","2021-05-23T00:00:00+00:00","2021-05-30T00:00:00+00:00","2021-06-06T00:00:00+00:00","2021-06-13T00:00:00+00:00","2021-06-20T00:00:00+00:00","2021-06-27T00:00:00+00:00","2021-07-04T00:00:00+00:00","2021-07-11T00:00:00+00:00","2021-07-18T00:00:00+00:00","2021-07-25T00:00:00+00:00","2021-08-01T00:00:00+00:00","2021-08-08T00:00:00+00:00","2021-08-15T00:00:00+00:00","2021-08-22T00:00:00+00:00","2021-08-29T00:00:00+00:00","2021-09-05T00:00:00+00:00","2021-09-12T00:00:00+00:00","2021-09-19T00:00:00+00:00","2021-09-26T00:00:00+00:00"],"xaxis":"x","y":[12850.558651785643,100109.58024300527,705759.6768312947,1473177.034724886,2016628.349681839,5098418.038413955,9355220.084392218,10230078.66835839,11173506.533639528,11074285.605406843,13043723.266461994,15690963.54139016,16995904.473225914,21419608.856366612,20535029.21806296,22581462.644840147,20660909.504760176,20204340.86502991,24482624.847383346,27621528.33916408,23668035.257082723,15243187.723909682,21643718.48885372,24337474.88958312,22538671.640906464,17153952.165576834,17834914.65030439,19708280.409496248,17364136.809695106,15519684.252257127,16979911.879887253,18360290.613454204,22230634.454402182,23602686.429601867,24791178.485955875,24290418.518001426,25054793.30727688,30062978.412761897,29083781.237345845,27056300.29090207],"yaxis":"y"},{"hovertemplate":"Vault=yvBoost<br>Week=%{x}<br>USD Value=%{y}<extra></extra>","legendgroup":"yvBoost","line":{"color":"#FF7F0E","dash":"solid"},"marker":{"symbol":"circle"},"mode":"lines","name":"yvBoost","orientation":"v","showlegend":true,"type":"scatter","x":["2020-12-27T00:00:00+00:00","2021-01-03T00:00:00+00:00","2021-01-10T00:00:00+00:00","2021-01-17T00:00:00+00:00","2021-01-24T00:00:00+00:00","2021-01-31T00:00:00+00:00","2021-02-07T00:00:00+00:00","2021-02-14T00:00:00+00:00","2021-02-21T00:00:00+00:00","2021-02-28T00:00:00+00:00","2021-03-07T00:00:00+00:00","2021-03-14T00:00:00+00:00","2021-03-21T00:00:00+00:00","2021-03-28T00:00:00+00:00","2021-04-04T00:00:00+00:00","2021-04-11T00:00:00+00:00","2021-04-18T00:00:00+00:00","2021-04-25T00:00:00+00:00","2021-05-02T00:00:00+00:00","2021-05-09T00:00:00+00:00","2021-05-16T00:00:00+00:00","2021-05-23T00:00:00+00:00","2021-05-30T00:00:00+00:00","2021-06-06T00:00:00+00:00","2021-06-13T00:00:00+00:00","2021-06-20T00:00:00+00:00","2021-06-27T00:00:00+00:00","2021-07-04T00:00:00+00:00","2021-07-11T00:00:00+00:00","2021-07-18T00:00:00+00:00","2021-07-25T00:00:00+00:00","2021-08-01T00:00:00+00:00","2021-08-08T00:00:00+00:00","2021-08-15T00:00:00+00:00","2021-08-22T00:00:00+00:00","2021-08-29T00:00:00+00:00","2021-09-05T00:00:00+00:00","2021-09-12T00:00:00+00:00","2021-09-19T00:00:00+00:00","2021-09-26T00:00:00+00:00"],"xaxis":"x","y":[null,null,null,null,null,null,null,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,744452.3219404294,266181.34324016003,8881471.351556616,17514568.49999327,21448707.63219488,16765685.57923611,13067304.139547821,16995329.787649535,17712431.540470388,17079847.51031067,13918679.321447365,14186232.178868813,15151646.243514681,13171581.982805876,11958777.487714091,12914056.681535974,13227410.32659851,14424575.879719894,12633230.381701404,10613397.367311165,11945188.01344171,11412268.093359496,11258184.97680441,9919478.64077141,9532089.81621598],"yaxis":"y"}],                        {"height":494.4375772558714,"legend":{"title":{},"tracegroupgap":0,"x":0.99,"xanchor":"right","y":0.01,"yanchor":"bottom"},"template":{"data":{"bar":[{"error_x":{"color":"rgb(36,36,36)"},"error_y":{"color":"rgb(36,36,36)"},"marker":{"line":{"color":"white","width":0.5},"pattern":{"fillmode":"overlay","size":10,"solidity":0.2}},"type":"bar"}],"barpolar":[{"marker":{"line":{"color":"white","width":0.5},"pattern":{"fillmode":"overlay","size":10,"solidity":0.2}},"type":"barpolar"}],"carpet":[{"aaxis":{"endlinecolor":"rgb(36,36,36)","gridcolor":"white","linecolor":"white","minorgridcolor":"white","startlinecolor":"rgb(36,36,36)"},"baxis":{"endlinecolor":"rgb(36,36,36)","gridcolor":"white","linecolor":"white","minorgridcolor":"white","startlinecolor":"rgb(36,36,36)"},"type":"carpet"}],"choropleth":[{"colorbar":{"outlinewidth":1,"tickcolor":"rgb(36,36,36)","ticks":"outside"},"type":"choropleth"}],"contour":[{"colorbar":{"outlinewidth":1,"tickcolor":"rgb(36,36,36)","ticks":"outside"},"colorscale":[[0.0,"#440154"],[0.1111111111111111,"#482878"],[0.2222222222222222,"#3e4989"],[0.3333333333333333,"#31688e"],[0.4444444444444444,"#26828e"],[0.5555555555555556,"#1f9e89"],[0.6666666666666666,"#35b779"],[0.7777777777777778,"#6ece58"],[0.8888888888888888,"#b5de2b"],[1.0,"#fde725"]],"type":"contour"}],"contourcarpet":[{"colorbar":{"outlinewidth":1,"tickcolor":"rgb(36,36,36)","ticks":"outside"},"type":"contourcarpet"}],"heatmap":[{"colorbar":{"outlinewidth":1,"tickcolor":"rgb(36,36,36)","ticks":"outside"},"colorscale":[[0.0,"#440154"],[0.1111111111111111,"#482878"],[0.2222222222222222,"#3e4989"],[0.3333333333333333,"#31688e"],[0.4444444444444444,"#26828e"],[0.5555555555555556,"#1f9e89"],[0.6666666666666666,"#35b779"],[0.7777777777777778,"#6ece58"],[0.8888888888888888,"#b5de2b"],[1.0,"#fde725"]],"type":"heatmap"}],"heatmapgl":[{"colorbar":{"outlinewidth":1,"tickcolor":"rgb(36,36,36)","ticks":"outside"},"colorscale":[[0.0,"#440154"],[0.1111111111111111,"#482878"],[0.2222222222222222,"#3e4989"],[0.3333333333333333,"#31688e"],[0.4444444444444444,"#26828e"],[0.5555555555555556,"#1f9e89"],[0.6666666666666666,"#35b779"],[0.7777777777777778,"#6ece58"],[0.8888888888888888,"#b5de2b"],[1.0,"#fde725"]],"type":"heatmapgl"}],"histogram":[{"marker":{"line":{"color":"white","width":0.6}},"type":"histogram"}],"histogram2d":[{"colorbar":{"outlinewidth":1,"tickcolor":"rgb(36,36,36)","ticks":"outside"},"colorscale":[[0.0,"#440154"],[0.1111111111111111,"#482878"],[0.2222222222222222,"#3e4989"],[0.3333333333333333,"#31688e"],[0.4444444444444444,"#26828e"],[0.5555555555555556,"#1f9e89"],[0.6666666666666666,"#35b779"],[0.7777777777777778,"#6ece58"],[0.8888888888888888,"#b5de2b"],[1.0,"#fde725"]],"type":"histogram2d"}],"histogram2dcontour":[{"colorbar":{"outlinewidth":1,"tickcolor":"rgb(36,36,36)","ticks":"outside"},"colorscale":[[0.0,"#440154"],[0.1111111111111111,"#482878"],[0.2222222222222222,"#3e4989"],[0.3333333333333333,"#31688e"],[0.4444444444444444,"#26828e"],[0.5555555555555556,"#1f9e89"],[0.6666666666666666,"#35b779"],[0.7777777777777778,"#6ece58"],[0.8888888888888888,"#b5de2b"],[1.0,"#fde725"]],"type":"histogram2dcontour"}],"mesh3d":[{"colorbar":{"outlinewidth":1,"tickcolor":"rgb(36,36,36)","ticks":"outside"},"type":"mesh3d"}],"parcoords":[{"line":{"colorbar":{"outlinewidth":1,"tickcolor":"rgb(36,36,36)","ticks":"outside"}},"type":"parcoords"}],"pie":[{"automargin":true,"type":"pie"}],"scatter":[{"marker":{"colorbar":{"outlinewidth":1,"tickcolor":"rgb(36,36,36)","ticks":"outside"}},"type":"scatter"}],"scatter3d":[{"line":{"colorbar":{"outlinewidth":1,"tickcolor":"rgb(36,36,36)","ticks":"outside"}},"marker":{"colorbar":{"outlinewidth":1,"tickcolor":"rgb(36,36,36)","ticks":"outside"}},"type":"scatter3d"}],"scattercarpet":[{"marker":{"colorbar":{"outlinewidth":1,"tickcolor":"rgb(36,36,36)","ticks":"outside"}},"type":"scattercarpet"}],"scattergeo":[{"marker":{"colorbar":{"outlinewidth":1,"tickcolor":"rgb(36,36,36)","ticks":"outside"}},"type":"scattergeo"}],"scattergl":[{"marker":{"colorbar":{"outlinewidth":1,"tickcolor":"rgb(36,36,36)","ticks":"outside"}},"type":"scattergl"}],"scattermapbox":[{"marker":{"colorbar":{"outlinewidth":1,"tickcolor":"rgb(36,36,36)","ticks":"outside"}},"type":"scattermapbox"}],"scatterpolar":[{"marker":{"colorbar":{"outlinewidth":1,"tickcolor":"rgb(36,36,36)","ticks":"outside"}},"type":"scatterpolar"}],"scatterpolargl":[{"marker":{"colorbar":{"outlinewidth":1,"tickcolor":"rgb(36,36,36)","ticks":"outside"}},"type":"scatterpolargl"}],"scatterternary":[{"marker":{"colorbar":{"outlinewidth":1,"tickcolor":"rgb(36,36,36)","ticks":"outside"}},"type":"scatterternary"}],"surface":[{"colorbar":{"outlinewidth":1,"tickcolor":"rgb(36,36,36)","ticks":"outside"},"colorscale":[[0.0,"#440154"],[0.1111111111111111,"#482878"],[0.2222222222222222,"#3e4989"],[0.3333333333333333,"#31688e"],[0.4444444444444444,"#26828e"],[0.5555555555555556,"#1f9e89"],[0.6666666666666666,"#35b779"],[0.7777777777777778,"#6ece58"],[0.8888888888888888,"#b5de2b"],[1.0,"#fde725"]],"type":"surface"}],"table":[{"cells":{"fill":{"color":"rgb(237,237,237)"},"line":{"color":"white"}},"header":{"fill":{"color":"rgb(217,217,217)"},"line":{"color":"white"}},"type":"table"}]},"layout":{"annotationdefaults":{"arrowhead":0,"arrowwidth":1},"autotypenumbers":"strict","coloraxis":{"colorbar":{"outlinewidth":1,"tickcolor":"rgb(36,36,36)","ticks":"outside"}},"colorscale":{"diverging":[[0.0,"rgb(103,0,31)"],[0.1,"rgb(178,24,43)"],[0.2,"rgb(214,96,77)"],[0.3,"rgb(244,165,130)"],[0.4,"rgb(253,219,199)"],[0.5,"rgb(247,247,247)"],[0.6,"rgb(209,229,240)"],[0.7,"rgb(146,197,222)"],[0.8,"rgb(67,147,195)"],[0.9,"rgb(33,102,172)"],[1.0,"rgb(5,48,97)"]],"sequential":[[0.0,"#440154"],[0.1111111111111111,"#482878"],[0.2222222222222222,"#3e4989"],[0.3333333333333333,"#31688e"],[0.4444444444444444,"#26828e"],[0.5555555555555556,"#1f9e89"],[0.6666666666666666,"#35b779"],[0.7777777777777778,"#6ece58"],[0.8888888888888888,"#b5de2b"],[1.0,"#fde725"]],"sequentialminus":[[0.0,"#440154"],[0.1111111111111111,"#482878"],[0.2222222222222222,"#3e4989"],[0.3333333333333333,"#31688e"],[0.4444444444444444,"#26828e"],[0.5555555555555556,"#1f9e89"],[0.6666666666666666,"#35b779"],[0.7777777777777778,"#6ece58"],[0.8888888888888888,"#b5de2b"],[1.0,"#fde725"]]},"colorway":["#1F77B4","#FF7F0E","#2CA02C","#D62728","#9467BD","#8C564B","#E377C2","#7F7F7F","#BCBD22","#17BECF"],"font":{"color":"rgb(36,36,36)"},"geo":{"bgcolor":"white","lakecolor":"white","landcolor":"white","showlakes":true,"showland":true,"subunitcolor":"white"},"hoverlabel":{"align":"left"},"hovermode":"closest","mapbox":{"style":"light"},"paper_bgcolor":"white","plot_bgcolor":"white","polar":{"angularaxis":{"gridcolor":"rgb(232,232,232)","linecolor":"rgb(36,36,36)","showgrid":false,"showline":true,"ticks":"outside"},"bgcolor":"white","radialaxis":{"gridcolor":"rgb(232,232,232)","linecolor":"rgb(36,36,36)","showgrid":false,"showline":true,"ticks":"outside"}},"scene":{"xaxis":{"backgroundcolor":"white","gridcolor":"rgb(232,232,232)","gridwidth":2,"linecolor":"rgb(36,36,36)","showbackground":true,"showgrid":false,"showline":true,"ticks":"outside","zeroline":false,"zerolinecolor":"rgb(36,36,36)"},"yaxis":{"backgroundcolor":"white","gridcolor":"rgb(232,232,232)","gridwidth":2,"linecolor":"rgb(36,36,36)","showbackground":true,"showgrid":false,"showline":true,"ticks":"outside","zeroline":false,"zerolinecolor":"rgb(36,36,36)"},"zaxis":{"backgroundcolor":"white","gridcolor":"rgb(232,232,232)","gridwidth":2,"linecolor":"rgb(36,36,36)","showbackground":true,"showgrid":false,"showline":true,"ticks":"outside","zeroline":false,"zerolinecolor":"rgb(36,36,36)"}},"shapedefaults":{"fillcolor":"black","line":{"width":0},"opacity":0.3},"ternary":{"aaxis":{"gridcolor":"rgb(232,232,232)","linecolor":"rgb(36,36,36)","showgrid":false,"showline":true,"ticks":"outside"},"baxis":{"gridcolor":"rgb(232,232,232)","linecolor":"rgb(36,36,36)","showgrid":false,"showline":true,"ticks":"outside"},"bgcolor":"white","caxis":{"gridcolor":"rgb(232,232,232)","linecolor":"rgb(36,36,36)","showgrid":false,"showline":true,"ticks":"outside"}},"title":{"x":0.05},"xaxis":{"automargin":true,"gridcolor":"rgb(232,232,232)","linecolor":"rgb(36,36,36)","showgrid":false,"showline":true,"ticks":"outside","title":{"standoff":15},"zeroline":false,"zerolinecolor":"rgb(36,36,36)"},"yaxis":{"automargin":true,"gridcolor":"rgb(232,232,232)","linecolor":"rgb(36,36,36)","showgrid":false,"showline":true,"ticks":"outside","title":{"standoff":15},"zeroline":false,"zerolinecolor":"rgb(36,36,36)"}}},"title":{"text":"Vault TVL in USD"},"width":800,"xaxis":{"anchor":"y","domain":[0.0,1.0],"title":{}},"yaxis":{"anchor":"x","domain":[0.0,1.0],"title":{"text":"Amount (USD)"}}},                        {"responsive": true}                    ).then(function(){
+                            
+var gd = document.getElementById('b97964b7-7f2b-4a53-86d0-28c9583fff65');
+var x = new MutationObserver(function (mutations, observer) {{
+        var display = window.getComputedStyle(gd).display;
+        if (!display || display === 'none') {{
+            console.log([gd, 'removed!']);
+            Plotly.purge(gd);
+            observer.disconnect();
+        }}
+}});
+
+// Listen for the removal of the full notebook cells
+var notebookContainer = gd.closest('#notebook-container');
+if (notebookContainer) {{
+    x.observe(notebookContainer, {childList: true});
+}}
+
+// Listen for the clearing of the current output cell
+var outputEl = gd.closest('.output');
+if (outputEl) {{
+    x.observe(outputEl, {childList: true});
+}}
+
+                        })                };                            </script>        </div>
+
+
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+    
+
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="yVault-Usage---Total-Value-Locked-in-CRV-Tokens">
+<a class="anchor" href="#yVault-Usage---Total-Value-Locked-in-CRV-Tokens" aria-hidden="true"><span class="octicon octicon-link"></span></a>yVault Usage - Total Value Locked in CRV Tokens<a class="anchor-link" href="#yVault-Usage---Total-Value-Locked-in-CRV-Tokens"> </a>
+</h1>
+<p>When users deposit CRV into the yveCRV vault, they receive 1 yveCRV-DAO token for each CRV deposited.  Given that yveCRV-DAO tokens are then deposited into the yvBoost vault, it makes sense to look at the TVL of these two vaults denominated in CRV.  The graph below shows the TVL of the two vaults in equivalent CRV tokens.  Now we can see the underlying usage of the vaults independent of the USD price volatility.  We saw rapid growth of the yveCRV vault to March 2021, then it levelled off considerably.  The launch of yvBoost in April saw rapid takeup of this vault, with the TVL approaching that of the yveCRV vault within 6-7 weeks.  At the same time, the yveCRV vault TVL also rose rapidly.  This growth in yveCRV was driven by the yvBoost growth because yvBoost requires yveCRV-DAO tokens to deposit.  These are obtained either by depositing CRV into yveCRV and minting new tokens, or by purchasing them on the secondary market.  The yvBoost vault makes the choice based on what is best value at the time - we will examine the relative pricing a bit later.</p>
+
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+
+<div class="output_html rendered_html output_subarea ">
+
+<meta charset="utf-8">
+
+    <div>            <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-AMS-MML_SVG"></script><script type="text/javascript">if (window.MathJax) {MathJax.Hub.Config({SVG: {font: "STIX-Web"}});}</script>                <script type="text/javascript">window.PlotlyConfig = {MathJaxConfig: 'local'};</script>
+        <script src="https://cdn.plot.ly/plotly-2.4.2.min.js"></script>                <div id="d04945b3-049e-4722-8dde-758e6e281ba6" class="plotly-graph-div" style="height:494.4375772558714px; width:800px;"></div>            <script type="text/javascript">                                    window.PLOTLYENV=window.PLOTLYENV || {};                                    if (document.getElementById("d04945b3-049e-4722-8dde-758e6e281ba6")) {                    Plotly.newPlot(                        "d04945b3-049e-4722-8dde-758e6e281ba6",                        [{"hovertemplate":"Vault=yveCRV-DAO<br>Week=%{x}<br>Equivalent CRV=%{y}<extra></extra>","legendgroup":"yveCRV-DAO","line":{"color":"#1F77B4","dash":"solid"},"marker":{"symbol":"circle"},"mode":"lines","name":"yveCRV-DAO","orientation":"v","showlegend":true,"type":"scatter","x":["2020-12-27T00:00:00+00:00","2021-01-03T00:00:00+00:00","2021-01-10T00:00:00+00:00","2021-01-17T00:00:00+00:00","2021-01-24T00:00:00+00:00","2021-01-31T00:00:00+00:00","2021-02-07T00:00:00+00:00","2021-02-14T00:00:00+00:00","2021-02-21T00:00:00+00:00","2021-02-28T00:00:00+00:00","2021-03-07T00:00:00+00:00","2021-03-14T00:00:00+00:00","2021-03-21T00:00:00+00:00","2021-03-28T00:00:00+00:00","2021-04-04T00:00:00+00:00","2021-04-11T00:00:00+00:00","2021-04-18T00:00:00+00:00","2021-04-25T00:00:00+00:00","2021-05-02T00:00:00+00:00","2021-05-09T00:00:00+00:00","2021-05-16T00:00:00+00:00","2021-05-23T00:00:00+00:00","2021-05-30T00:00:00+00:00","2021-06-06T00:00:00+00:00","2021-06-13T00:00:00+00:00","2021-06-20T00:00:00+00:00","2021-06-27T00:00:00+00:00","2021-07-04T00:00:00+00:00","2021-07-11T00:00:00+00:00","2021-07-18T00:00:00+00:00","2021-07-25T00:00:00+00:00","2021-08-01T00:00:00+00:00","2021-08-08T00:00:00+00:00","2021-08-15T00:00:00+00:00","2021-08-22T00:00:00+00:00","2021-08-29T00:00:00+00:00","2021-09-05T00:00:00+00:00","2021-09-12T00:00:00+00:00","2021-09-19T00:00:00+00:00","2021-09-26T00:00:00+00:00"],"xaxis":"x","y":[22905.901721967242,146358.67826745074,913706.8874224946,933728.4925013834,975660.5958897348,1875437.772147845,2920926.046320119,3596548.3940101615,4689656.700991203,5263869.175094887,5895258.852148558,6414112.339603914,6559609.033514446,6603596.760768044,6698285.324110909,6769844.888267377,6826227.264458245,7070671.9185759425,7538349.017858494,8094851.528180314,8691109.907949096,9320963.956698107,10112168.192433815,10390769.629378024,10579925.305801908,10621055.718642717,10694303.053683702,10724216.511661235,10744554.809933439,10754716.373472482,10780273.442346998,10782989.402635265,11109896.935923213,11113701.185553472,11130882.66490637,11133426.817538103,11142212.990596838,11193093.94679562,11204007.292458216,11212285.056650037],"yaxis":"y"},{"hovertemplate":"Vault=yvBoost<br>Week=%{x}<br>Equivalent CRV=%{y}<extra></extra>","legendgroup":"yvBoost","line":{"color":"#FF7F0E","dash":"solid"},"marker":{"symbol":"circle"},"mode":"lines","name":"yvBoost","orientation":"v","showlegend":true,"type":"scatter","x":["2020-12-27T00:00:00+00:00","2021-01-03T00:00:00+00:00","2021-01-10T00:00:00+00:00","2021-01-17T00:00:00+00:00","2021-01-24T00:00:00+00:00","2021-01-31T00:00:00+00:00","2021-02-07T00:00:00+00:00","2021-02-14T00:00:00+00:00","2021-02-21T00:00:00+00:00","2021-02-28T00:00:00+00:00","2021-03-07T00:00:00+00:00","2021-03-14T00:00:00+00:00","2021-03-21T00:00:00+00:00","2021-03-28T00:00:00+00:00","2021-04-04T00:00:00+00:00","2021-04-11T00:00:00+00:00","2021-04-18T00:00:00+00:00","2021-04-25T00:00:00+00:00","2021-05-02T00:00:00+00:00","2021-05-09T00:00:00+00:00","2021-05-16T00:00:00+00:00","2021-05-23T00:00:00+00:00","2021-05-30T00:00:00+00:00","2021-06-06T00:00:00+00:00","2021-06-13T00:00:00+00:00","2021-06-20T00:00:00+00:00","2021-06-27T00:00:00+00:00","2021-07-04T00:00:00+00:00","2021-07-11T00:00:00+00:00","2021-07-18T00:00:00+00:00","2021-07-25T00:00:00+00:00","2021-08-01T00:00:00+00:00","2021-08-08T00:00:00+00:00","2021-08-15T00:00:00+00:00","2021-08-22T00:00:00+00:00","2021-08-29T00:00:00+00:00","2021-09-05T00:00:00+00:00","2021-09-12T00:00:00+00:00","2021-09-19T00:00:00+00:00","2021-09-26T00:00:00+00:00"],"xaxis":"x","y":[0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,260959.5996240733,95463.03007804099,3306903.607640312,5583879.5939586535,6828575.529633563,7610982.474301399,8429014.829102289,9599182.654326756,10006931.00939228,10608880.689551963,10835289.869834645,10844891.545939809,10917258.64875125,10895893.794480402,10867496.289576253,10821653.783074927,10626020.163603371,10902432.818939276,10767083.402864408,10713609.518268343,10677210.979504365,10518518.295771355,10574701.263969017,10419178.3393111,10370682.761390286],"yaxis":"y"}],                        {"height":494.4375772558714,"legend":{"title":{},"tracegroupgap":0,"x":0.99,"xanchor":"right","y":0.01,"yanchor":"bottom"},"template":{"data":{"bar":[{"error_x":{"color":"rgb(36,36,36)"},"error_y":{"color":"rgb(36,36,36)"},"marker":{"line":{"color":"white","width":0.5},"pattern":{"fillmode":"overlay","size":10,"solidity":0.2}},"type":"bar"}],"barpolar":[{"marker":{"line":{"color":"white","width":0.5},"pattern":{"fillmode":"overlay","size":10,"solidity":0.2}},"type":"barpolar"}],"carpet":[{"aaxis":{"endlinecolor":"rgb(36,36,36)","gridcolor":"white","linecolor":"white","minorgridcolor":"white","startlinecolor":"rgb(36,36,36)"},"baxis":{"endlinecolor":"rgb(36,36,36)","gridcolor":"white","linecolor":"white","minorgridcolor":"white","startlinecolor":"rgb(36,36,36)"},"type":"carpet"}],"choropleth":[{"colorbar":{"outlinewidth":1,"tickcolor":"rgb(36,36,36)","ticks":"outside"},"type":"choropleth"}],"contour":[{"colorbar":{"outlinewidth":1,"tickcolor":"rgb(36,36,36)","ticks":"outside"},"colorscale":[[0.0,"#440154"],[0.1111111111111111,"#482878"],[0.2222222222222222,"#3e4989"],[0.3333333333333333,"#31688e"],[0.4444444444444444,"#26828e"],[0.5555555555555556,"#1f9e89"],[0.6666666666666666,"#35b779"],[0.7777777777777778,"#6ece58"],[0.8888888888888888,"#b5de2b"],[1.0,"#fde725"]],"type":"contour"}],"contourcarpet":[{"colorbar":{"outlinewidth":1,"tickcolor":"rgb(36,36,36)","ticks":"outside"},"type":"contourcarpet"}],"heatmap":[{"colorbar":{"outlinewidth":1,"tickcolor":"rgb(36,36,36)","ticks":"outside"},"colorscale":[[0.0,"#440154"],[0.1111111111111111,"#482878"],[0.2222222222222222,"#3e4989"],[0.3333333333333333,"#31688e"],[0.4444444444444444,"#26828e"],[0.5555555555555556,"#1f9e89"],[0.6666666666666666,"#35b779"],[0.7777777777777778,"#6ece58"],[0.8888888888888888,"#b5de2b"],[1.0,"#fde725"]],"type":"heatmap"}],"heatmapgl":[{"colorbar":{"outlinewidth":1,"tickcolor":"rgb(36,36,36)","ticks":"outside"},"colorscale":[[0.0,"#440154"],[0.1111111111111111,"#482878"],[0.2222222222222222,"#3e4989"],[0.3333333333333333,"#31688e"],[0.4444444444444444,"#26828e"],[0.5555555555555556,"#1f9e89"],[0.6666666666666666,"#35b779"],[0.7777777777777778,"#6ece58"],[0.8888888888888888,"#b5de2b"],[1.0,"#fde725"]],"type":"heatmapgl"}],"histogram":[{"marker":{"line":{"color":"white","width":0.6}},"type":"histogram"}],"histogram2d":[{"colorbar":{"outlinewidth":1,"tickcolor":"rgb(36,36,36)","ticks":"outside"},"colorscale":[[0.0,"#440154"],[0.1111111111111111,"#482878"],[0.2222222222222222,"#3e4989"],[0.3333333333333333,"#31688e"],[0.4444444444444444,"#26828e"],[0.5555555555555556,"#1f9e89"],[0.6666666666666666,"#35b779"],[0.7777777777777778,"#6ece58"],[0.8888888888888888,"#b5de2b"],[1.0,"#fde725"]],"type":"histogram2d"}],"histogram2dcontour":[{"colorbar":{"outlinewidth":1,"tickcolor":"rgb(36,36,36)","ticks":"outside"},"colorscale":[[0.0,"#440154"],[0.1111111111111111,"#482878"],[0.2222222222222222,"#3e4989"],[0.3333333333333333,"#31688e"],[0.4444444444444444,"#26828e"],[0.5555555555555556,"#1f9e89"],[0.6666666666666666,"#35b779"],[0.7777777777777778,"#6ece58"],[0.8888888888888888,"#b5de2b"],[1.0,"#fde725"]],"type":"histogram2dcontour"}],"mesh3d":[{"colorbar":{"outlinewidth":1,"tickcolor":"rgb(36,36,36)","ticks":"outside"},"type":"mesh3d"}],"parcoords":[{"line":{"colorbar":{"outlinewidth":1,"tickcolor":"rgb(36,36,36)","ticks":"outside"}},"type":"parcoords"}],"pie":[{"automargin":true,"type":"pie"}],"scatter":[{"marker":{"colorbar":{"outlinewidth":1,"tickcolor":"rgb(36,36,36)","ticks":"outside"}},"type":"scatter"}],"scatter3d":[{"line":{"colorbar":{"outlinewidth":1,"tickcolor":"rgb(36,36,36)","ticks":"outside"}},"marker":{"colorbar":{"outlinewidth":1,"tickcolor":"rgb(36,36,36)","ticks":"outside"}},"type":"scatter3d"}],"scattercarpet":[{"marker":{"colorbar":{"outlinewidth":1,"tickcolor":"rgb(36,36,36)","ticks":"outside"}},"type":"scattercarpet"}],"scattergeo":[{"marker":{"colorbar":{"outlinewidth":1,"tickcolor":"rgb(36,36,36)","ticks":"outside"}},"type":"scattergeo"}],"scattergl":[{"marker":{"colorbar":{"outlinewidth":1,"tickcolor":"rgb(36,36,36)","ticks":"outside"}},"type":"scattergl"}],"scattermapbox":[{"marker":{"colorbar":{"outlinewidth":1,"tickcolor":"rgb(36,36,36)","ticks":"outside"}},"type":"scattermapbox"}],"scatterpolar":[{"marker":{"colorbar":{"outlinewidth":1,"tickcolor":"rgb(36,36,36)","ticks":"outside"}},"type":"scatterpolar"}],"scatterpolargl":[{"marker":{"colorbar":{"outlinewidth":1,"tickcolor":"rgb(36,36,36)","ticks":"outside"}},"type":"scatterpolargl"}],"scatterternary":[{"marker":{"colorbar":{"outlinewidth":1,"tickcolor":"rgb(36,36,36)","ticks":"outside"}},"type":"scatterternary"}],"surface":[{"colorbar":{"outlinewidth":1,"tickcolor":"rgb(36,36,36)","ticks":"outside"},"colorscale":[[0.0,"#440154"],[0.1111111111111111,"#482878"],[0.2222222222222222,"#3e4989"],[0.3333333333333333,"#31688e"],[0.4444444444444444,"#26828e"],[0.5555555555555556,"#1f9e89"],[0.6666666666666666,"#35b779"],[0.7777777777777778,"#6ece58"],[0.8888888888888888,"#b5de2b"],[1.0,"#fde725"]],"type":"surface"}],"table":[{"cells":{"fill":{"color":"rgb(237,237,237)"},"line":{"color":"white"}},"header":{"fill":{"color":"rgb(217,217,217)"},"line":{"color":"white"}},"type":"table"}]},"layout":{"annotationdefaults":{"arrowhead":0,"arrowwidth":1},"autotypenumbers":"strict","coloraxis":{"colorbar":{"outlinewidth":1,"tickcolor":"rgb(36,36,36)","ticks":"outside"}},"colorscale":{"diverging":[[0.0,"rgb(103,0,31)"],[0.1,"rgb(178,24,43)"],[0.2,"rgb(214,96,77)"],[0.3,"rgb(244,165,130)"],[0.4,"rgb(253,219,199)"],[0.5,"rgb(247,247,247)"],[0.6,"rgb(209,229,240)"],[0.7,"rgb(146,197,222)"],[0.8,"rgb(67,147,195)"],[0.9,"rgb(33,102,172)"],[1.0,"rgb(5,48,97)"]],"sequential":[[0.0,"#440154"],[0.1111111111111111,"#482878"],[0.2222222222222222,"#3e4989"],[0.3333333333333333,"#31688e"],[0.4444444444444444,"#26828e"],[0.5555555555555556,"#1f9e89"],[0.6666666666666666,"#35b779"],[0.7777777777777778,"#6ece58"],[0.8888888888888888,"#b5de2b"],[1.0,"#fde725"]],"sequentialminus":[[0.0,"#440154"],[0.1111111111111111,"#482878"],[0.2222222222222222,"#3e4989"],[0.3333333333333333,"#31688e"],[0.4444444444444444,"#26828e"],[0.5555555555555556,"#1f9e89"],[0.6666666666666666,"#35b779"],[0.7777777777777778,"#6ece58"],[0.8888888888888888,"#b5de2b"],[1.0,"#fde725"]]},"colorway":["#1F77B4","#FF7F0E","#2CA02C","#D62728","#9467BD","#8C564B","#E377C2","#7F7F7F","#BCBD22","#17BECF"],"font":{"color":"rgb(36,36,36)"},"geo":{"bgcolor":"white","lakecolor":"white","landcolor":"white","showlakes":true,"showland":true,"subunitcolor":"white"},"hoverlabel":{"align":"left"},"hovermode":"closest","mapbox":{"style":"light"},"paper_bgcolor":"white","plot_bgcolor":"white","polar":{"angularaxis":{"gridcolor":"rgb(232,232,232)","linecolor":"rgb(36,36,36)","showgrid":false,"showline":true,"ticks":"outside"},"bgcolor":"white","radialaxis":{"gridcolor":"rgb(232,232,232)","linecolor":"rgb(36,36,36)","showgrid":false,"showline":true,"ticks":"outside"}},"scene":{"xaxis":{"backgroundcolor":"white","gridcolor":"rgb(232,232,232)","gridwidth":2,"linecolor":"rgb(36,36,36)","showbackground":true,"showgrid":false,"showline":true,"ticks":"outside","zeroline":false,"zerolinecolor":"rgb(36,36,36)"},"yaxis":{"backgroundcolor":"white","gridcolor":"rgb(232,232,232)","gridwidth":2,"linecolor":"rgb(36,36,36)","showbackground":true,"showgrid":false,"showline":true,"ticks":"outside","zeroline":false,"zerolinecolor":"rgb(36,36,36)"},"zaxis":{"backgroundcolor":"white","gridcolor":"rgb(232,232,232)","gridwidth":2,"linecolor":"rgb(36,36,36)","showbackground":true,"showgrid":false,"showline":true,"ticks":"outside","zeroline":false,"zerolinecolor":"rgb(36,36,36)"}},"shapedefaults":{"fillcolor":"black","line":{"width":0},"opacity":0.3},"ternary":{"aaxis":{"gridcolor":"rgb(232,232,232)","linecolor":"rgb(36,36,36)","showgrid":false,"showline":true,"ticks":"outside"},"baxis":{"gridcolor":"rgb(232,232,232)","linecolor":"rgb(36,36,36)","showgrid":false,"showline":true,"ticks":"outside"},"bgcolor":"white","caxis":{"gridcolor":"rgb(232,232,232)","linecolor":"rgb(36,36,36)","showgrid":false,"showline":true,"ticks":"outside"}},"title":{"x":0.05},"xaxis":{"automargin":true,"gridcolor":"rgb(232,232,232)","linecolor":"rgb(36,36,36)","showgrid":false,"showline":true,"ticks":"outside","title":{"standoff":15},"zeroline":false,"zerolinecolor":"rgb(36,36,36)"},"yaxis":{"automargin":true,"gridcolor":"rgb(232,232,232)","linecolor":"rgb(36,36,36)","showgrid":false,"showline":true,"ticks":"outside","title":{"standoff":15},"zeroline":false,"zerolinecolor":"rgb(36,36,36)"}}},"title":{"text":"Vault Equivalent Locked CRV Tokens"},"width":800,"xaxis":{"anchor":"y","domain":[0.0,1.0],"title":{}},"yaxis":{"anchor":"x","domain":[0.0,1.0],"title":{"text":"Equivalent CRV Tokens"}}},                        {"responsive": true}                    ).then(function(){
+                            
+var gd = document.getElementById('d04945b3-049e-4722-8dde-758e6e281ba6');
+var x = new MutationObserver(function (mutations, observer) {{
+        var display = window.getComputedStyle(gd).display;
+        if (!display || display === 'none') {{
+            console.log([gd, 'removed!']);
+            Plotly.purge(gd);
+            observer.disconnect();
+        }}
+}});
+
+// Listen for the removal of the full notebook cells
+var notebookContainer = gd.closest('#notebook-container');
+if (notebookContainer) {{
+    x.observe(notebookContainer, {childList: true});
+}}
+
+// Listen for the clearing of the current output cell
+var outputEl = gd.closest('.output');
+if (outputEl) {{
+    x.observe(outputEl, {childList: true});
+}}
+
+                        })                };                            </script>        </div>
+
+
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+    
+
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>The graph below shows the same data as above, but looks at the net token growth over time rather than the TVL of each vault.  Here we see more clearly the impact of yvBoost on the growth of yveCRV.  yveCRV grew steadily from Jan-Mar 2021, then growth dropped to almost zero for a month or so.  The growth kicked off again once yvBoost launched, and slowed in line with the slowing in yvBoost growth at the end of June.</p>
+
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+
+<div class="output_html rendered_html output_subarea ">
+
+<meta charset="utf-8">
+
+    <div>            <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-AMS-MML_SVG"></script><script type="text/javascript">if (window.MathJax) {MathJax.Hub.Config({SVG: {font: "STIX-Web"}});}</script>                <script type="text/javascript">window.PlotlyConfig = {MathJaxConfig: 'local'};</script>
+        <script src="https://cdn.plot.ly/plotly-2.4.2.min.js"></script>                <div id="052d9789-f7c8-47c5-8a5b-33747a33e0bb" class="plotly-graph-div" style="height:600px; width:800px;"></div>            <script type="text/javascript">                                    window.PLOTLYENV=window.PLOTLYENV || {};                                    if (document.getElementById("052d9789-f7c8-47c5-8a5b-33747a33e0bb")) {                    Plotly.newPlot(                        "052d9789-f7c8-47c5-8a5b-33747a33e0bb",                        [{"name":"CRV","type":"bar","x":["2020-12-27T00:00:00+00:00","2021-01-03T00:00:00+00:00","2021-01-10T00:00:00+00:00","2021-01-17T00:00:00+00:00","2021-01-24T00:00:00+00:00","2021-01-31T00:00:00+00:00","2021-02-07T00:00:00+00:00","2021-02-14T00:00:00+00:00","2021-02-21T00:00:00+00:00","2021-02-28T00:00:00+00:00","2021-03-07T00:00:00+00:00","2021-03-14T00:00:00+00:00","2021-03-21T00:00:00+00:00","2021-03-28T00:00:00+00:00","2021-04-04T00:00:00+00:00","2021-04-11T00:00:00+00:00","2021-04-18T00:00:00+00:00","2021-04-25T00:00:00+00:00","2021-05-02T00:00:00+00:00","2021-05-09T00:00:00+00:00","2021-05-16T00:00:00+00:00","2021-05-23T00:00:00+00:00","2021-05-30T00:00:00+00:00","2021-06-06T00:00:00+00:00","2021-06-13T00:00:00+00:00","2021-06-20T00:00:00+00:00","2021-06-27T00:00:00+00:00","2021-07-04T00:00:00+00:00","2021-07-11T00:00:00+00:00","2021-07-18T00:00:00+00:00","2021-07-25T00:00:00+00:00","2021-08-01T00:00:00+00:00","2021-08-08T00:00:00+00:00","2021-08-15T00:00:00+00:00","2021-08-22T00:00:00+00:00","2021-08-29T00:00:00+00:00","2021-09-05T00:00:00+00:00","2021-09-12T00:00:00+00:00","2021-09-19T00:00:00+00:00","2021-09-26T00:00:00+00:00"],"xaxis":"x","y":[22905.901721967242,123452.77654548349,767348.2091550438,20021.6050788889,41932.10338835131,899777.1762581103,1045488.2741722737,675622.3476900426,1093108.3069810416,574212.4741036837,631389.677053671,518853.4874553559,145496.69391053225,43987.72725359798,94688.56334286538,71559.56415646864,56382.376190867384,244444.6541176973,467677.0992825512,556502.5103218202,596258.3797687818,629854.0487490116,791204.2357357085,278601.43694420793,189155.67642388467,41130.412840809484,73247.33504098358,29913.457977533853,20338.298272203352,10161.563539044291,25557.068874514265,2715.9602882685317,326907.53328794695,3804.249630260404,17181.479352896946,2544.152631732675,8786.17305873643,50880.956198780375,10913.345662595668,8277.764191822333],"yaxis":"y"},{"name":"CRV","type":"bar","x":["2020-12-27T00:00:00+00:00","2021-01-03T00:00:00+00:00","2021-01-10T00:00:00+00:00","2021-01-17T00:00:00+00:00","2021-01-24T00:00:00+00:00","2021-01-31T00:00:00+00:00","2021-02-07T00:00:00+00:00","2021-02-14T00:00:00+00:00","2021-02-21T00:00:00+00:00","2021-02-28T00:00:00+00:00","2021-03-07T00:00:00+00:00","2021-03-14T00:00:00+00:00","2021-03-21T00:00:00+00:00","2021-03-28T00:00:00+00:00","2021-04-04T00:00:00+00:00","2021-04-11T00:00:00+00:00","2021-04-18T00:00:00+00:00","2021-04-25T00:00:00+00:00","2021-05-02T00:00:00+00:00","2021-05-09T00:00:00+00:00","2021-05-16T00:00:00+00:00","2021-05-23T00:00:00+00:00","2021-05-30T00:00:00+00:00","2021-06-06T00:00:00+00:00","2021-06-13T00:00:00+00:00","2021-06-20T00:00:00+00:00","2021-06-27T00:00:00+00:00","2021-07-04T00:00:00+00:00","2021-07-11T00:00:00+00:00","2021-07-18T00:00:00+00:00","2021-07-25T00:00:00+00:00","2021-08-01T00:00:00+00:00","2021-08-08T00:00:00+00:00","2021-08-15T00:00:00+00:00","2021-08-22T00:00:00+00:00","2021-08-29T00:00:00+00:00","2021-09-05T00:00:00+00:00","2021-09-12T00:00:00+00:00","2021-09-19T00:00:00+00:00","2021-09-26T00:00:00+00:00"],"xaxis":"x2","y":[0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,260959.5996240733,-165496.56954603232,3211440.577562271,2276975.9863183415,1244695.9356749095,782406.9446678357,818032.354800891,1170167.8252244655,407748.3550655249,601949.6801596821,226409.18028268154,9601.676105164035,72367.10281144168,-21364.854270848133,-28397.504904148063,-45842.50650132708,-195633.61947155604,276412.6553359049,-135349.4160748675,-53473.8845960651,-36398.53876397634,-158692.68373301142,56182.96819766249,-155522.92465791747,-48495.57792081368],"yaxis":"y2"}],                        {"annotations":[{"font":{"size":16},"showarrow":false,"text":"yveCRV-DAO Net Token Growth","x":0.5,"xanchor":"center","xref":"paper","y":1.0,"yanchor":"bottom","yref":"paper"},{"font":{"size":16},"showarrow":false,"text":"yvBoost Net Token Growth","x":0.5,"xanchor":"center","xref":"paper","y":0.375,"yanchor":"bottom","yref":"paper"}],"height":600,"showlegend":false,"template":{"data":{"bar":[{"error_x":{"color":"rgb(36,36,36)"},"error_y":{"color":"rgb(36,36,36)"},"marker":{"line":{"color":"white","width":0.5},"pattern":{"fillmode":"overlay","size":10,"solidity":0.2}},"type":"bar"}],"barpolar":[{"marker":{"line":{"color":"white","width":0.5},"pattern":{"fillmode":"overlay","size":10,"solidity":0.2}},"type":"barpolar"}],"carpet":[{"aaxis":{"endlinecolor":"rgb(36,36,36)","gridcolor":"white","linecolor":"white","minorgridcolor":"white","startlinecolor":"rgb(36,36,36)"},"baxis":{"endlinecolor":"rgb(36,36,36)","gridcolor":"white","linecolor":"white","minorgridcolor":"white","startlinecolor":"rgb(36,36,36)"},"type":"carpet"}],"choropleth":[{"colorbar":{"outlinewidth":1,"tickcolor":"rgb(36,36,36)","ticks":"outside"},"type":"choropleth"}],"contour":[{"colorbar":{"outlinewidth":1,"tickcolor":"rgb(36,36,36)","ticks":"outside"},"colorscale":[[0.0,"#440154"],[0.1111111111111111,"#482878"],[0.2222222222222222,"#3e4989"],[0.3333333333333333,"#31688e"],[0.4444444444444444,"#26828e"],[0.5555555555555556,"#1f9e89"],[0.6666666666666666,"#35b779"],[0.7777777777777778,"#6ece58"],[0.8888888888888888,"#b5de2b"],[1.0,"#fde725"]],"type":"contour"}],"contourcarpet":[{"colorbar":{"outlinewidth":1,"tickcolor":"rgb(36,36,36)","ticks":"outside"},"type":"contourcarpet"}],"heatmap":[{"colorbar":{"outlinewidth":1,"tickcolor":"rgb(36,36,36)","ticks":"outside"},"colorscale":[[0.0,"#440154"],[0.1111111111111111,"#482878"],[0.2222222222222222,"#3e4989"],[0.3333333333333333,"#31688e"],[0.4444444444444444,"#26828e"],[0.5555555555555556,"#1f9e89"],[0.6666666666666666,"#35b779"],[0.7777777777777778,"#6ece58"],[0.8888888888888888,"#b5de2b"],[1.0,"#fde725"]],"type":"heatmap"}],"heatmapgl":[{"colorbar":{"outlinewidth":1,"tickcolor":"rgb(36,36,36)","ticks":"outside"},"colorscale":[[0.0,"#440154"],[0.1111111111111111,"#482878"],[0.2222222222222222,"#3e4989"],[0.3333333333333333,"#31688e"],[0.4444444444444444,"#26828e"],[0.5555555555555556,"#1f9e89"],[0.6666666666666666,"#35b779"],[0.7777777777777778,"#6ece58"],[0.8888888888888888,"#b5de2b"],[1.0,"#fde725"]],"type":"heatmapgl"}],"histogram":[{"marker":{"line":{"color":"white","width":0.6}},"type":"histogram"}],"histogram2d":[{"colorbar":{"outlinewidth":1,"tickcolor":"rgb(36,36,36)","ticks":"outside"},"colorscale":[[0.0,"#440154"],[0.1111111111111111,"#482878"],[0.2222222222222222,"#3e4989"],[0.3333333333333333,"#31688e"],[0.4444444444444444,"#26828e"],[0.5555555555555556,"#1f9e89"],[0.6666666666666666,"#35b779"],[0.7777777777777778,"#6ece58"],[0.8888888888888888,"#b5de2b"],[1.0,"#fde725"]],"type":"histogram2d"}],"histogram2dcontour":[{"colorbar":{"outlinewidth":1,"tickcolor":"rgb(36,36,36)","ticks":"outside"},"colorscale":[[0.0,"#440154"],[0.1111111111111111,"#482878"],[0.2222222222222222,"#3e4989"],[0.3333333333333333,"#31688e"],[0.4444444444444444,"#26828e"],[0.5555555555555556,"#1f9e89"],[0.6666666666666666,"#35b779"],[0.7777777777777778,"#6ece58"],[0.8888888888888888,"#b5de2b"],[1.0,"#fde725"]],"type":"histogram2dcontour"}],"mesh3d":[{"colorbar":{"outlinewidth":1,"tickcolor":"rgb(36,36,36)","ticks":"outside"},"type":"mesh3d"}],"parcoords":[{"line":{"colorbar":{"outlinewidth":1,"tickcolor":"rgb(36,36,36)","ticks":"outside"}},"type":"parcoords"}],"pie":[{"automargin":true,"type":"pie"}],"scatter":[{"marker":{"colorbar":{"outlinewidth":1,"tickcolor":"rgb(36,36,36)","ticks":"outside"}},"type":"scatter"}],"scatter3d":[{"line":{"colorbar":{"outlinewidth":1,"tickcolor":"rgb(36,36,36)","ticks":"outside"}},"marker":{"colorbar":{"outlinewidth":1,"tickcolor":"rgb(36,36,36)","ticks":"outside"}},"type":"scatter3d"}],"scattercarpet":[{"marker":{"colorbar":{"outlinewidth":1,"tickcolor":"rgb(36,36,36)","ticks":"outside"}},"type":"scattercarpet"}],"scattergeo":[{"marker":{"colorbar":{"outlinewidth":1,"tickcolor":"rgb(36,36,36)","ticks":"outside"}},"type":"scattergeo"}],"scattergl":[{"marker":{"colorbar":{"outlinewidth":1,"tickcolor":"rgb(36,36,36)","ticks":"outside"}},"type":"scattergl"}],"scattermapbox":[{"marker":{"colorbar":{"outlinewidth":1,"tickcolor":"rgb(36,36,36)","ticks":"outside"}},"type":"scattermapbox"}],"scatterpolar":[{"marker":{"colorbar":{"outlinewidth":1,"tickcolor":"rgb(36,36,36)","ticks":"outside"}},"type":"scatterpolar"}],"scatterpolargl":[{"marker":{"colorbar":{"outlinewidth":1,"tickcolor":"rgb(36,36,36)","ticks":"outside"}},"type":"scatterpolargl"}],"scatterternary":[{"marker":{"colorbar":{"outlinewidth":1,"tickcolor":"rgb(36,36,36)","ticks":"outside"}},"type":"scatterternary"}],"surface":[{"colorbar":{"outlinewidth":1,"tickcolor":"rgb(36,36,36)","ticks":"outside"},"colorscale":[[0.0,"#440154"],[0.1111111111111111,"#482878"],[0.2222222222222222,"#3e4989"],[0.3333333333333333,"#31688e"],[0.4444444444444444,"#26828e"],[0.5555555555555556,"#1f9e89"],[0.6666666666666666,"#35b779"],[0.7777777777777778,"#6ece58"],[0.8888888888888888,"#b5de2b"],[1.0,"#fde725"]],"type":"surface"}],"table":[{"cells":{"fill":{"color":"rgb(237,237,237)"},"line":{"color":"white"}},"header":{"fill":{"color":"rgb(217,217,217)"},"line":{"color":"white"}},"type":"table"}]},"layout":{"annotationdefaults":{"arrowhead":0,"arrowwidth":1},"autotypenumbers":"strict","coloraxis":{"colorbar":{"outlinewidth":1,"tickcolor":"rgb(36,36,36)","ticks":"outside"}},"colorscale":{"diverging":[[0.0,"rgb(103,0,31)"],[0.1,"rgb(178,24,43)"],[0.2,"rgb(214,96,77)"],[0.3,"rgb(244,165,130)"],[0.4,"rgb(253,219,199)"],[0.5,"rgb(247,247,247)"],[0.6,"rgb(209,229,240)"],[0.7,"rgb(146,197,222)"],[0.8,"rgb(67,147,195)"],[0.9,"rgb(33,102,172)"],[1.0,"rgb(5,48,97)"]],"sequential":[[0.0,"#440154"],[0.1111111111111111,"#482878"],[0.2222222222222222,"#3e4989"],[0.3333333333333333,"#31688e"],[0.4444444444444444,"#26828e"],[0.5555555555555556,"#1f9e89"],[0.6666666666666666,"#35b779"],[0.7777777777777778,"#6ece58"],[0.8888888888888888,"#b5de2b"],[1.0,"#fde725"]],"sequentialminus":[[0.0,"#440154"],[0.1111111111111111,"#482878"],[0.2222222222222222,"#3e4989"],[0.3333333333333333,"#31688e"],[0.4444444444444444,"#26828e"],[0.5555555555555556,"#1f9e89"],[0.6666666666666666,"#35b779"],[0.7777777777777778,"#6ece58"],[0.8888888888888888,"#b5de2b"],[1.0,"#fde725"]]},"colorway":["#1F77B4","#FF7F0E","#2CA02C","#D62728","#9467BD","#8C564B","#E377C2","#7F7F7F","#BCBD22","#17BECF"],"font":{"color":"rgb(36,36,36)"},"geo":{"bgcolor":"white","lakecolor":"white","landcolor":"white","showlakes":true,"showland":true,"subunitcolor":"white"},"hoverlabel":{"align":"left"},"hovermode":"closest","mapbox":{"style":"light"},"paper_bgcolor":"white","plot_bgcolor":"white","polar":{"angularaxis":{"gridcolor":"rgb(232,232,232)","linecolor":"rgb(36,36,36)","showgrid":false,"showline":true,"ticks":"outside"},"bgcolor":"white","radialaxis":{"gridcolor":"rgb(232,232,232)","linecolor":"rgb(36,36,36)","showgrid":false,"showline":true,"ticks":"outside"}},"scene":{"xaxis":{"backgroundcolor":"white","gridcolor":"rgb(232,232,232)","gridwidth":2,"linecolor":"rgb(36,36,36)","showbackground":true,"showgrid":false,"showline":true,"ticks":"outside","zeroline":false,"zerolinecolor":"rgb(36,36,36)"},"yaxis":{"backgroundcolor":"white","gridcolor":"rgb(232,232,232)","gridwidth":2,"linecolor":"rgb(36,36,36)","showbackground":true,"showgrid":false,"showline":true,"ticks":"outside","zeroline":false,"zerolinecolor":"rgb(36,36,36)"},"zaxis":{"backgroundcolor":"white","gridcolor":"rgb(232,232,232)","gridwidth":2,"linecolor":"rgb(36,36,36)","showbackground":true,"showgrid":false,"showline":true,"ticks":"outside","zeroline":false,"zerolinecolor":"rgb(36,36,36)"}},"shapedefaults":{"fillcolor":"black","line":{"width":0},"opacity":0.3},"ternary":{"aaxis":{"gridcolor":"rgb(232,232,232)","linecolor":"rgb(36,36,36)","showgrid":false,"showline":true,"ticks":"outside"},"baxis":{"gridcolor":"rgb(232,232,232)","linecolor":"rgb(36,36,36)","showgrid":false,"showline":true,"ticks":"outside"},"bgcolor":"white","caxis":{"gridcolor":"rgb(232,232,232)","linecolor":"rgb(36,36,36)","showgrid":false,"showline":true,"ticks":"outside"}},"title":{"x":0.05},"xaxis":{"automargin":true,"gridcolor":"rgb(232,232,232)","linecolor":"rgb(36,36,36)","showgrid":false,"showline":true,"ticks":"outside","title":{"standoff":15},"zeroline":false,"zerolinecolor":"rgb(36,36,36)"},"yaxis":{"automargin":true,"gridcolor":"rgb(232,232,232)","linecolor":"rgb(36,36,36)","showgrid":false,"showline":true,"ticks":"outside","title":{"standoff":15},"zeroline":false,"zerolinecolor":"rgb(36,36,36)"}}},"width":800,"xaxis":{"anchor":"y","domain":[0.0,1.0]},"xaxis2":{"anchor":"y2","domain":[0.0,1.0]},"yaxis":{"anchor":"x","domain":[0.625,1.0],"title":{"text":"Value in CRV"}},"yaxis2":{"anchor":"x2","domain":[0.0,0.375],"title":{"text":"Value in CRV"}}},                        {"responsive": true}                    ).then(function(){
+                            
+var gd = document.getElementById('052d9789-f7c8-47c5-8a5b-33747a33e0bb');
+var x = new MutationObserver(function (mutations, observer) {{
+        var display = window.getComputedStyle(gd).display;
+        if (!display || display === 'none') {{
+            console.log([gd, 'removed!']);
+            Plotly.purge(gd);
+            observer.disconnect();
+        }}
+}});
+
+// Listen for the removal of the full notebook cells
+var notebookContainer = gd.closest('#notebook-container');
+if (notebookContainer) {{
+    x.observe(notebookContainer, {childList: true});
+}}
+
+// Listen for the clearing of the current output cell
+var outputEl = gd.closest('.output');
+if (outputEl) {{
+    x.observe(outputEl, {childList: true});
+}}
+
+                        })                };                            </script>        </div>
+
+
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+    
+
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Impact-of-Pricing">
+<a class="anchor" href="#Impact-of-Pricing" aria-hidden="true"><span class="octicon octicon-link"></span></a>Impact of Pricing<a class="anchor-link" href="#Impact-of-Pricing"> </a>
+</h1>
+<p>We saw above that yveCRV-DAO tokens were created in the yvCRV vault for use in yvBoost in the period from April-June 2021.  The chart below looks at the relative price of yveCRV tokens to CRV tokens.  Remember that you can have a one-way transaction and convert CRV to yveCRV. In doing so you give up the ability to get your CRV back, but gain a perpetual share of the revenue of the vault in return.  The relative price chart below shows what market participants are valuing this loss of flexibility and future income stream at.  In the period from Feb-June, yveCRV traded at an average of 90% of CRV, roughly a 10% discount.  This dropped to 75% from June to August, then fell dramatically to below 40% in September.  This means that the market is valuing the flexibility of the unencumbered CRV tokens over the income stream by a factor of nearly 3!  With yveCRV trading at this much of a discount, it is not surprising that there had been very low growth in the yveCRV since July 2020.  Any required yveCRV tokens (for depositing in yvBoost) can be purchased on the open market at a steep discount to the underlying CRV tokens.</p>
+<p>It's unclear what is driving this pricing mismatch - perhaps the competition for CRV token locking with <a href="https://www.convexfinance.com/">Convex</a> is causing people to exit their yveCRV positions in search of better yields elsewhere.</p>
+
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+
+<div class="output_html rendered_html output_subarea ">
+
+<meta charset="utf-8">
+
+    <div>            <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-AMS-MML_SVG"></script><script type="text/javascript">if (window.MathJax) {MathJax.Hub.Config({SVG: {font: "STIX-Web"}});}</script>                <script type="text/javascript">window.PlotlyConfig = {MathJaxConfig: 'local'};</script>
+        <script src="https://cdn.plot.ly/plotly-2.4.2.min.js"></script>                <div id="606ffa18-b6b3-46bf-b854-63f55a45f7b7" class="plotly-graph-div" style="height:494.4375772558714px; width:800px;"></div>            <script type="text/javascript">                                    window.PLOTLYENV=window.PLOTLYENV || {};                                    if (document.getElementById("606ffa18-b6b3-46bf-b854-63f55a45f7b7")) {                    Plotly.newPlot(                        "606ffa18-b6b3-46bf-b854-63f55a45f7b7",                        [{"hovertemplate":"Week=%{x}<br>Ratio=%{y}<extra></extra>","legendgroup":"","line":{"color":"#1F77B4","dash":"solid"},"marker":{"symbol":"circle"},"mode":"lines","name":"","orientation":"v","showlegend":false,"type":"scatter","x":["2020-12-27T00:00:00+00:00","2021-01-03T00:00:00+00:00","2021-01-10T00:00:00+00:00","2021-01-17T00:00:00+00:00","2021-01-24T00:00:00+00:00","2021-01-31T00:00:00+00:00","2021-02-07T00:00:00+00:00","2021-02-14T00:00:00+00:00","2021-02-21T00:00:00+00:00","2021-02-28T00:00:00+00:00","2021-03-07T00:00:00+00:00","2021-03-14T00:00:00+00:00","2021-03-21T00:00:00+00:00","2021-03-28T00:00:00+00:00","2021-04-04T00:00:00+00:00","2021-04-11T00:00:00+00:00","2021-04-18T00:00:00+00:00","2021-04-25T00:00:00+00:00","2021-05-02T00:00:00+00:00","2021-05-09T00:00:00+00:00","2021-05-16T00:00:00+00:00","2021-05-23T00:00:00+00:00","2021-05-30T00:00:00+00:00","2021-06-06T00:00:00+00:00","2021-06-13T00:00:00+00:00","2021-06-20T00:00:00+00:00","2021-06-27T00:00:00+00:00","2021-07-04T00:00:00+00:00","2021-07-11T00:00:00+00:00","2021-07-18T00:00:00+00:00","2021-07-25T00:00:00+00:00","2021-08-01T00:00:00+00:00","2021-08-08T00:00:00+00:00","2021-08-15T00:00:00+00:00","2021-08-22T00:00:00+00:00","2021-08-29T00:00:00+00:00","2021-09-05T00:00:00+00:00","2021-09-12T00:00:00+00:00","2021-09-19T00:00:00+00:00","2021-09-26T00:00:00+00:00"],"xaxis":"x","y":[null,null,null,null,null,null,null,0.7908096744099249,0.9483557111163805,0.9290530317759403,0.9381441782033609,0.8852931731721352,0.8204352175656608,0.8017941638240532,0.8310373524554274,0.8552444430136371,0.9117551771339741,0.9452166863459156,0.9717095169374396,0.9267529765151805,0.8148765150183902,0.9561692559668411,0.8362973983027854,0.7646249008678658,0.7657453097950335,0.8064446994345709,0.7954298467177483,0.7660422094624371,0.758697381337433,0.773529589027355,0.768389558320507,0.740902746881409,0.6710882044792045,0.5603557819236785,0.450983703606218,0.5198108852775702,0.48859658968834196,0.40154898620548335,0.37107867965151164,0.3852149740002149],"yaxis":"y"}],                        {"height":494.4375772558714,"legend":{"tracegroupgap":0,"x":0.99,"xanchor":"right","y":0.99,"yanchor":"top"},"template":{"data":{"bar":[{"error_x":{"color":"rgb(36,36,36)"},"error_y":{"color":"rgb(36,36,36)"},"marker":{"line":{"color":"white","width":0.5},"pattern":{"fillmode":"overlay","size":10,"solidity":0.2}},"type":"bar"}],"barpolar":[{"marker":{"line":{"color":"white","width":0.5},"pattern":{"fillmode":"overlay","size":10,"solidity":0.2}},"type":"barpolar"}],"carpet":[{"aaxis":{"endlinecolor":"rgb(36,36,36)","gridcolor":"white","linecolor":"white","minorgridcolor":"white","startlinecolor":"rgb(36,36,36)"},"baxis":{"endlinecolor":"rgb(36,36,36)","gridcolor":"white","linecolor":"white","minorgridcolor":"white","startlinecolor":"rgb(36,36,36)"},"type":"carpet"}],"choropleth":[{"colorbar":{"outlinewidth":1,"tickcolor":"rgb(36,36,36)","ticks":"outside"},"type":"choropleth"}],"contour":[{"colorbar":{"outlinewidth":1,"tickcolor":"rgb(36,36,36)","ticks":"outside"},"colorscale":[[0.0,"#440154"],[0.1111111111111111,"#482878"],[0.2222222222222222,"#3e4989"],[0.3333333333333333,"#31688e"],[0.4444444444444444,"#26828e"],[0.5555555555555556,"#1f9e89"],[0.6666666666666666,"#35b779"],[0.7777777777777778,"#6ece58"],[0.8888888888888888,"#b5de2b"],[1.0,"#fde725"]],"type":"contour"}],"contourcarpet":[{"colorbar":{"outlinewidth":1,"tickcolor":"rgb(36,36,36)","ticks":"outside"},"type":"contourcarpet"}],"heatmap":[{"colorbar":{"outlinewidth":1,"tickcolor":"rgb(36,36,36)","ticks":"outside"},"colorscale":[[0.0,"#440154"],[0.1111111111111111,"#482878"],[0.2222222222222222,"#3e4989"],[0.3333333333333333,"#31688e"],[0.4444444444444444,"#26828e"],[0.5555555555555556,"#1f9e89"],[0.6666666666666666,"#35b779"],[0.7777777777777778,"#6ece58"],[0.8888888888888888,"#b5de2b"],[1.0,"#fde725"]],"type":"heatmap"}],"heatmapgl":[{"colorbar":{"outlinewidth":1,"tickcolor":"rgb(36,36,36)","ticks":"outside"},"colorscale":[[0.0,"#440154"],[0.1111111111111111,"#482878"],[0.2222222222222222,"#3e4989"],[0.3333333333333333,"#31688e"],[0.4444444444444444,"#26828e"],[0.5555555555555556,"#1f9e89"],[0.6666666666666666,"#35b779"],[0.7777777777777778,"#6ece58"],[0.8888888888888888,"#b5de2b"],[1.0,"#fde725"]],"type":"heatmapgl"}],"histogram":[{"marker":{"line":{"color":"white","width":0.6}},"type":"histogram"}],"histogram2d":[{"colorbar":{"outlinewidth":1,"tickcolor":"rgb(36,36,36)","ticks":"outside"},"colorscale":[[0.0,"#440154"],[0.1111111111111111,"#482878"],[0.2222222222222222,"#3e4989"],[0.3333333333333333,"#31688e"],[0.4444444444444444,"#26828e"],[0.5555555555555556,"#1f9e89"],[0.6666666666666666,"#35b779"],[0.7777777777777778,"#6ece58"],[0.8888888888888888,"#b5de2b"],[1.0,"#fde725"]],"type":"histogram2d"}],"histogram2dcontour":[{"colorbar":{"outlinewidth":1,"tickcolor":"rgb(36,36,36)","ticks":"outside"},"colorscale":[[0.0,"#440154"],[0.1111111111111111,"#482878"],[0.2222222222222222,"#3e4989"],[0.3333333333333333,"#31688e"],[0.4444444444444444,"#26828e"],[0.5555555555555556,"#1f9e89"],[0.6666666666666666,"#35b779"],[0.7777777777777778,"#6ece58"],[0.8888888888888888,"#b5de2b"],[1.0,"#fde725"]],"type":"histogram2dcontour"}],"mesh3d":[{"colorbar":{"outlinewidth":1,"tickcolor":"rgb(36,36,36)","ticks":"outside"},"type":"mesh3d"}],"parcoords":[{"line":{"colorbar":{"outlinewidth":1,"tickcolor":"rgb(36,36,36)","ticks":"outside"}},"type":"parcoords"}],"pie":[{"automargin":true,"type":"pie"}],"scatter":[{"marker":{"colorbar":{"outlinewidth":1,"tickcolor":"rgb(36,36,36)","ticks":"outside"}},"type":"scatter"}],"scatter3d":[{"line":{"colorbar":{"outlinewidth":1,"tickcolor":"rgb(36,36,36)","ticks":"outside"}},"marker":{"colorbar":{"outlinewidth":1,"tickcolor":"rgb(36,36,36)","ticks":"outside"}},"type":"scatter3d"}],"scattercarpet":[{"marker":{"colorbar":{"outlinewidth":1,"tickcolor":"rgb(36,36,36)","ticks":"outside"}},"type":"scattercarpet"}],"scattergeo":[{"marker":{"colorbar":{"outlinewidth":1,"tickcolor":"rgb(36,36,36)","ticks":"outside"}},"type":"scattergeo"}],"scattergl":[{"marker":{"colorbar":{"outlinewidth":1,"tickcolor":"rgb(36,36,36)","ticks":"outside"}},"type":"scattergl"}],"scattermapbox":[{"marker":{"colorbar":{"outlinewidth":1,"tickcolor":"rgb(36,36,36)","ticks":"outside"}},"type":"scattermapbox"}],"scatterpolar":[{"marker":{"colorbar":{"outlinewidth":1,"tickcolor":"rgb(36,36,36)","ticks":"outside"}},"type":"scatterpolar"}],"scatterpolargl":[{"marker":{"colorbar":{"outlinewidth":1,"tickcolor":"rgb(36,36,36)","ticks":"outside"}},"type":"scatterpolargl"}],"scatterternary":[{"marker":{"colorbar":{"outlinewidth":1,"tickcolor":"rgb(36,36,36)","ticks":"outside"}},"type":"scatterternary"}],"surface":[{"colorbar":{"outlinewidth":1,"tickcolor":"rgb(36,36,36)","ticks":"outside"},"colorscale":[[0.0,"#440154"],[0.1111111111111111,"#482878"],[0.2222222222222222,"#3e4989"],[0.3333333333333333,"#31688e"],[0.4444444444444444,"#26828e"],[0.5555555555555556,"#1f9e89"],[0.6666666666666666,"#35b779"],[0.7777777777777778,"#6ece58"],[0.8888888888888888,"#b5de2b"],[1.0,"#fde725"]],"type":"surface"}],"table":[{"cells":{"fill":{"color":"rgb(237,237,237)"},"line":{"color":"white"}},"header":{"fill":{"color":"rgb(217,217,217)"},"line":{"color":"white"}},"type":"table"}]},"layout":{"annotationdefaults":{"arrowhead":0,"arrowwidth":1},"autotypenumbers":"strict","coloraxis":{"colorbar":{"outlinewidth":1,"tickcolor":"rgb(36,36,36)","ticks":"outside"}},"colorscale":{"diverging":[[0.0,"rgb(103,0,31)"],[0.1,"rgb(178,24,43)"],[0.2,"rgb(214,96,77)"],[0.3,"rgb(244,165,130)"],[0.4,"rgb(253,219,199)"],[0.5,"rgb(247,247,247)"],[0.6,"rgb(209,229,240)"],[0.7,"rgb(146,197,222)"],[0.8,"rgb(67,147,195)"],[0.9,"rgb(33,102,172)"],[1.0,"rgb(5,48,97)"]],"sequential":[[0.0,"#440154"],[0.1111111111111111,"#482878"],[0.2222222222222222,"#3e4989"],[0.3333333333333333,"#31688e"],[0.4444444444444444,"#26828e"],[0.5555555555555556,"#1f9e89"],[0.6666666666666666,"#35b779"],[0.7777777777777778,"#6ece58"],[0.8888888888888888,"#b5de2b"],[1.0,"#fde725"]],"sequentialminus":[[0.0,"#440154"],[0.1111111111111111,"#482878"],[0.2222222222222222,"#3e4989"],[0.3333333333333333,"#31688e"],[0.4444444444444444,"#26828e"],[0.5555555555555556,"#1f9e89"],[0.6666666666666666,"#35b779"],[0.7777777777777778,"#6ece58"],[0.8888888888888888,"#b5de2b"],[1.0,"#fde725"]]},"colorway":["#1F77B4","#FF7F0E","#2CA02C","#D62728","#9467BD","#8C564B","#E377C2","#7F7F7F","#BCBD22","#17BECF"],"font":{"color":"rgb(36,36,36)"},"geo":{"bgcolor":"white","lakecolor":"white","landcolor":"white","showlakes":true,"showland":true,"subunitcolor":"white"},"hoverlabel":{"align":"left"},"hovermode":"closest","mapbox":{"style":"light"},"paper_bgcolor":"white","plot_bgcolor":"white","polar":{"angularaxis":{"gridcolor":"rgb(232,232,232)","linecolor":"rgb(36,36,36)","showgrid":false,"showline":true,"ticks":"outside"},"bgcolor":"white","radialaxis":{"gridcolor":"rgb(232,232,232)","linecolor":"rgb(36,36,36)","showgrid":false,"showline":true,"ticks":"outside"}},"scene":{"xaxis":{"backgroundcolor":"white","gridcolor":"rgb(232,232,232)","gridwidth":2,"linecolor":"rgb(36,36,36)","showbackground":true,"showgrid":false,"showline":true,"ticks":"outside","zeroline":false,"zerolinecolor":"rgb(36,36,36)"},"yaxis":{"backgroundcolor":"white","gridcolor":"rgb(232,232,232)","gridwidth":2,"linecolor":"rgb(36,36,36)","showbackground":true,"showgrid":false,"showline":true,"ticks":"outside","zeroline":false,"zerolinecolor":"rgb(36,36,36)"},"zaxis":{"backgroundcolor":"white","gridcolor":"rgb(232,232,232)","gridwidth":2,"linecolor":"rgb(36,36,36)","showbackground":true,"showgrid":false,"showline":true,"ticks":"outside","zeroline":false,"zerolinecolor":"rgb(36,36,36)"}},"shapedefaults":{"fillcolor":"black","line":{"width":0},"opacity":0.3},"ternary":{"aaxis":{"gridcolor":"rgb(232,232,232)","linecolor":"rgb(36,36,36)","showgrid":false,"showline":true,"ticks":"outside"},"baxis":{"gridcolor":"rgb(232,232,232)","linecolor":"rgb(36,36,36)","showgrid":false,"showline":true,"ticks":"outside"},"bgcolor":"white","caxis":{"gridcolor":"rgb(232,232,232)","linecolor":"rgb(36,36,36)","showgrid":false,"showline":true,"ticks":"outside"}},"title":{"x":0.05},"xaxis":{"automargin":true,"gridcolor":"rgb(232,232,232)","linecolor":"rgb(36,36,36)","showgrid":false,"showline":true,"ticks":"outside","title":{"standoff":15},"zeroline":false,"zerolinecolor":"rgb(36,36,36)"},"yaxis":{"automargin":true,"gridcolor":"rgb(232,232,232)","linecolor":"rgb(36,36,36)","showgrid":false,"showline":true,"ticks":"outside","title":{"standoff":15},"zeroline":false,"zerolinecolor":"rgb(36,36,36)"}}},"title":{"text":"yveCRV:CRV Price Ratio"},"width":800,"xaxis":{"anchor":"y","domain":[0.0,1.0],"title":{}},"yaxis":{"anchor":"x","domain":[0.0,1.0],"title":{"text":"yveCRV Price in CRV"}}},                        {"responsive": true}                    ).then(function(){
+                            
+var gd = document.getElementById('606ffa18-b6b3-46bf-b854-63f55a45f7b7');
+var x = new MutationObserver(function (mutations, observer) {{
+        var display = window.getComputedStyle(gd).display;
+        if (!display || display === 'none') {{
+            console.log([gd, 'removed!']);
+            Plotly.purge(gd);
+            observer.disconnect();
+        }}
+}});
+
+// Listen for the removal of the full notebook cells
+var notebookContainer = gd.closest('#notebook-container');
+if (notebookContainer) {{
+    x.observe(notebookContainer, {childList: true});
+}}
+
+// Listen for the clearing of the current output cell
+var outputEl = gd.closest('.output');
+if (outputEl) {{
+    x.observe(outputEl, {childList: true});
+}}
+
+                        })                };                            </script>        </div>
+
+
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+    
+
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Vault-Return-on-Investment">
+<a class="anchor" href="#Vault-Return-on-Investment" aria-hidden="true"><span class="octicon octicon-link"></span></a>Vault Return on Investment<a class="anchor-link" href="#Vault-Return-on-Investment"> </a>
+</h1>
+<p>The pricing above is curious - why is yveCRV valued at such a steep discount to CRV?  We will see if there is any impact from the Return on Investment of the vaults in question.</p>
+<p>Vault ROI for a normal Yearn yVault is calculated from the price of the yToken relative to the underlying deposited token.  Each Vault has an exchange rate built into it - deposit 1 token, get a bit less than one yvtoken in return.  Over time, 1 deposit token will buy less and less yvtokens - the price is always rising.  For a given investment, the ROI is determined by the following formula, where the Buy &amp; Sell prices are the number of native tokens required to buy the yvtokens:</p>
+<p><img src="https://github.com/scottincrypto/analytics/raw/master/data/yearn_vault_ROI_calc.gif" alt="ROI Formula"></p>
+<p>The approach used by the Yearn team on the <a href="https://yearn.finance">https://yearn.finance</a> page is to annualise this ROI based on a 7 day rolling period.  We have applied this approach to the yvBoost vault.</p>
+<p>The ROI calculations for the yveCRV vault is a little simpler - each week there is a deposit of 3CRV tokens into the vault which are the income stream generated from the locked CRV tokens.  We take the value of the deposited 3CRV tokens over the value of the CRV tokens in the vault over each 7 day period and annualise it to get the vault ROI.  Note, this assumes that users withdraw their returns from the vault.</p>
+<p>The ROI of the two vaults are shown in the chart below.  We can see that the yvBoost vault tracks the return of the yveCRV vault, with a slight discount on average.  It's not clear whether there is any impact on yveCRV/yvBoost usage due to ROI as they track each other fairly reliably.  What we do see, however, is an impact on ROI of the yveCRV:CRV pricing ratio above.  We can see the yvBoost ROI flippen the yveCRV ROI in late August - this is a direct result of the steep discount of yveCRV relative to CRV.  The underlying income of the yvBoost vault is driven by the number of CRV tokens locked, but the value of the vault has fallen due to the drop in yveCRV price relative to CRV.  This increases the vault ROI dramatically.  This apparent pricing mismatch is an excellent opportunity to get some great returns from the yvBoost vault.</p>
+
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+
+<div class="output_html rendered_html output_subarea ">
+
+<meta charset="utf-8">
+
+    <div>            <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-AMS-MML_SVG"></script><script type="text/javascript">if (window.MathJax) {MathJax.Hub.Config({SVG: {font: "STIX-Web"}});}</script>                <script type="text/javascript">window.PlotlyConfig = {MathJaxConfig: 'local'};</script>
+        <script src="https://cdn.plot.ly/plotly-2.4.2.min.js"></script>                <div id="20cabc49-bacb-44f3-bcda-a89178606ece" class="plotly-graph-div" style="height:494.4375772558714px; width:800px;"></div>            <script type="text/javascript">                                    window.PLOTLYENV=window.PLOTLYENV || {};                                    if (document.getElementById("20cabc49-bacb-44f3-bcda-a89178606ece")) {                    Plotly.newPlot(                        "20cabc49-bacb-44f3-bcda-a89178606ece",                        [{"hovertemplate":"Vault=yveCRV-DAO<br>Week=%{x}<br>Equivalent CRV=%{y}<extra></extra>","legendgroup":"yveCRV-DAO","line":{"color":"#1F77B4","dash":"solid"},"marker":{"symbol":"circle"},"mode":"lines","name":"yveCRV-DAO","orientation":"v","showlegend":true,"type":"scatter","x":["2020-12-27T00:00:00+00:00","2021-01-03T00:00:00+00:00","2021-01-10T00:00:00+00:00","2021-01-17T00:00:00+00:00","2021-01-24T00:00:00+00:00","2021-01-31T00:00:00+00:00","2021-02-07T00:00:00+00:00","2021-02-14T00:00:00+00:00","2021-02-21T00:00:00+00:00","2021-02-28T00:00:00+00:00","2021-03-07T00:00:00+00:00","2021-03-14T00:00:00+00:00","2021-03-21T00:00:00+00:00","2021-03-28T00:00:00+00:00","2021-04-04T00:00:00+00:00","2021-04-11T00:00:00+00:00","2021-04-18T00:00:00+00:00","2021-04-25T00:00:00+00:00","2021-05-02T00:00:00+00:00","2021-05-09T00:00:00+00:00","2021-05-16T00:00:00+00:00","2021-05-23T00:00:00+00:00","2021-05-30T00:00:00+00:00","2021-06-06T00:00:00+00:00","2021-06-13T00:00:00+00:00","2021-06-20T00:00:00+00:00","2021-06-27T00:00:00+00:00","2021-07-04T00:00:00+00:00","2021-07-11T00:00:00+00:00","2021-07-18T00:00:00+00:00","2021-07-25T00:00:00+00:00","2021-08-01T00:00:00+00:00","2021-08-08T00:00:00+00:00","2021-08-15T00:00:00+00:00","2021-08-22T00:00:00+00:00","2021-08-29T00:00:00+00:00","2021-09-05T00:00:00+00:00","2021-09-12T00:00:00+00:00","2021-09-19T00:00:00+00:00","2021-09-26T00:00:00+00:00"],"xaxis":"x","y":[null,null,null,null,null,null,102.86352429428966,106.49054210359927,79.08672137037593,27.304656064675193,30.089136466412857,31.09258819179727,19.60350870715316,17.350086682167436,17.03329256732004,22.987026952818287,24.92285293423852,20.045946938524008,20.318058432387716,21.474851612604088,29.980043596827944,56.45346670666588,52.71256890484776,25.851193232967116,31.23006135435152,42.590788358228565,40.27594120228821,24.475134421013365,21.485701413172766,24.32289714081067,23.569051670360007,20.29354970522528,22.31554565515444,28.326515627317065,35.7819409385586,37.66516983516225,30.68117040651042,36.93309525335679,43.09456850809415,43.96803119161943],"yaxis":"y"},{"hovertemplate":"Vault=yvBoost<br>Week=%{x}<br>Equivalent CRV=%{y}<extra></extra>","legendgroup":"yvBoost","line":{"color":"#FF7F0E","dash":"solid"},"marker":{"symbol":"circle"},"mode":"lines","name":"yvBoost","orientation":"v","showlegend":true,"type":"scatter","x":["2020-12-27T00:00:00+00:00","2021-01-03T00:00:00+00:00","2021-01-10T00:00:00+00:00","2021-01-17T00:00:00+00:00","2021-01-24T00:00:00+00:00","2021-01-31T00:00:00+00:00","2021-02-07T00:00:00+00:00","2021-02-14T00:00:00+00:00","2021-02-21T00:00:00+00:00","2021-02-28T00:00:00+00:00","2021-03-07T00:00:00+00:00","2021-03-14T00:00:00+00:00","2021-03-21T00:00:00+00:00","2021-03-28T00:00:00+00:00","2021-04-04T00:00:00+00:00","2021-04-11T00:00:00+00:00","2021-04-18T00:00:00+00:00","2021-04-25T00:00:00+00:00","2021-05-02T00:00:00+00:00","2021-05-09T00:00:00+00:00","2021-05-16T00:00:00+00:00","2021-05-23T00:00:00+00:00","2021-05-30T00:00:00+00:00","2021-06-06T00:00:00+00:00","2021-06-13T00:00:00+00:00","2021-06-20T00:00:00+00:00","2021-06-27T00:00:00+00:00","2021-07-04T00:00:00+00:00","2021-07-11T00:00:00+00:00","2021-07-18T00:00:00+00:00","2021-07-25T00:00:00+00:00","2021-08-01T00:00:00+00:00","2021-08-08T00:00:00+00:00","2021-08-15T00:00:00+00:00","2021-08-22T00:00:00+00:00","2021-08-29T00:00:00+00:00","2021-09-05T00:00:00+00:00","2021-09-12T00:00:00+00:00","2021-09-19T00:00:00+00:00","2021-09-26T00:00:00+00:00"],"xaxis":"x","y":[null,null,null,null,null,null,null,null,null,null,null,null,null,null,0.0,0.0,13.70735338408547,15.133087166130517,9.991929551254167,13.5350947223087,21.488332006147953,31.589203692048734,39.550592752760764,18.556150898601498,22.43090237060596,30.48516200910077,29.95183962382853,20.048678297776693,17.347007272391934,19.326932769728497,20.776044422569726,16.58687278546141,17.951686206131637,14.694608483057118,30.678361458433223,23.93805970133908,45.4119728120238,48.833320552031594,27.676322050760188,70.11517590240581],"yaxis":"y"}],                        {"height":494.4375772558714,"legend":{"title":{},"tracegroupgap":0,"x":0.99,"xanchor":"right","y":0.99,"yanchor":"top"},"template":{"data":{"bar":[{"error_x":{"color":"rgb(36,36,36)"},"error_y":{"color":"rgb(36,36,36)"},"marker":{"line":{"color":"white","width":0.5},"pattern":{"fillmode":"overlay","size":10,"solidity":0.2}},"type":"bar"}],"barpolar":[{"marker":{"line":{"color":"white","width":0.5},"pattern":{"fillmode":"overlay","size":10,"solidity":0.2}},"type":"barpolar"}],"carpet":[{"aaxis":{"endlinecolor":"rgb(36,36,36)","gridcolor":"white","linecolor":"white","minorgridcolor":"white","startlinecolor":"rgb(36,36,36)"},"baxis":{"endlinecolor":"rgb(36,36,36)","gridcolor":"white","linecolor":"white","minorgridcolor":"white","startlinecolor":"rgb(36,36,36)"},"type":"carpet"}],"choropleth":[{"colorbar":{"outlinewidth":1,"tickcolor":"rgb(36,36,36)","ticks":"outside"},"type":"choropleth"}],"contour":[{"colorbar":{"outlinewidth":1,"tickcolor":"rgb(36,36,36)","ticks":"outside"},"colorscale":[[0.0,"#440154"],[0.1111111111111111,"#482878"],[0.2222222222222222,"#3e4989"],[0.3333333333333333,"#31688e"],[0.4444444444444444,"#26828e"],[0.5555555555555556,"#1f9e89"],[0.6666666666666666,"#35b779"],[0.7777777777777778,"#6ece58"],[0.8888888888888888,"#b5de2b"],[1.0,"#fde725"]],"type":"contour"}],"contourcarpet":[{"colorbar":{"outlinewidth":1,"tickcolor":"rgb(36,36,36)","ticks":"outside"},"type":"contourcarpet"}],"heatmap":[{"colorbar":{"outlinewidth":1,"tickcolor":"rgb(36,36,36)","ticks":"outside"},"colorscale":[[0.0,"#440154"],[0.1111111111111111,"#482878"],[0.2222222222222222,"#3e4989"],[0.3333333333333333,"#31688e"],[0.4444444444444444,"#26828e"],[0.5555555555555556,"#1f9e89"],[0.6666666666666666,"#35b779"],[0.7777777777777778,"#6ece58"],[0.8888888888888888,"#b5de2b"],[1.0,"#fde725"]],"type":"heatmap"}],"heatmapgl":[{"colorbar":{"outlinewidth":1,"tickcolor":"rgb(36,36,36)","ticks":"outside"},"colorscale":[[0.0,"#440154"],[0.1111111111111111,"#482878"],[0.2222222222222222,"#3e4989"],[0.3333333333333333,"#31688e"],[0.4444444444444444,"#26828e"],[0.5555555555555556,"#1f9e89"],[0.6666666666666666,"#35b779"],[0.7777777777777778,"#6ece58"],[0.8888888888888888,"#b5de2b"],[1.0,"#fde725"]],"type":"heatmapgl"}],"histogram":[{"marker":{"line":{"color":"white","width":0.6}},"type":"histogram"}],"histogram2d":[{"colorbar":{"outlinewidth":1,"tickcolor":"rgb(36,36,36)","ticks":"outside"},"colorscale":[[0.0,"#440154"],[0.1111111111111111,"#482878"],[0.2222222222222222,"#3e4989"],[0.3333333333333333,"#31688e"],[0.4444444444444444,"#26828e"],[0.5555555555555556,"#1f9e89"],[0.6666666666666666,"#35b779"],[0.7777777777777778,"#6ece58"],[0.8888888888888888,"#b5de2b"],[1.0,"#fde725"]],"type":"histogram2d"}],"histogram2dcontour":[{"colorbar":{"outlinewidth":1,"tickcolor":"rgb(36,36,36)","ticks":"outside"},"colorscale":[[0.0,"#440154"],[0.1111111111111111,"#482878"],[0.2222222222222222,"#3e4989"],[0.3333333333333333,"#31688e"],[0.4444444444444444,"#26828e"],[0.5555555555555556,"#1f9e89"],[0.6666666666666666,"#35b779"],[0.7777777777777778,"#6ece58"],[0.8888888888888888,"#b5de2b"],[1.0,"#fde725"]],"type":"histogram2dcontour"}],"mesh3d":[{"colorbar":{"outlinewidth":1,"tickcolor":"rgb(36,36,36)","ticks":"outside"},"type":"mesh3d"}],"parcoords":[{"line":{"colorbar":{"outlinewidth":1,"tickcolor":"rgb(36,36,36)","ticks":"outside"}},"type":"parcoords"}],"pie":[{"automargin":true,"type":"pie"}],"scatter":[{"marker":{"colorbar":{"outlinewidth":1,"tickcolor":"rgb(36,36,36)","ticks":"outside"}},"type":"scatter"}],"scatter3d":[{"line":{"colorbar":{"outlinewidth":1,"tickcolor":"rgb(36,36,36)","ticks":"outside"}},"marker":{"colorbar":{"outlinewidth":1,"tickcolor":"rgb(36,36,36)","ticks":"outside"}},"type":"scatter3d"}],"scattercarpet":[{"marker":{"colorbar":{"outlinewidth":1,"tickcolor":"rgb(36,36,36)","ticks":"outside"}},"type":"scattercarpet"}],"scattergeo":[{"marker":{"colorbar":{"outlinewidth":1,"tickcolor":"rgb(36,36,36)","ticks":"outside"}},"type":"scattergeo"}],"scattergl":[{"marker":{"colorbar":{"outlinewidth":1,"tickcolor":"rgb(36,36,36)","ticks":"outside"}},"type":"scattergl"}],"scattermapbox":[{"marker":{"colorbar":{"outlinewidth":1,"tickcolor":"rgb(36,36,36)","ticks":"outside"}},"type":"scattermapbox"}],"scatterpolar":[{"marker":{"colorbar":{"outlinewidth":1,"tickcolor":"rgb(36,36,36)","ticks":"outside"}},"type":"scatterpolar"}],"scatterpolargl":[{"marker":{"colorbar":{"outlinewidth":1,"tickcolor":"rgb(36,36,36)","ticks":"outside"}},"type":"scatterpolargl"}],"scatterternary":[{"marker":{"colorbar":{"outlinewidth":1,"tickcolor":"rgb(36,36,36)","ticks":"outside"}},"type":"scatterternary"}],"surface":[{"colorbar":{"outlinewidth":1,"tickcolor":"rgb(36,36,36)","ticks":"outside"},"colorscale":[[0.0,"#440154"],[0.1111111111111111,"#482878"],[0.2222222222222222,"#3e4989"],[0.3333333333333333,"#31688e"],[0.4444444444444444,"#26828e"],[0.5555555555555556,"#1f9e89"],[0.6666666666666666,"#35b779"],[0.7777777777777778,"#6ece58"],[0.8888888888888888,"#b5de2b"],[1.0,"#fde725"]],"type":"surface"}],"table":[{"cells":{"fill":{"color":"rgb(237,237,237)"},"line":{"color":"white"}},"header":{"fill":{"color":"rgb(217,217,217)"},"line":{"color":"white"}},"type":"table"}]},"layout":{"annotationdefaults":{"arrowhead":0,"arrowwidth":1},"autotypenumbers":"strict","coloraxis":{"colorbar":{"outlinewidth":1,"tickcolor":"rgb(36,36,36)","ticks":"outside"}},"colorscale":{"diverging":[[0.0,"rgb(103,0,31)"],[0.1,"rgb(178,24,43)"],[0.2,"rgb(214,96,77)"],[0.3,"rgb(244,165,130)"],[0.4,"rgb(253,219,199)"],[0.5,"rgb(247,247,247)"],[0.6,"rgb(209,229,240)"],[0.7,"rgb(146,197,222)"],[0.8,"rgb(67,147,195)"],[0.9,"rgb(33,102,172)"],[1.0,"rgb(5,48,97)"]],"sequential":[[0.0,"#440154"],[0.1111111111111111,"#482878"],[0.2222222222222222,"#3e4989"],[0.3333333333333333,"#31688e"],[0.4444444444444444,"#26828e"],[0.5555555555555556,"#1f9e89"],[0.6666666666666666,"#35b779"],[0.7777777777777778,"#6ece58"],[0.8888888888888888,"#b5de2b"],[1.0,"#fde725"]],"sequentialminus":[[0.0,"#440154"],[0.1111111111111111,"#482878"],[0.2222222222222222,"#3e4989"],[0.3333333333333333,"#31688e"],[0.4444444444444444,"#26828e"],[0.5555555555555556,"#1f9e89"],[0.6666666666666666,"#35b779"],[0.7777777777777778,"#6ece58"],[0.8888888888888888,"#b5de2b"],[1.0,"#fde725"]]},"colorway":["#1F77B4","#FF7F0E","#2CA02C","#D62728","#9467BD","#8C564B","#E377C2","#7F7F7F","#BCBD22","#17BECF"],"font":{"color":"rgb(36,36,36)"},"geo":{"bgcolor":"white","lakecolor":"white","landcolor":"white","showlakes":true,"showland":true,"subunitcolor":"white"},"hoverlabel":{"align":"left"},"hovermode":"closest","mapbox":{"style":"light"},"paper_bgcolor":"white","plot_bgcolor":"white","polar":{"angularaxis":{"gridcolor":"rgb(232,232,232)","linecolor":"rgb(36,36,36)","showgrid":false,"showline":true,"ticks":"outside"},"bgcolor":"white","radialaxis":{"gridcolor":"rgb(232,232,232)","linecolor":"rgb(36,36,36)","showgrid":false,"showline":true,"ticks":"outside"}},"scene":{"xaxis":{"backgroundcolor":"white","gridcolor":"rgb(232,232,232)","gridwidth":2,"linecolor":"rgb(36,36,36)","showbackground":true,"showgrid":false,"showline":true,"ticks":"outside","zeroline":false,"zerolinecolor":"rgb(36,36,36)"},"yaxis":{"backgroundcolor":"white","gridcolor":"rgb(232,232,232)","gridwidth":2,"linecolor":"rgb(36,36,36)","showbackground":true,"showgrid":false,"showline":true,"ticks":"outside","zeroline":false,"zerolinecolor":"rgb(36,36,36)"},"zaxis":{"backgroundcolor":"white","gridcolor":"rgb(232,232,232)","gridwidth":2,"linecolor":"rgb(36,36,36)","showbackground":true,"showgrid":false,"showline":true,"ticks":"outside","zeroline":false,"zerolinecolor":"rgb(36,36,36)"}},"shapedefaults":{"fillcolor":"black","line":{"width":0},"opacity":0.3},"ternary":{"aaxis":{"gridcolor":"rgb(232,232,232)","linecolor":"rgb(36,36,36)","showgrid":false,"showline":true,"ticks":"outside"},"baxis":{"gridcolor":"rgb(232,232,232)","linecolor":"rgb(36,36,36)","showgrid":false,"showline":true,"ticks":"outside"},"bgcolor":"white","caxis":{"gridcolor":"rgb(232,232,232)","linecolor":"rgb(36,36,36)","showgrid":false,"showline":true,"ticks":"outside"}},"title":{"x":0.05},"xaxis":{"automargin":true,"gridcolor":"rgb(232,232,232)","linecolor":"rgb(36,36,36)","showgrid":false,"showline":true,"ticks":"outside","title":{"standoff":15},"zeroline":false,"zerolinecolor":"rgb(36,36,36)"},"yaxis":{"automargin":true,"gridcolor":"rgb(232,232,232)","linecolor":"rgb(36,36,36)","showgrid":false,"showline":true,"ticks":"outside","title":{"standoff":15},"zeroline":false,"zerolinecolor":"rgb(36,36,36)"}}},"title":{"text":"Vault Annualised 7 Day ROI"},"width":800,"xaxis":{"anchor":"y","domain":[0.0,1.0],"title":{}},"yaxis":{"anchor":"x","domain":[0.0,1.0],"title":{"text":"Annualised ROI %"}}},                        {"responsive": true}                    ).then(function(){
+                            
+var gd = document.getElementById('20cabc49-bacb-44f3-bcda-a89178606ece');
+var x = new MutationObserver(function (mutations, observer) {{
+        var display = window.getComputedStyle(gd).display;
+        if (!display || display === 'none') {{
+            console.log([gd, 'removed!']);
+            Plotly.purge(gd);
+            observer.disconnect();
+        }}
+}});
+
+// Listen for the removal of the full notebook cells
+var notebookContainer = gd.closest('#notebook-container');
+if (notebookContainer) {{
+    x.observe(notebookContainer, {childList: true});
+}}
+
+// Listen for the clearing of the current output cell
+var outputEl = gd.closest('.output');
+if (outputEl) {{
+    x.observe(outputEl, {childList: true});
+}}
+
+                        })                };                            </script>        </div>
+
+
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+    
+
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Conclusions">
+<a class="anchor" href="#Conclusions" aria-hidden="true"><span class="octicon octicon-link"></span></a>Conclusions<a class="anchor-link" href="#Conclusions"> </a>
+</h1>
+<p>We attempted to answer the question of whether there was an impact on the usage of the yveCRV vault from the introduction of the yvBoost vault - a more improved &amp; automated version of yveCRV.  We saw that the usage of yveCRV had already dropped prior to the introduction of yvBoost, so there was no opportunity for yveCRV usage to fall much further.  The launch of yvBoost, however, generated an upswing of deposits to the yveCRV vault, as yveCRV-DAO tokens were required to deposit into the yvBoost vault.  The relative pricing of yveCRV-DAO to CRV meant that minting fresh yveCRV-DAO tokens was the best way to enter yvBoost.  Since the initial 6 week upswing of yvBoost, we have seen the growth of both vaults level out with yvBoost declining a little.  A surprising observation was the steep drop in value of yveCRV-DAO relative to CRV - it's clear that people want out of their locked CRV positions and are prepared to take a big haircut to do so.</p>
+<ul>
+<li>All on-chain data sourced from the curated tables at <a href="https://flipsidecrypto.com">Flipside Crypto</a>
+</li>
+<li>Pricing data sourced from <a href="https://coingecko.com">Coingecko</a>
+</li>
+</ul>
+
+</div>
+</div>
+</div>
+</div>
+
+
+</body>
+  </div><a class="u-url" href="/analytics/curve/yearn/2021/09/29/yvBoost-and-yveCRV-Vaults.html" hidden></a>
+</article>
+      </div>
+    </main><footer class="site-footer h-card">
+  <data class="u-url" href="/analytics/"></data>
+
+  <div class="wrapper">
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col">
+        <p class="feed-subscribe">
+          <a href="/analytics/feed.xml">
+            <svg class="svg-icon orange">
+              <use xlink:href="/analytics/assets/minima-social-icons.svg#rss"></use>
+            </svg><span>Subscribe</span>
+          </a>
+        </p>
+      </div>
+      <div class="footer-col">
+        <p>On-chain analysis by @scottincrypto</p>
+      </div>
+    </div>
+
+    <div class="social-links"><ul class="social-media-list"><li><a rel="me" href="https://github.com/scottincrypto" title="scottincrypto"><svg class="svg-icon grey"><use xlink:href="/analytics/assets/minima-social-icons.svg#github"></use></svg></a></li><li><a rel="me" href="https://twitter.com/scottincrypto" title="scottincrypto"><svg class="svg-icon grey"><use xlink:href="/analytics/assets/minima-social-icons.svg#twitter"></use></svg></a></li></ul>
+</div>
+
+  </div>
+
+</footer>
+</body>
+
+</html>
