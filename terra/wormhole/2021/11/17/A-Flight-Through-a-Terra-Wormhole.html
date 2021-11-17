@@ -80,7 +80,7 @@ window.onload = wrap_img;
        • <span class="read-time" title="Estimated read time">
     
     
-      9 min read
+      7 min read
     
 </span></p>
 
@@ -285,26 +285,6 @@ if (outputEl) {{
     
     
 <div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-python"><pre><span></span><span class="c1"># User Counts</span>
-<span class="n">df_p</span> <span class="o">=</span> <span class="o">%</span><span class="n">R</span> <span class="n">tx_by_day</span> <span class="o">%&gt;%</span> <span class="n">select</span><span class="p">(</span><span class="o">-</span><span class="n">tx_count</span><span class="p">)</span> <span class="o">%&gt;%</span> <span class="n">pivot_wider</span><span class="p">(</span><span class="n">names_from</span> <span class="o">=</span> <span class="n">bridge</span><span class="p">,</span> <span class="n">values_from</span> <span class="o">=</span> <span class="n">user_count</span><span class="p">,</span> <span class="n">values_fill</span> <span class="o">=</span> <span class="mi">0</span><span class="p">)</span> <span class="o">%&gt;%</span> <span class="n">arrange</span><span class="p">(</span><span class="n">date</span><span class="p">)</span>
-
-<span class="n">fig</span> <span class="o">=</span> <span class="n">make_subplots</span><span class="p">(</span><span class="n">rows</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span> <span class="n">cols</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">subplot_titles</span><span class="o">=</span><span class="p">(</span><span class="s2">"Shuttle Bridge Wallets"</span><span class="p">,</span> <span class="s2">"Wormhole Bridge Wallets"</span><span class="p">))</span>
-<span class="n">fig</span><span class="o">.</span><span class="n">append_trace</span><span class="p">(</span><span class="n">go</span><span class="o">.</span><span class="n">Scatter</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="n">df_p</span><span class="p">[</span><span class="s2">"date"</span><span class="p">],</span> <span class="n">y</span><span class="o">=</span><span class="n">df_p</span><span class="p">[</span><span class="s2">"Shuttle"</span><span class="p">],</span> <span class="n">name</span><span class="o">=</span><span class="s2">"Shuttle Wallets Count"</span><span class="p">),</span> <span class="n">row</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">col</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
-<span class="n">fig</span><span class="o">.</span><span class="n">append_trace</span><span class="p">(</span><span class="n">go</span><span class="o">.</span><span class="n">Scatter</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="n">df_p</span><span class="p">[</span><span class="s2">"date"</span><span class="p">],</span> <span class="n">y</span><span class="o">=</span><span class="n">df_p</span><span class="p">[</span><span class="s2">"Wormhole"</span><span class="p">],</span> <span class="n">name</span><span class="o">=</span><span class="s2">"Wormhole Wallets Count"</span><span class="p">),</span> <span class="n">row</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span> <span class="n">col</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
-<span class="n">fig</span><span class="o">.</span><span class="n">update_layout</span><span class="p">(</span><span class="n">width</span><span class="o">=</span><span class="mi">800</span><span class="p">,</span> <span class="n">height</span><span class="o">=</span><span class="mi">800</span><span class="o">/</span><span class="mf">1.618</span><span class="p">,</span> <span class="n">title_text</span><span class="o">=</span><span class="s2">"Bridge Wallet Count"</span><span class="p">)</span>
-<span class="n">fig</span><span class="o">.</span><span class="n">update_layout</span><span class="p">(</span><span class="n">template</span><span class="o">=</span><span class="s2">"simple_white"</span><span class="p">,</span> <span class="n">showlegend</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
-<span class="n">fig</span><span class="o">.</span><span class="n">update_yaxes</span><span class="p">(</span><span class="n">title_text</span><span class="o">=</span><span class="s1">'Wallet Count'</span><span class="p">,</span> <span class="n">row</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">col</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
-<span class="n">fig</span><span class="o">.</span><span class="n">update_yaxes</span><span class="p">(</span><span class="n">title_text</span><span class="o">=</span><span class="s1">'Wallet Count'</span><span class="p">,</span> <span class="n">row</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span> <span class="n">col</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
-<span class="n">fig</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
-</pre></div>
-
-    </div>
-</div>
-</div>
 
 <div class="output_wrapper">
 <div class="output">
@@ -376,35 +356,6 @@ if (outputEl) {{
     
     
 <div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-python"><pre><span></span><span class="c1">#Tokens Sent/Received via Wormhole</span>
-<span class="n">df_p</span> <span class="o">=</span> <span class="o">%</span><span class="n">R</span> <span class="n">tx_by_day_coin</span> <span class="o">%&gt;%</span> <span class="nb">filter</span><span class="p">(</span><span class="n">bridge</span> <span class="o">==</span> <span class="s2">"Shuttle"</span><span class="p">)</span> <span class="o">%&gt;%</span> <span class="n">arrange</span><span class="p">(</span><span class="n">group2_order</span><span class="p">)</span>
-<span class="n">fig</span> <span class="o">=</span> <span class="n">px</span><span class="o">.</span><span class="n">bar</span><span class="p">(</span><span class="n">df_p</span>
-             <span class="p">,</span> <span class="n">x</span> <span class="o">=</span> <span class="s2">"date"</span>
-             <span class="p">,</span> <span class="n">y</span> <span class="o">=</span> <span class="s2">"tx_count"</span>
-             <span class="p">,</span> <span class="n">color</span> <span class="o">=</span> <span class="s1">'group2'</span>
-             <span class="p">,</span> <span class="n">labels</span><span class="o">=</span><span class="nb">dict</span><span class="p">(</span><span class="n">date</span><span class="o">=</span><span class="s2">"Date"</span><span class="p">,</span> <span class="n">tx_count</span><span class="o">=</span><span class="s2">"Transactions"</span><span class="p">,</span> <span class="n">group2</span><span class="o">=</span><span class="s1">'Token Type'</span><span class="p">)</span>
-             <span class="p">,</span> <span class="n">title</span><span class="o">=</span> <span class="s2">"Transactions on Shuttle Bridge by Token Type"</span>
-             <span class="p">,</span> <span class="n">template</span><span class="o">=</span><span class="s2">"simple_white"</span><span class="p">,</span> <span class="n">width</span><span class="o">=</span><span class="mi">800</span><span class="p">,</span> <span class="n">height</span><span class="o">=</span><span class="mi">800</span><span class="o">/</span><span class="mf">1.618</span>
-             <span class="p">)</span>
-<span class="n">fig</span><span class="o">.</span><span class="n">update_layout</span><span class="p">(</span><span class="n">legend</span><span class="o">=</span><span class="nb">dict</span><span class="p">(</span>
-    <span class="n">yanchor</span><span class="o">=</span><span class="s2">"top"</span><span class="p">,</span>
-    <span class="n">y</span><span class="o">=</span><span class="mf">0.99</span><span class="p">,</span>
-    <span class="n">xanchor</span><span class="o">=</span><span class="s2">"right"</span><span class="p">,</span>
-    <span class="n">x</span><span class="o">=</span><span class="mf">0.99</span><span class="p">,</span>
-    <span class="n">title_text</span><span class="o">=</span><span class="kc">None</span>
-<span class="p">))</span>
-<span class="n">fig</span><span class="o">.</span><span class="n">update_yaxes</span><span class="p">(</span><span class="n">title_text</span><span class="o">=</span><span class="s1">'Transaction Count'</span><span class="p">)</span>
-<span class="n">fig</span><span class="o">.</span><span class="n">update_xaxes</span><span class="p">(</span><span class="n">title_text</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span>
-<span class="n">fig</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
-</pre></div>
-
-    </div>
-</div>
-</div>
 
 <div class="output_wrapper">
 <div class="output">
@@ -465,35 +416,6 @@ if (outputEl) {{
     
     
 <div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-python"><pre><span></span><span class="c1">#Tokens Sent/Received via Wormhole</span>
-<span class="n">df_p</span> <span class="o">=</span> <span class="o">%</span><span class="n">R</span> <span class="n">tx_by_day_coin</span> <span class="o">%&gt;%</span> <span class="nb">filter</span><span class="p">(</span><span class="n">bridge</span> <span class="o">==</span> <span class="s2">"Wormhole"</span><span class="p">)</span> <span class="o">%&gt;%</span> <span class="n">arrange</span><span class="p">(</span><span class="n">group2_order</span><span class="p">)</span>
-<span class="n">fig</span> <span class="o">=</span> <span class="n">px</span><span class="o">.</span><span class="n">bar</span><span class="p">(</span><span class="n">df_p</span>
-             <span class="p">,</span> <span class="n">x</span> <span class="o">=</span> <span class="s2">"date"</span>
-             <span class="p">,</span> <span class="n">y</span> <span class="o">=</span> <span class="s2">"tx_count"</span>
-             <span class="p">,</span> <span class="n">color</span> <span class="o">=</span> <span class="s1">'group2'</span>
-             <span class="p">,</span> <span class="n">labels</span><span class="o">=</span><span class="nb">dict</span><span class="p">(</span><span class="n">date</span><span class="o">=</span><span class="s2">"Date"</span><span class="p">,</span> <span class="n">tx_count</span><span class="o">=</span><span class="s2">"Transactions"</span><span class="p">,</span> <span class="n">group2</span><span class="o">=</span><span class="s1">'Token Type'</span><span class="p">)</span>
-             <span class="p">,</span> <span class="n">title</span><span class="o">=</span> <span class="s2">"Transactions on Wormhole Bridge by Token Type"</span>
-             <span class="p">,</span> <span class="n">template</span><span class="o">=</span><span class="s2">"simple_white"</span><span class="p">,</span> <span class="n">width</span><span class="o">=</span><span class="mi">800</span><span class="p">,</span> <span class="n">height</span><span class="o">=</span><span class="mi">800</span><span class="o">/</span><span class="mf">1.618</span>
-             <span class="p">)</span>
-<span class="n">fig</span><span class="o">.</span><span class="n">update_layout</span><span class="p">(</span><span class="n">legend</span><span class="o">=</span><span class="nb">dict</span><span class="p">(</span>
-    <span class="n">yanchor</span><span class="o">=</span><span class="s2">"top"</span><span class="p">,</span>
-    <span class="n">y</span><span class="o">=</span><span class="mf">0.99</span><span class="p">,</span>
-    <span class="n">xanchor</span><span class="o">=</span><span class="s2">"left"</span><span class="p">,</span>
-    <span class="n">x</span><span class="o">=</span><span class="mf">0.01</span><span class="p">,</span>
-    <span class="n">title_text</span><span class="o">=</span><span class="kc">None</span>
-<span class="p">))</span>
-<span class="n">fig</span><span class="o">.</span><span class="n">update_yaxes</span><span class="p">(</span><span class="n">title_text</span><span class="o">=</span><span class="s1">'Transaction Count'</span><span class="p">)</span>
-<span class="n">fig</span><span class="o">.</span><span class="n">update_xaxes</span><span class="p">(</span><span class="n">title_text</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span>
-<span class="n">fig</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
-</pre></div>
-
-    </div>
-</div>
-</div>
 
 <div class="output_wrapper">
 <div class="output">
@@ -558,35 +480,6 @@ if (outputEl) {{
     
     
 <div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-python"><pre><span></span><span class="c1">#Destination Chain Sent via Shuttle (received not possible)</span>
-<span class="n">df_p</span> <span class="o">=</span> <span class="o">%</span><span class="n">R</span> <span class="n">tx_by_day_chain</span> <span class="o">%&gt;%</span> <span class="nb">filter</span><span class="p">(</span><span class="n">bridge</span> <span class="o">==</span> <span class="s2">"Shuttle"</span><span class="p">)</span> <span class="o">%&gt;%</span> <span class="nb">filter</span><span class="p">(</span><span class="n">bridge_chain</span> <span class="o">!=</span> <span class="s2">"Unknown"</span><span class="p">)</span> <span class="o">%&gt;%</span> <span class="n">arrange</span><span class="p">(</span><span class="n">bridge_chain</span><span class="p">)</span>
-<span class="n">fig</span> <span class="o">=</span> <span class="n">px</span><span class="o">.</span><span class="n">bar</span><span class="p">(</span><span class="n">df_p</span>
-             <span class="p">,</span> <span class="n">x</span> <span class="o">=</span> <span class="s2">"date"</span>
-             <span class="p">,</span> <span class="n">y</span> <span class="o">=</span> <span class="s2">"tx_count"</span>
-             <span class="p">,</span> <span class="n">color</span> <span class="o">=</span> <span class="s1">'bridge_chain'</span>
-             <span class="p">,</span> <span class="n">labels</span><span class="o">=</span><span class="nb">dict</span><span class="p">(</span><span class="n">date</span><span class="o">=</span><span class="s2">"Date"</span><span class="p">,</span> <span class="n">tx_count</span><span class="o">=</span><span class="s2">"Transactions"</span><span class="p">,</span> <span class="n">bridge_chain</span><span class="o">=</span><span class="s1">'Chain'</span><span class="p">)</span>
-             <span class="p">,</span> <span class="n">title</span><span class="o">=</span> <span class="s2">"All Transactions on Shuttle Bridge by Source/Destination Chain"</span>
-             <span class="p">,</span> <span class="n">template</span><span class="o">=</span><span class="s2">"simple_white"</span><span class="p">,</span> <span class="n">width</span><span class="o">=</span><span class="mi">800</span><span class="p">,</span> <span class="n">height</span><span class="o">=</span><span class="mi">800</span><span class="o">/</span><span class="mf">1.618</span>
-             <span class="p">)</span>
-<span class="n">fig</span><span class="o">.</span><span class="n">update_layout</span><span class="p">(</span><span class="n">legend</span><span class="o">=</span><span class="nb">dict</span><span class="p">(</span>
-    <span class="n">yanchor</span><span class="o">=</span><span class="s2">"top"</span><span class="p">,</span>
-    <span class="n">y</span><span class="o">=</span><span class="mf">0.99</span><span class="p">,</span>
-    <span class="n">xanchor</span><span class="o">=</span><span class="s2">"right"</span><span class="p">,</span>
-    <span class="n">x</span><span class="o">=</span><span class="mf">0.99</span><span class="p">,</span>
-    <span class="n">title_text</span><span class="o">=</span><span class="kc">None</span>
-<span class="p">))</span>
-<span class="n">fig</span><span class="o">.</span><span class="n">update_yaxes</span><span class="p">(</span><span class="n">title_text</span><span class="o">=</span><span class="s1">'Transaction Count'</span><span class="p">)</span>
-<span class="n">fig</span><span class="o">.</span><span class="n">update_xaxes</span><span class="p">(</span><span class="n">title_text</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span>
-<span class="n">fig</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
-</pre></div>
-
-    </div>
-</div>
-</div>
 
 <div class="output_wrapper">
 <div class="output">
@@ -648,35 +541,6 @@ if (outputEl) {{
     
     
 <div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-python"><pre><span></span><span class="c1">#Destination Chain Sent via Wormhole (received not possible)</span>
-<span class="n">df_p</span> <span class="o">=</span> <span class="o">%</span><span class="n">R</span> <span class="n">tx_by_day_chain</span> <span class="o">%&gt;%</span> <span class="nb">filter</span><span class="p">(</span><span class="n">bridge</span> <span class="o">==</span> <span class="s2">"Wormhole"</span><span class="p">)</span> <span class="o">%&gt;%</span> <span class="nb">filter</span><span class="p">(</span><span class="n">bridge_chain</span> <span class="o">!=</span> <span class="s2">"Unknown"</span><span class="p">)</span> <span class="o">%&gt;%</span> <span class="n">arrange</span><span class="p">(</span><span class="n">bridge_chain</span><span class="p">)</span>
-<span class="n">fig</span> <span class="o">=</span> <span class="n">px</span><span class="o">.</span><span class="n">bar</span><span class="p">(</span><span class="n">df_p</span>
-             <span class="p">,</span> <span class="n">x</span> <span class="o">=</span> <span class="s2">"date"</span>
-             <span class="p">,</span> <span class="n">y</span> <span class="o">=</span> <span class="s2">"tx_count"</span>
-             <span class="p">,</span> <span class="n">color</span> <span class="o">=</span> <span class="s1">'bridge_chain'</span>
-             <span class="p">,</span> <span class="n">labels</span><span class="o">=</span><span class="nb">dict</span><span class="p">(</span><span class="n">date</span><span class="o">=</span><span class="s2">"Date"</span><span class="p">,</span> <span class="n">tx_count</span><span class="o">=</span><span class="s2">"Transactions"</span><span class="p">,</span> <span class="n">bridge_chain</span><span class="o">=</span><span class="s1">'Destination Chain'</span><span class="p">)</span>
-             <span class="p">,</span> <span class="n">title</span><span class="o">=</span> <span class="s2">"Send Transactions on Wormhole Bridge by Destination Chain"</span>
-             <span class="p">,</span> <span class="n">template</span><span class="o">=</span><span class="s2">"simple_white"</span><span class="p">,</span> <span class="n">width</span><span class="o">=</span><span class="mi">800</span><span class="p">,</span> <span class="n">height</span><span class="o">=</span><span class="mi">800</span><span class="o">/</span><span class="mf">1.618</span>
-             <span class="p">)</span>
-<span class="n">fig</span><span class="o">.</span><span class="n">update_layout</span><span class="p">(</span><span class="n">legend</span><span class="o">=</span><span class="nb">dict</span><span class="p">(</span>
-    <span class="n">yanchor</span><span class="o">=</span><span class="s2">"top"</span><span class="p">,</span>
-    <span class="n">y</span><span class="o">=</span><span class="mf">0.99</span><span class="p">,</span>
-    <span class="n">xanchor</span><span class="o">=</span><span class="s2">"left"</span><span class="p">,</span>
-    <span class="n">x</span><span class="o">=</span><span class="mf">0.01</span><span class="p">,</span>
-    <span class="n">title_text</span><span class="o">=</span><span class="kc">None</span>
-<span class="p">))</span>
-<span class="n">fig</span><span class="o">.</span><span class="n">update_yaxes</span><span class="p">(</span><span class="n">title_text</span><span class="o">=</span><span class="s1">'Transaction Count'</span><span class="p">)</span>
-<span class="n">fig</span><span class="o">.</span><span class="n">update_xaxes</span><span class="p">(</span><span class="n">title_text</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span>
-<span class="n">fig</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
-</pre></div>
-
-    </div>
-</div>
-</div>
 
 <div class="output_wrapper">
 <div class="output">
