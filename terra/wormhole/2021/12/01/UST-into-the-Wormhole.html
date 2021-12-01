@@ -80,7 +80,7 @@ window.onload = wrap_img;
        • <span class="read-time" title="Estimated read time">
     
     
-      11 min read
+      8 min read
     
 </span></p>
 
@@ -165,34 +165,6 @@ window.onload = wrap_img;
     
     
 <div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-python"><pre><span></span><span class="c1">#UST Sent via Wormhole</span>
-<span class="n">df_p</span> <span class="o">=</span> <span class="o">%</span><span class="n">R</span> <span class="n">tx_by_day</span>
-<span class="n">fig</span> <span class="o">=</span> <span class="n">px</span><span class="o">.</span><span class="n">bar</span><span class="p">(</span><span class="n">df_p</span>
-             <span class="p">,</span> <span class="n">x</span> <span class="o">=</span> <span class="s2">"date"</span>
-             <span class="p">,</span> <span class="n">y</span> <span class="o">=</span> <span class="s2">"qty"</span>
-             <span class="p">,</span> <span class="n">labels</span><span class="o">=</span><span class="nb">dict</span><span class="p">(</span><span class="n">date</span><span class="o">=</span><span class="s2">"Date"</span><span class="p">,</span> <span class="n">qty</span><span class="o">=</span><span class="s2">"UST Sent"</span><span class="p">)</span>
-             <span class="p">,</span> <span class="n">title</span><span class="o">=</span> <span class="s2">"UST Sent via Wormhole"</span>
-             <span class="p">,</span> <span class="n">template</span><span class="o">=</span><span class="s2">"simple_white"</span><span class="p">,</span> <span class="n">width</span><span class="o">=</span><span class="mi">800</span><span class="p">,</span> <span class="n">height</span><span class="o">=</span><span class="mi">800</span><span class="o">/</span><span class="mf">1.618</span>
-             <span class="p">)</span>
-<span class="n">fig</span><span class="o">.</span><span class="n">update_layout</span><span class="p">(</span><span class="n">legend</span><span class="o">=</span><span class="nb">dict</span><span class="p">(</span>
-    <span class="n">yanchor</span><span class="o">=</span><span class="s2">"top"</span><span class="p">,</span>
-    <span class="n">y</span><span class="o">=</span><span class="mf">0.99</span><span class="p">,</span>
-    <span class="n">xanchor</span><span class="o">=</span><span class="s2">"right"</span><span class="p">,</span>
-    <span class="n">x</span><span class="o">=</span><span class="mf">0.99</span><span class="p">,</span>
-    <span class="n">title_text</span><span class="o">=</span><span class="kc">None</span>
-<span class="p">))</span>
-<span class="n">fig</span><span class="o">.</span><span class="n">update_yaxes</span><span class="p">(</span><span class="n">title_text</span><span class="o">=</span><span class="s1">'UST'</span><span class="p">)</span>
-<span class="n">fig</span><span class="o">.</span><span class="n">update_xaxes</span><span class="p">(</span><span class="n">title_text</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span>
-<span class="n">fig</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
-</pre></div>
-
-    </div>
-</div>
-</div>
 
 <div class="output_wrapper">
 <div class="output">
@@ -259,16 +231,6 @@ if (outputEl) {{
     
     
 <div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-python"><pre><span></span><span class="o">%</span><span class="n">R</span> <span class="n">tx_by_wallet</span> <span class="o">%&gt;%</span> <span class="n">arrange</span><span class="p">(</span><span class="n">desc</span><span class="p">(</span><span class="n">qty</span><span class="p">))</span> <span class="o">%&gt;%</span> <span class="n">head</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span>
-</pre></div>
-
-    </div>
-</div>
-</div>
 
 <div class="output_wrapper">
 <div class="output">
@@ -399,34 +361,6 @@ if (outputEl) {{
     
     
 <div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-python"><pre><span></span><span class="c1">#UST Sent via Wormhole expluding the network liquidity account</span>
-<span class="n">df_p</span> <span class="o">=</span> <span class="o">%</span><span class="n">R</span> <span class="n">tx_by_day_excl_network_acc</span> 
-<span class="n">fig</span> <span class="o">=</span> <span class="n">px</span><span class="o">.</span><span class="n">bar</span><span class="p">(</span><span class="n">df_p</span>
-             <span class="p">,</span> <span class="n">x</span> <span class="o">=</span> <span class="s2">"date"</span>
-             <span class="p">,</span> <span class="n">y</span> <span class="o">=</span> <span class="s2">"qty"</span>
-             <span class="p">,</span> <span class="n">labels</span><span class="o">=</span><span class="nb">dict</span><span class="p">(</span><span class="n">date</span><span class="o">=</span><span class="s2">"Date"</span><span class="p">,</span> <span class="n">qty</span><span class="o">=</span><span class="s2">"UST Sent"</span><span class="p">)</span>
-             <span class="p">,</span> <span class="n">title</span><span class="o">=</span> <span class="s2">"UST Sent via Wormhole, network ops count excluded"</span>
-             <span class="p">,</span> <span class="n">template</span><span class="o">=</span><span class="s2">"simple_white"</span><span class="p">,</span> <span class="n">width</span><span class="o">=</span><span class="mi">800</span><span class="p">,</span> <span class="n">height</span><span class="o">=</span><span class="mi">800</span><span class="o">/</span><span class="mf">1.618</span>
-             <span class="p">)</span>
-<span class="n">fig</span><span class="o">.</span><span class="n">update_layout</span><span class="p">(</span><span class="n">legend</span><span class="o">=</span><span class="nb">dict</span><span class="p">(</span>
-    <span class="n">yanchor</span><span class="o">=</span><span class="s2">"top"</span><span class="p">,</span>
-    <span class="n">y</span><span class="o">=</span><span class="mf">0.99</span><span class="p">,</span>
-    <span class="n">xanchor</span><span class="o">=</span><span class="s2">"right"</span><span class="p">,</span>
-    <span class="n">x</span><span class="o">=</span><span class="mf">0.99</span><span class="p">,</span>
-    <span class="n">title_text</span><span class="o">=</span><span class="kc">None</span>
-<span class="p">))</span>
-<span class="n">fig</span><span class="o">.</span><span class="n">update_yaxes</span><span class="p">(</span><span class="n">title_text</span><span class="o">=</span><span class="s1">'UST'</span><span class="p">)</span>
-<span class="n">fig</span><span class="o">.</span><span class="n">update_xaxes</span><span class="p">(</span><span class="n">title_text</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span>
-<span class="n">fig</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
-</pre></div>
-
-    </div>
-</div>
-</div>
 
 <div class="output_wrapper">
 <div class="output">
@@ -490,16 +424,6 @@ if (outputEl) {{
     
     
 <div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-python"><pre><span></span><span class="o">%</span><span class="n">R</span> <span class="n">tx_by_dest_chain</span> <span class="o">%&gt;%</span> <span class="n">group_by</span> <span class="p">(</span><span class="n">bridge_chain</span><span class="p">)</span> <span class="o">%&gt;%</span> <span class="n">summarise</span><span class="p">(</span><span class="n">qty_sent</span> <span class="o">=</span> <span class="nb">sum</span><span class="p">(</span><span class="n">qty</span><span class="p">))</span> <span class="o">%&gt;%</span> <span class="n">mutate</span><span class="p">(</span><span class="n">percentage</span> <span class="o">=</span> <span class="n">qty_sent</span> <span class="o">/</span> <span class="nb">sum</span><span class="p">(</span><span class="n">qty_sent</span><span class="p">)</span><span class="o">*</span><span class="mi">100</span> <span class="p">)</span><span class="o">%&gt;%</span> <span class="n">arrange</span><span class="p">(</span><span class="n">desc</span><span class="p">(</span><span class="n">qty_sent</span><span class="p">))</span>
-</pre></div>
-
-    </div>
-</div>
-</div>
 
 <div class="output_wrapper">
 <div class="output">
@@ -580,28 +504,6 @@ if (outputEl) {{
     
     
 <div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-python"><pre><span></span><span class="c1"># User Counts</span>
-<span class="n">df_p</span> <span class="o">=</span> <span class="o">%</span><span class="n">R</span> <span class="n">tx_by_dest_chain</span> <span class="o">%&gt;%</span> <span class="n">select</span><span class="p">(</span><span class="o">-</span><span class="n">tx_count</span><span class="p">)</span> <span class="o">%&gt;%</span> <span class="n">select</span> <span class="p">(</span><span class="o">-</span><span class="n">av_tx_size</span><span class="p">)</span> <span class="o">%&gt;%</span> <span class="n">pivot_wider</span><span class="p">(</span><span class="n">names_from</span> <span class="o">=</span> <span class="n">bridge_chain</span><span class="p">,</span> <span class="n">values_from</span> <span class="o">=</span> <span class="n">qty</span><span class="p">,</span> <span class="n">values_fill</span> <span class="o">=</span> <span class="mi">0</span><span class="p">)</span> <span class="o">%&gt;%</span> <span class="n">arrange</span><span class="p">(</span><span class="n">date</span><span class="p">)</span>
-
-<span class="n">fig</span> <span class="o">=</span> <span class="n">make_subplots</span><span class="p">(</span><span class="n">rows</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span> <span class="n">cols</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span> <span class="n">subplot_titles</span><span class="o">=</span><span class="p">(</span><span class="s2">"BSC"</span><span class="p">,</span> <span class="s2">"Ethereum"</span><span class="p">,</span> <span class="s2">"Polygon"</span><span class="p">,</span> <span class="s2">"Solana"</span><span class="p">))</span>
-<span class="n">fig</span><span class="o">.</span><span class="n">append_trace</span><span class="p">(</span><span class="n">go</span><span class="o">.</span><span class="n">Bar</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="n">df_p</span><span class="p">[</span><span class="s2">"date"</span><span class="p">],</span> <span class="n">y</span><span class="o">=</span><span class="n">df_p</span><span class="p">[</span><span class="s2">"BSC"</span><span class="p">],</span> <span class="n">name</span><span class="o">=</span><span class="s2">"UST"</span><span class="p">),</span> <span class="n">row</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">col</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
-<span class="n">fig</span><span class="o">.</span><span class="n">append_trace</span><span class="p">(</span><span class="n">go</span><span class="o">.</span><span class="n">Bar</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="n">df_p</span><span class="p">[</span><span class="s2">"date"</span><span class="p">],</span> <span class="n">y</span><span class="o">=</span><span class="n">df_p</span><span class="p">[</span><span class="s2">"Ethereum"</span><span class="p">],</span> <span class="n">name</span><span class="o">=</span><span class="s2">"UST"</span><span class="p">),</span> <span class="n">row</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span> <span class="n">col</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
-<span class="n">fig</span><span class="o">.</span><span class="n">append_trace</span><span class="p">(</span><span class="n">go</span><span class="o">.</span><span class="n">Bar</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="n">df_p</span><span class="p">[</span><span class="s2">"date"</span><span class="p">],</span> <span class="n">y</span><span class="o">=</span><span class="n">df_p</span><span class="p">[</span><span class="s2">"Polygon"</span><span class="p">],</span> <span class="n">name</span><span class="o">=</span><span class="s2">"UST"</span><span class="p">),</span> <span class="n">row</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">col</span><span class="o">=</span><span class="mi">2</span><span class="p">)</span>
-<span class="n">fig</span><span class="o">.</span><span class="n">append_trace</span><span class="p">(</span><span class="n">go</span><span class="o">.</span><span class="n">Bar</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="n">df_p</span><span class="p">[</span><span class="s2">"date"</span><span class="p">],</span> <span class="n">y</span><span class="o">=</span><span class="n">df_p</span><span class="p">[</span><span class="s2">"Solana"</span><span class="p">],</span> <span class="n">name</span><span class="o">=</span><span class="s2">"UST"</span><span class="p">),</span> <span class="n">row</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span> <span class="n">col</span><span class="o">=</span><span class="mi">2</span><span class="p">)</span>
-<span class="n">fig</span><span class="o">.</span><span class="n">update_layout</span><span class="p">(</span><span class="n">width</span><span class="o">=</span><span class="mi">800</span><span class="p">,</span> <span class="n">height</span><span class="o">=</span><span class="mi">800</span><span class="o">/</span><span class="mf">1.618</span><span class="p">,</span> <span class="n">title_text</span><span class="o">=</span><span class="s2">"UST Sent by Destionation Chain"</span><span class="p">)</span>
-<span class="n">fig</span><span class="o">.</span><span class="n">update_layout</span><span class="p">(</span><span class="n">template</span><span class="o">=</span><span class="s2">"simple_white"</span><span class="p">,</span> <span class="n">showlegend</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
-<span class="n">fig</span><span class="o">.</span><span class="n">update_yaxes</span><span class="p">(</span><span class="n">title_text</span><span class="o">=</span><span class="s1">'Value Bridged UST'</span><span class="p">,</span> <span class="n">row</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">col</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
-<span class="n">fig</span><span class="o">.</span><span class="n">update_yaxes</span><span class="p">(</span><span class="n">title_text</span><span class="o">=</span><span class="s1">'Value Bridged UST'</span><span class="p">,</span> <span class="n">row</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span> <span class="n">col</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
-<span class="n">fig</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
-</pre></div>
-
-    </div>
-</div>
-</div>
 
 <div class="output_wrapper">
 <div class="output">
@@ -665,34 +567,6 @@ if (outputEl) {{
     
     
 <div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-python"><pre><span></span><span class="c1">#cumulative wallets</span>
-<span class="n">df_p</span> <span class="o">=</span> <span class="o">%</span><span class="n">R</span> <span class="n">unique_wallets</span>
-<span class="n">fig</span> <span class="o">=</span> <span class="n">px</span><span class="o">.</span><span class="n">bar</span><span class="p">(</span><span class="n">df_p</span>
-             <span class="p">,</span> <span class="n">x</span> <span class="o">=</span> <span class="s2">"first_date"</span>
-             <span class="p">,</span> <span class="n">y</span> <span class="o">=</span> <span class="s2">"cum_unique"</span>
-             <span class="p">,</span> <span class="n">labels</span><span class="o">=</span><span class="nb">dict</span><span class="p">(</span><span class="n">date</span><span class="o">=</span><span class="s2">"Date"</span><span class="p">,</span> <span class="n">av_tx_size</span><span class="o">=</span><span class="s2">"Av Tx Size"</span><span class="p">)</span>
-             <span class="p">,</span> <span class="n">title</span><span class="o">=</span> <span class="s2">"Unique Wallets Sending UST over Wormhole Bridge"</span>
-             <span class="p">,</span> <span class="n">template</span><span class="o">=</span><span class="s2">"simple_white"</span><span class="p">,</span> <span class="n">width</span><span class="o">=</span><span class="mi">800</span><span class="p">,</span> <span class="n">height</span><span class="o">=</span><span class="mi">800</span><span class="o">/</span><span class="mf">1.618</span>
-             <span class="p">)</span>
-<span class="n">fig</span><span class="o">.</span><span class="n">update_layout</span><span class="p">(</span><span class="n">legend</span><span class="o">=</span><span class="nb">dict</span><span class="p">(</span>
-    <span class="n">yanchor</span><span class="o">=</span><span class="s2">"top"</span><span class="p">,</span>
-    <span class="n">y</span><span class="o">=</span><span class="mf">0.99</span><span class="p">,</span>
-    <span class="n">xanchor</span><span class="o">=</span><span class="s2">"right"</span><span class="p">,</span>
-    <span class="n">x</span><span class="o">=</span><span class="mf">0.99</span><span class="p">,</span>
-    <span class="n">title_text</span><span class="o">=</span><span class="kc">None</span>
-<span class="p">))</span>
-<span class="n">fig</span><span class="o">.</span><span class="n">update_yaxes</span><span class="p">(</span><span class="n">title_text</span><span class="o">=</span><span class="s1">'Wallet Count'</span><span class="p">)</span>
-<span class="n">fig</span><span class="o">.</span><span class="n">update_xaxes</span><span class="p">(</span><span class="n">title_text</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span>
-<span class="n">fig</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
-</pre></div>
-
-    </div>
-</div>
-</div>
 
 <div class="output_wrapper">
 <div class="output">
@@ -753,34 +627,6 @@ if (outputEl) {{
     
     
 <div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-python"><pre><span></span><span class="c1">#cumulative wallets growth rate</span>
-<span class="n">df_p</span> <span class="o">=</span> <span class="o">%</span><span class="n">R</span> <span class="n">unique_wallets</span>
-<span class="n">fig</span> <span class="o">=</span> <span class="n">px</span><span class="o">.</span><span class="n">bar</span><span class="p">(</span><span class="n">df_p</span>
-             <span class="p">,</span> <span class="n">x</span> <span class="o">=</span> <span class="s2">"first_date"</span>
-             <span class="p">,</span> <span class="n">y</span> <span class="o">=</span> <span class="s2">"growth_rate"</span>
-             <span class="p">,</span> <span class="n">labels</span><span class="o">=</span><span class="nb">dict</span><span class="p">(</span><span class="n">date</span><span class="o">=</span><span class="s2">"Date"</span><span class="p">,</span> <span class="n">av_tx_size</span><span class="o">=</span><span class="s2">"Av Tx Size"</span><span class="p">)</span>
-             <span class="p">,</span> <span class="n">title</span><span class="o">=</span> <span class="s2">"Growth rate of unique wallets sending UST over Wormhole Bridge"</span>
-             <span class="p">,</span> <span class="n">template</span><span class="o">=</span><span class="s2">"simple_white"</span><span class="p">,</span> <span class="n">width</span><span class="o">=</span><span class="mi">800</span><span class="p">,</span> <span class="n">height</span><span class="o">=</span><span class="mi">800</span><span class="o">/</span><span class="mf">1.618</span>
-             <span class="p">)</span>
-<span class="n">fig</span><span class="o">.</span><span class="n">update_layout</span><span class="p">(</span><span class="n">legend</span><span class="o">=</span><span class="nb">dict</span><span class="p">(</span>
-    <span class="n">yanchor</span><span class="o">=</span><span class="s2">"top"</span><span class="p">,</span>
-    <span class="n">y</span><span class="o">=</span><span class="mf">0.99</span><span class="p">,</span>
-    <span class="n">xanchor</span><span class="o">=</span><span class="s2">"right"</span><span class="p">,</span>
-    <span class="n">x</span><span class="o">=</span><span class="mf">0.99</span><span class="p">,</span>
-    <span class="n">title_text</span><span class="o">=</span><span class="kc">None</span>
-<span class="p">))</span>
-<span class="n">fig</span><span class="o">.</span><span class="n">update_yaxes</span><span class="p">(</span><span class="n">title_text</span><span class="o">=</span><span class="s1">'Growth Rate'</span><span class="p">)</span>
-<span class="n">fig</span><span class="o">.</span><span class="n">update_xaxes</span><span class="p">(</span><span class="n">title_text</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span>
-<span class="n">fig</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
-</pre></div>
-
-    </div>
-</div>
-</div>
 
 <div class="output_wrapper">
 <div class="output">
@@ -846,28 +692,6 @@ if (outputEl) {{
     
     
 <div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-python"><pre><span></span><span class="c1"># Tx size</span>
-<span class="n">df_p</span> <span class="o">=</span> <span class="o">%</span><span class="n">R</span> <span class="n">tx_by_dest_chain</span> <span class="o">%&gt;%</span> <span class="n">select</span><span class="p">(</span><span class="o">-</span><span class="n">tx_count</span><span class="p">)</span> <span class="o">%&gt;%</span> <span class="n">select</span> <span class="p">(</span><span class="o">-</span><span class="n">qty</span><span class="p">)</span> <span class="o">%&gt;%</span> <span class="n">pivot_wider</span><span class="p">(</span><span class="n">names_from</span> <span class="o">=</span> <span class="n">bridge_chain</span><span class="p">,</span> <span class="n">values_from</span> <span class="o">=</span> <span class="n">av_tx_size</span><span class="p">,</span> <span class="n">values_fill</span> <span class="o">=</span> <span class="mi">0</span><span class="p">)</span> <span class="o">%&gt;%</span> <span class="n">arrange</span><span class="p">(</span><span class="n">date</span><span class="p">)</span>
-
-<span class="n">fig</span> <span class="o">=</span> <span class="n">make_subplots</span><span class="p">(</span><span class="n">rows</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span> <span class="n">cols</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span> <span class="n">subplot_titles</span><span class="o">=</span><span class="p">(</span><span class="s2">"BSC"</span><span class="p">,</span> <span class="s2">"Ethereum"</span><span class="p">,</span> <span class="s2">"Polygon"</span><span class="p">,</span> <span class="s2">"Solana"</span><span class="p">))</span>
-<span class="n">fig</span><span class="o">.</span><span class="n">append_trace</span><span class="p">(</span><span class="n">go</span><span class="o">.</span><span class="n">Bar</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="n">df_p</span><span class="p">[</span><span class="s2">"date"</span><span class="p">],</span> <span class="n">y</span><span class="o">=</span><span class="n">df_p</span><span class="p">[</span><span class="s2">"BSC"</span><span class="p">],</span> <span class="n">name</span><span class="o">=</span><span class="s2">"UST"</span><span class="p">),</span> <span class="n">row</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">col</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
-<span class="n">fig</span><span class="o">.</span><span class="n">append_trace</span><span class="p">(</span><span class="n">go</span><span class="o">.</span><span class="n">Bar</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="n">df_p</span><span class="p">[</span><span class="s2">"date"</span><span class="p">],</span> <span class="n">y</span><span class="o">=</span><span class="n">df_p</span><span class="p">[</span><span class="s2">"Ethereum"</span><span class="p">],</span> <span class="n">name</span><span class="o">=</span><span class="s2">"UST"</span><span class="p">),</span> <span class="n">row</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span> <span class="n">col</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
-<span class="n">fig</span><span class="o">.</span><span class="n">append_trace</span><span class="p">(</span><span class="n">go</span><span class="o">.</span><span class="n">Bar</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="n">df_p</span><span class="p">[</span><span class="s2">"date"</span><span class="p">],</span> <span class="n">y</span><span class="o">=</span><span class="n">df_p</span><span class="p">[</span><span class="s2">"Polygon"</span><span class="p">],</span> <span class="n">name</span><span class="o">=</span><span class="s2">"UST"</span><span class="p">),</span> <span class="n">row</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">col</span><span class="o">=</span><span class="mi">2</span><span class="p">)</span>
-<span class="n">fig</span><span class="o">.</span><span class="n">append_trace</span><span class="p">(</span><span class="n">go</span><span class="o">.</span><span class="n">Bar</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="n">df_p</span><span class="p">[</span><span class="s2">"date"</span><span class="p">],</span> <span class="n">y</span><span class="o">=</span><span class="n">df_p</span><span class="p">[</span><span class="s2">"Solana"</span><span class="p">],</span> <span class="n">name</span><span class="o">=</span><span class="s2">"UST"</span><span class="p">),</span> <span class="n">row</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span> <span class="n">col</span><span class="o">=</span><span class="mi">2</span><span class="p">)</span>
-<span class="n">fig</span><span class="o">.</span><span class="n">update_layout</span><span class="p">(</span><span class="n">width</span><span class="o">=</span><span class="mi">800</span><span class="p">,</span> <span class="n">height</span><span class="o">=</span><span class="mi">800</span><span class="o">/</span><span class="mf">1.618</span><span class="p">,</span> <span class="n">title_text</span><span class="o">=</span><span class="s2">"Transaction Size by Destionation Chain"</span><span class="p">)</span>
-<span class="n">fig</span><span class="o">.</span><span class="n">update_layout</span><span class="p">(</span><span class="n">template</span><span class="o">=</span><span class="s2">"simple_white"</span><span class="p">,</span> <span class="n">showlegend</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
-<span class="n">fig</span><span class="o">.</span><span class="n">update_yaxes</span><span class="p">(</span><span class="n">title_text</span><span class="o">=</span><span class="s1">'Tx Size UST'</span><span class="p">,</span> <span class="n">row</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">col</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
-<span class="n">fig</span><span class="o">.</span><span class="n">update_yaxes</span><span class="p">(</span><span class="n">title_text</span><span class="o">=</span><span class="s1">'Tx Size UST'</span><span class="p">,</span> <span class="n">row</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span> <span class="n">col</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
-<span class="n">fig</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
-</pre></div>
-
-    </div>
-</div>
-</div>
 
 <div class="output_wrapper">
 <div class="output">
@@ -931,34 +755,6 @@ if (outputEl) {{
     
     
 <div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-python"><pre><span></span><span class="c1">#UST Sent via Wormhole expluding the network liquidity account</span>
-<span class="n">df_p</span> <span class="o">=</span> <span class="o">%</span><span class="n">R</span> <span class="n">tx_by_dest_chain</span> <span class="o">%&gt;%</span> <span class="nb">filter</span><span class="p">(</span><span class="n">bridge_chain</span> <span class="o">==</span> <span class="s1">'Solana'</span><span class="p">)</span>
-<span class="n">fig</span> <span class="o">=</span> <span class="n">px</span><span class="o">.</span><span class="n">bar</span><span class="p">(</span><span class="n">df_p</span>
-             <span class="p">,</span> <span class="n">x</span> <span class="o">=</span> <span class="s2">"date"</span>
-             <span class="p">,</span> <span class="n">y</span> <span class="o">=</span> <span class="s2">"qty"</span>
-             <span class="p">,</span> <span class="n">labels</span><span class="o">=</span><span class="nb">dict</span><span class="p">(</span><span class="n">date</span><span class="o">=</span><span class="s2">"Date"</span><span class="p">,</span> <span class="n">qty</span><span class="o">=</span><span class="s2">"UST Sent"</span><span class="p">)</span>
-             <span class="p">,</span> <span class="n">title</span><span class="o">=</span> <span class="s2">"UST Sent to Solana via Wormhole"</span>
-             <span class="p">,</span> <span class="n">template</span><span class="o">=</span><span class="s2">"simple_white"</span><span class="p">,</span> <span class="n">width</span><span class="o">=</span><span class="mi">800</span><span class="p">,</span> <span class="n">height</span><span class="o">=</span><span class="mi">800</span><span class="o">/</span><span class="mf">1.618</span>
-             <span class="p">)</span>
-<span class="n">fig</span><span class="o">.</span><span class="n">update_layout</span><span class="p">(</span><span class="n">legend</span><span class="o">=</span><span class="nb">dict</span><span class="p">(</span>
-    <span class="n">yanchor</span><span class="o">=</span><span class="s2">"top"</span><span class="p">,</span>
-    <span class="n">y</span><span class="o">=</span><span class="mf">0.99</span><span class="p">,</span>
-    <span class="n">xanchor</span><span class="o">=</span><span class="s2">"right"</span><span class="p">,</span>
-    <span class="n">x</span><span class="o">=</span><span class="mf">0.99</span><span class="p">,</span>
-    <span class="n">title_text</span><span class="o">=</span><span class="kc">None</span>
-<span class="p">))</span>
-<span class="n">fig</span><span class="o">.</span><span class="n">update_yaxes</span><span class="p">(</span><span class="n">title_text</span><span class="o">=</span><span class="s1">'UST'</span><span class="p">)</span>
-<span class="n">fig</span><span class="o">.</span><span class="n">update_xaxes</span><span class="p">(</span><span class="n">title_text</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span>
-<span class="n">fig</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
-</pre></div>
-
-    </div>
-</div>
-</div>
 
 <div class="output_wrapper">
 <div class="output">
@@ -1023,34 +819,6 @@ if (outputEl) {{
     
     
 <div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-python"><pre><span></span><span class="c1">#UST Sent via Wormhole expluding the network liquidity account</span>
-<span class="n">df_p</span> <span class="o">=</span> <span class="o">%</span><span class="n">R</span> <span class="n">sol_by_day_of_week</span>
-<span class="n">fig</span> <span class="o">=</span> <span class="n">px</span><span class="o">.</span><span class="n">bar</span><span class="p">(</span><span class="n">df_p</span>
-             <span class="p">,</span> <span class="n">x</span> <span class="o">=</span> <span class="s2">"weekday"</span>
-             <span class="p">,</span> <span class="n">y</span> <span class="o">=</span> <span class="s2">"av_qty"</span>
-             <span class="p">,</span> <span class="n">labels</span><span class="o">=</span><span class="nb">dict</span><span class="p">(</span><span class="n">date</span><span class="o">=</span><span class="s2">"Date"</span><span class="p">,</span> <span class="n">qty</span><span class="o">=</span><span class="s2">"UST Sent"</span><span class="p">)</span>
-             <span class="p">,</span> <span class="n">title</span><span class="o">=</span> <span class="s2">"UST Sent to Solana via Wormhole"</span>
-             <span class="p">,</span> <span class="n">template</span><span class="o">=</span><span class="s2">"simple_white"</span><span class="p">,</span> <span class="n">width</span><span class="o">=</span><span class="mi">800</span><span class="p">,</span> <span class="n">height</span><span class="o">=</span><span class="mi">800</span><span class="o">/</span><span class="mf">1.618</span>
-             <span class="p">)</span>
-<span class="n">fig</span><span class="o">.</span><span class="n">update_layout</span><span class="p">(</span><span class="n">legend</span><span class="o">=</span><span class="nb">dict</span><span class="p">(</span>
-    <span class="n">yanchor</span><span class="o">=</span><span class="s2">"top"</span><span class="p">,</span>
-    <span class="n">y</span><span class="o">=</span><span class="mf">0.99</span><span class="p">,</span>
-    <span class="n">xanchor</span><span class="o">=</span><span class="s2">"right"</span><span class="p">,</span>
-    <span class="n">x</span><span class="o">=</span><span class="mf">0.99</span><span class="p">,</span>
-    <span class="n">title_text</span><span class="o">=</span><span class="kc">None</span>
-<span class="p">))</span>
-<span class="n">fig</span><span class="o">.</span><span class="n">update_yaxes</span><span class="p">(</span><span class="n">title_text</span><span class="o">=</span><span class="s1">'UST'</span><span class="p">)</span>
-<span class="n">fig</span><span class="o">.</span><span class="n">update_xaxes</span><span class="p">(</span><span class="n">title_text</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span>
-<span class="n">fig</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
-</pre></div>
-
-    </div>
-</div>
-</div>
 
 <div class="output_wrapper">
 <div class="output">
